@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capelli D'Angelo | Hair Atelier & Armocromia a Rovereto</title>
+  
+  <!-- Font Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Alex+Brush&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-primary: #FAF8F5;
+      --bg-secondary: #F3EEE7;
+      --bg-dark: #1C1917;
+      --text-main: #292524;
+      --text-muted: #78716C;
+      --text-light: #F5F5F4;
+      --accent-gold: #C5A059;
+      --accent-soft: #D6C3B1;
+      --border-color: #E7E0D8;
+      
+      --font-heading: 'Cinzel', serif;
+      --font-script: 'Alex Brush', cursive;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.7;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-main);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .text-center { text-align: center; }
+    .section-padding { padding: 6rem 0; }
+    
+    .subtitle {
+      font-size: 0.85rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 1rem;
+      display: block;
+      font-weight: 500;
+    }
+
+    /* LOGO STYLING */
+    .logo-brand {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1.1;
+      z-index: 1001;
+      padding-top: 1.2rem;
+      padding-bottom: 0rem;
+      margin-bottom: 0rem;
+    }
+
+    .logo-main {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      letter-spacing: 0.25em;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 0;
+    }
+
+    .logo-sub {
+      font-family: var(--font-script);
+      font-size: 2rem;
+      color: var(--accent-gold);
+      margin-top: -8px;
+      margin-left: 4px;
+      margin-bottom: 0;
+    }
+
+    footer .logo-main {
+      color: var(--text-light);
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border: 1px solid var(--text-main);
+      background: transparent;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background: var(--text-main);
+      color: var(--bg-primary);
+    }
+
+    .btn-gold {
+      border-color: var(--accent-gold);
+      background: var(--accent-gold);
+      color: #fff;
+    }
+
+    .btn-gold:hover {
+      background: #B38F48;
+      border-color: #B38F48;
+      color: #fff;
+    }
+
+    .btn-dark {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      border-color: var(--bg-dark);
+    }
+
+    .btn-dark:hover {
+      background: transparent;
+      color: var(--bg-dark);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: var(--text-light);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--text-light);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* NAVIGATION */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(250, 248, 245, 0.96);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.2rem 0;
+      min-height: 85px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a.nav-item {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .nav-links a.nav-item:hover {
+      color: var(--text-main);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      z-index: 1002;
+      position: relative;
+    }
+
+    .mobile-menu-toggle span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background-color: var(--text-main);
+      margin: 6px 0;
+      transition: all 0.3s ease-in-out;
+      transform-origin: center;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .menu-mobile-footer {
+      display: none;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      padding-top: 240px;
+      padding-bottom: 140px;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(rgba(28, 25, 23, 0.5), rgba(28, 25, 23, 0.5)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
+      color: #fff;
+    }
+
+    .hero .subtitle { color: var(--accent-gold); }
+
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      color: #fff;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: #E7E0D8;
+      max-width: 650px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .hero .btn {
+      border-color: #fff;
+      color: #fff;
+    }
+    
+    .hero .btn:hover {
+      background: #fff;
+      color: var(--bg-dark);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* INTRO & CITAZIONI */
+    .intro {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .editorial-quote {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      color: var(--text-main);
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      font-weight: 300;
+    }
+
+    .highlight-quote {
+      border-left: 2px solid var(--accent-gold);
+      padding-left: 2rem;
+      margin: 3rem auto 0;
+      max-width: 750px;
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: var(--text-main);
+      letter-spacing: 0.03em;
+      text-align: left;
+    }
+
+    /* METODO - SFONDO CON IMMAGINE E OVERLAY */
+    #metodo {
+      position: relative;
+      background: linear-gradient(rgba(250, 248, 245, 0.92), rgba(250, 248, 245, 0.92)), url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat fixed;
+    }
+
+    .metodo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .metodo-card {
+      border: 1px solid var(--border-color);
+      padding: 2.5rem 2rem;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(4px);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .metodo-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .metodo-title-row {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .metodo-inline-icon {
+      width: 22px;
+      height: 22px;
+      stroke: var(--accent-gold);
+      flex-shrink: 0;
+    }
+
+    .metodo-card h3 {
+      font-size: 1.15rem;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .metodo-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* PRODOTTI */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .product-card {
+      background: #FFF;
+      border: 1px solid var(--border-color);
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+      border-color: var(--accent-gold);
+    }
+
+    .product-img-box {
+      height: 260px;
+      width: 100%;
+      margin-bottom: 1.2rem;
+      overflow: hidden;
+      background: #FAFAFA;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-img-box img {
+      max-height: 100%;
+      width: auto;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+    }
+
+    .product-card:hover .product-img-box img {
+      transform: scale(1.05);
+    }
+
+    .product-brand {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+
+    .product-card h4 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* AMBASCIATA DELLA GIOIA & PERCHÉ CAPELLI D'ANGELO */
+    .ambasciata-section {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      position: relative;
+    }
+
+    .ambasciata-section h2 {
+      color: var(--text-light);
+    }
+
+    .ambasciata-box {
+      max-width: 800px;
+      margin: 0 auto;
+      border: 1px solid rgba(197, 160, 89, 0.4);
+      padding: 3.5rem 3rem;
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(5px);
+    }
+
+    .why-us-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .why-us-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* GALLERIA FOTO SITO */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      background: #fff;
+      height: 380px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.2rem;
+      background: linear-gradient(transparent, rgba(28, 25, 23, 0.85));
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* FEATURED BLOCKS */
+    .feature-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-bottom: 0rem;
+    }
+
+    .feature-text h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-text p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-img-box {
+      height: 400px;
+      width: 100%;
+      border-radius: 2px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    .feature-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.95);
+      transition: transform 0.5s ease;
+    }
+
+    .feature-img-box img:hover {
+      transform: scale(1.03);
+    }
+
+    /* SERVIZI */
+    .servizi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .servizio-card {
+      background: #FFF;
+      padding: 3rem 2.5rem;
+      border: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .servizio-card:hover {
+      border-color: var(--accent-gold);
+      box-shadow: 0 12px 30px rgba(197, 160, 89, 0.12);
+      transform: translateY(-5px);
+    }
+
+    .servizio-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .servizio-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+
+    .link-arrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .servizio-card:hover .link-arrow { color: var(--accent-gold); }
+
+    /* RECENSIONI MODERNE */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3.5rem 0 1rem;
+    }
+
+    .review-card-modern {
+      background: #FFF;
+      padding: 2.5rem;
+      border: 1px solid var(--border-color);
+      text-align: left;
+      position: relative;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    }
+
+    .stars {
+      color: var(--accent-gold);
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      margin-bottom: 1.2rem;
+    }
+
+    .review-author {
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      display: block;
+      font-weight: 600;
+    }
+
+    /* INSTAGRAM */
+    .instagram-section {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      text-align: center;
+    }
+
+    .instagram-section h2 {
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .instagram-handle {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      color: var(--accent-gold);
+      margin: 1rem 0 2rem;
+      display: block;
+    }
+
+    /* BOOKING SECTION */
+    .booking-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .booking-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #FFF;
+      padding: 4rem 3rem;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    }
+
+    .booking-options {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--bg-dark);
+      color: #A8A29E;
+      padding: 4rem 0 2rem;
+      font-size: 0.85rem;
+      border-top: 1px solid #292524;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-links ul { list-style: none; }
+    .footer-links li { margin-bottom: 0.5rem; }
+    .footer-links a:hover { color: var(--accent-gold); }
+
+    .footer-bottom {
+      border-top: 1px solid #292524;
+      padding-top: 2rem;
+      text-align: center;
+      font-size: 0.75rem;
+    }
+
+    /* MODAL PRIVACY & COOKIES */
+    .policy-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(5px);
+      z-index: 2000;
+      overflow-y: auto;
+      padding: 2rem;
+    }
+
+    .policy-modal-content {
+      background: var(--bg-primary);
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 3rem;
+      border: 1px solid var(--border-color);
+      position: relative;
+    }
+
+    .policy-modal-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: var(--text-main);
+    }
+
+    .policy-modal h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.5rem;
+    }
+
+    .cookie-banner {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 3rem);
+      max-width: 780px;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      padding: 1.5rem 2rem;
+      border: 1px solid #333;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      z-index: 1500;
+      font-size: 0.8rem;
+    }
+
+    .cookie-actions { display: flex; gap: 0.6rem; flex-shrink: 0; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .feature-block { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .cookie-banner { flex-direction: column; text-align: center; }
+      .cookie-actions { width: 100%; justify-content: center; }
+
+      .mobile-menu-toggle { display: block; margin-left: auto; }
+
+      .nav-links {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--bg-primary);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        padding: 2rem 1.5rem;
+        z-index: 1001;
+        gap: 0.2rem;
+      }
+
+      .nav-links.active { left: 0; }
+
+      .nav-links::before {
+        content: "CAPELLI d'Angelo";
+        font-family: var(--font-heading);
+        font-size: 1.1rem;
+        letter-spacing: 0.2em;
+        color: var(--accent-gold);
+        margin-bottom: 1.2rem;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.8rem;
+        width: 70%;
+        text-align: center;
+      }
+
+      .nav-links li { width: 100%; text-align: center; margin: 0.2rem 0; }
+
+      .nav-links a.nav-item {
+        font-size: 1.05rem;
+        letter-spacing: 0.15em;
+        font-family: var(--font-heading);
+        color: var(--text-main);
+        display: block;
+        padding: 0.35rem 0;
+      }
+
+      .menu-mobile-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border-color);
+        width: 80%;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
+
+      .menu-mobile-footer a {
+        color: var(--accent-gold);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+
+      .ambasciata-box { padding: 2rem 1.5rem; }
+      .booking-container { padding: 2.5rem 1.5rem; }
+      .booking-options { flex-direction: column; gap: 1rem; }
+      .booking-options .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER & LOGO -->
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo-brand">
+        <span class="logo-main">CAPELLI</span>
+        <span class="logo-sub">d'Angelo</span>
+      </a>
+      
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#metodo" class="nav-item">Il Metodo</a></li>
+        <li><a href="#servizi" class="nav-item">Servizi</a></li>
+        <li><a href="#cura-casa" class="nav-item">Cura a Casa</a></li>
+        <li><a href="#ambasciata" class="nav-item">Filosofia</a></li>
+        <li><a href="#prenota" class="nav-item">Prenota</a></li>
+        <li style="margin-top: 0.5rem;">
+          <a href="#prenota" class="btn btn-gold nav-item" style="padding: 0.6rem 1.6rem; font-size: 0.7rem; color: #fff;">Consulenza</a>
+        </li>
+
+        <div class="menu-mobile-footer">
+          <span>Via Trieste 42 — Rovereto (TN)</span>
+          <a href="https://www.instagram.com/capelli_d_angelo_?stkn=MWFxcGxrdGsyOXJidw==" target="_blank" rel="noopener">@capelli_d_angelo_</a>
+        </div>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="subtitle">Rovereto</span>
+      <h1>Prima di scegliere il colore,<br>ascoltiamo te.</h1>
+      <p>Consulenza sartoriale, armocromia e cura profonda del capello a Rovereto.</p>
+      <div class="hero-buttons">
+        <a href="#prenota" class="btn btn-gold">Prenota una consulenza</a>
+        <a href="#metodo" class="btn">Scopri il nostro metodo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section-padding intro">
+    <div class="container">
+      <div class="editorial-quote">
+        <p>I capelli non sono tutti uguali. E nemmeno le persone.</p>
+        <p>Per questo, prima di parlare di trattamento, partiamo dall'ascolto. Osserviamo la struttura e comprendiamo le tue vere esigenze.</p>
+      </div>
+      
+      <div class="highlight-quote">
+        "Non vendiamo solo servizi di parruccheria. Creiamo uno spazio di ascolto e valorizzazione sartoriale della tua immagine."
+      </div>
+    </div>
+  </section>
+
+  <!-- IL NOSTRO METODO -->
+  <section id="metodo" class="section-padding">
+    <div class="container">
+      <div class="text-center">
+        <span class="subtitle">Concept Atelier</span>
+        <h2>Il Nostro Metodo</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Ascoltare. Capire. Valorizzare. Un percorso costruito interamente intorno alla tua unicità.</p>
+      </div>
+
+      <div class="metodo-grid">
+        <div class="metodo-card">
+          <div class="metodo-title-row">
+            <svg class="metodo-inline-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"/></svg>
+            <h3>Ascolto</h3>
+          </div>
+          <p>Ci prendiamo il tempo per comprendere i tuoi desideri e ciò che desideri comunicare con il tuo look.</p>
+        </div>
+
+        <div class="metodo-card">
+          <div class="metodo-title-row">
+            <svg class="metodo-inline-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.46 6.288a15.99 15.99 0 00-4.648 4.763m3.42 3.42a6.761 6.761 0 01-1.436 1.436"/></svg>
+            <h3>Armonia</h3>
+          </div>
+          <p>Analizziamo i tratti e le proporzioni per impostare un lavoro coerente con la tua immagine.</p>
+        </div>
+
+        <div class="metodo-card">
+          <div class="metodo-title-row">
+            <svg class="metodo-inline-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+            <h3>Colore</h3>
+          </div>
+          <p>Tecniche avanzate di colorazione sartoriale concepite esclusivamente per esaltare la tua persona.</p>
+        </div>
+
+        <div class="metodo-card">
+          <div class="metodo-title-row">
+            <svg class="metodo-inline-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
+            <h3>Cura</h3>
+          </div>
+          <p>Trattamenti mirati a preservare salute, luminosità e qualità del capello nel tempo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIZI -->
+  <section id="servizi" class="section-padding">
+    <div class="container">
+      <div class="text-center">
+        <span class="subtitle">L'Offerta Atelier</span>
+        <h2>I Nostri Servizi</h2>
+        <p style="color: var(--text-muted);">Trattamenti di stile e consulenze dedicate alla tua valorizzazione.</p>
+      </div>
+
+      <div class="servizi-grid">
+        <div class="servizio-card">
+          <div>
+            <h3>Colore Sartoriale</h3>
+            <p>Sfumature, riflessi e tecniche personalizzate modellate sulle tue caratteristiche cromatiche ed espressive.</p>
+          </div>
+          <a href="#prenota" class="link-arrow">Prenota ora &rarr;</a>
+        </div>
+
+        <div class="servizio-card">
+          <div>
+            <h3>Taglio & Architettura</h3>
+            <p>Studio geometrico di forme e volumi in perfetta armonia con la struttura del viso e lo stile personale.</p>
+          </div>
+          <a href="#prenota" class="link-arrow">Prenota ora &rarr;</a>
+        </div>
+
+        <div class="servizio-card">
+          <div>
+            <h3>Armocromia</h3>
+            <p>Consulenza avanzata: quando la cromia del capello incontra i tuoi toni naturali per illuminare il volto.</p>
+          </div>
+          <a href="#prenota" class="link-arrow">Scopri il servizio &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LA CURA CONTINUA A CASA -->
+  <section id="cura-casa" class="section-padding" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="text-center">
+        <span class="subtitle">Home Care Routine</span>
+        <h2>La Cura Continua a Casa</h2>
+        <p style="color: var(--text-muted); max-width: 750px; margin: 1rem auto 0; font-size: 1.05rem;">
+          Il risultato non finisce quando esci dal salone. La cura dei capelli continua anche a casa.<br>
+          Per questo selezioniamo e proponiamo prodotti professionali, <strong>Philip Martin's</strong>, scelti per accompagnare le esigenze dei tuoi capelli e mantenere nel tempo il risultato ottenuto nel salone.<br><br>
+          <em>Non sai cosa utilizzare? Ti aiutiamo a trovare la routine più adatta a te.</em>
+        </p>
+      </div>
+
+      <!-- VETRINA PRODOTTI PHILIP MARTIN'S -->
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img-box">
+            <img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80&w=600" alt="Philip Martin's Shampoo">
+          </div>
+          <span class="product-brand">Philip Martin's</span>
+          <h4>Shampoo Organico & Nutritivo</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Detersione delicata per mantenere la brillantezza del colore e l'idratazione della cute.</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-box">
+            <img src="https://images.unsplash.com/photo-1608248597261-8131e4e32239?auto=format&fit=crop&q=80&w=600" alt="Philip Martin's Maschera Ristrutturante">
+          </div>
+          <span class="product-brand">Philip Martin's</span>
+          <h4>Maschera Ristrutturante</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Trattamento intensivo per capelli sfibrati, dona morbidezza e lucentezza naturale.</p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-box">
+            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=600" alt="Philip Martin's Siero Protettivo">
+          </div>
+          <span class="product-brand">Philip Martin's</span>
+          <h4>Siero Protettivo & Elixir</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Protezione termica e finitura seta senza appesantire lo styling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AMBASCIATA DELLA GIOIA -->
+  <section id="ambasciata" class="section-padding ambasciata-section text-center">
+    <div class="container">
+      <div class="ambasciata-box">
+        <span class="subtitle" style="color: var(--accent-gold);">Progetto & Valori</span>
+        <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Ambasciata della Gioia</h2>
+        <p style="font-size: 1.1rem; font-family: var(--font-heading); color: var(--accent-soft); letter-spacing: 0.05em; margin-bottom: 1.5rem;">
+          Un modo diverso di vivere la bellezza.
+        </p>
+        <p style="color: #D6D3D1; font-size: 1rem; line-height: 1.8; margin-bottom: 0;">
+          <strong>Capelli D'Angelo</strong> fa parte del progetto <strong>Ambasciata della Gioia</strong>, un percorso che mette al centro la persona, l'ascolto e la valorizzazione della propria immagine. Un approccio che condividiamo e che ritroviamo ogni giorno nel nostro modo di lavorare.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERCHÉ CAPELLI D'ANGELO -->
+  <section class="section-padding why-us-section text-center">
+    <div class="container">
+      <span class="subtitle">La Nostra Filosofia</span>
+      <h2>Perché Capelli D'Angelo</h2>
+      
+      <div class="why-us-content" style="margin-top: 1.5rem;">
+        <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto 2rem; font-size: 1.05rem;">
+          Non cerchiamo il risultato perfetto. Cerchiamo quello giusto per te.
+        </p>
+        <p style="color: var(--text-muted); max-width: 750px; margin: 0 auto 1rem; font-size: 0.95rem;">
+          Per noi professionalità significa ascoltare prima di proporre. Significa conoscere il capello, studiare il colore, aggiornarsi sulle tecniche e scegliere con attenzione prodotti e trattamenti.
+        </p>
+        <p style="color: var(--text-muted); max-width: 750px; margin: 0 auto; font-size: 0.95rem;">
+          Ma significa anche sapere che dietro ogni capello c'è una persona.<br>Ed è da quella che partiamo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERIA -->
+  <section id="galleria" class="section-padding">
+    <div class="container">
+      <div class="text-center">
+        <span class="subtitle">Portfolio & Armocromia</span>
+        <h2>Le Nostre Creazioni</h2>
+        <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto;">Luce, movimento e armonia cromatica realizzati su misura per ogni cliente.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800" alt="Peachy Red Sablage & Piega Morbida">
+          <div class="gallery-caption">Peachy Red Sablage & Piega Ondulata</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=800" alt="Sfumature Calde Armocromia">
+          <div class="gallery-caption">Sfumature Calde e Armocromia</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&q=80&w=800" alt="Taglio Sartoriale & Biondo Naturale">
+          <div class="gallery-caption">Taglio Sartoriale & Biondo Luminoso</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IL SALONE -->
+  <section id="salone" class="section-padding" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="feature-block">
+        <div class="feature-text">
+          <span class="subtitle">Lo Spazio a Rovereto</span>
+          <h2>Il Salone</h2>
+          <p><strong>Un luogo pensato per rigenerare mente e capelli.</strong></p>
+          <p>Luce naturale diffusa, design essenziale e materiali caldi. Il nostro atelier in Via Trieste a Rovereto è stato progettato per offrirti un'atmosfera riservata, elegante e lontana dalla confusione dei saloni tradizionali.</p>
+          <p>Un ambiente dove ogni dettaglio riflette la nostra attenzione per il tuo benessere.</p>
+        </div>
+        <div class="feature-img-box">
+          <img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&q=80&w=800" alt="Interno Salone Capelli D'Angelo Rovereto">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENSIONI -->
+  <section class="section-padding">
+    <div class="container text-center">
+      <span class="subtitle">Testimonianze</span>
+      <h2>Esperienze in Atelier</h2>
+      <p style="color: var(--text-muted);">Cosa dicono le clienti che hanno scelto il nostro metodo.</p>
+
+      <div class="reviews-grid">
+        <div class="review-card-modern">
+          <div class="stars">★★★★★</div>
+          <p>"Un livello di ascolto e consulenza mai provato prima. L'armocromia mi ha fatto scoprire toni che valorizzano davvero il mio viso."</p>
+          <span class="review-author">Elena R.</span>
+        </div>
+
+        <div class="review-card-modern">
+          <div class="stars">★★★★★</div>
+          <p>"Non è un semplice passaggio in salone, ma un momento di vera cura. Ho finalmente trovato il colore perfetto e naturale."</p>
+          <span class="review-author">Chiara M.</span>
+        </div>
+
+        <div class="review-card-modern">
+          <div class="stars">★★★★★</div>
+          <p>"Atmosfera rilassante e grande professionalità. Ti senti ascoltata dal primo minuto fino al risultato finale."</p>
+          <span class="review-author">Sofia T.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="section-padding instagram-section">
+    <div class="container">
+      <span class="subtitle" style="color: var(--accent-soft);">Social Feed</span>
+      <h2>Instagram</h2>
+      <p>Segui i nostri lavori quotidiani e i retroscena dall'atelier.</p>
+      <a href="https://www.instagram.com/capelli_d_angelo_?stkn=MWFxcGxrdGsyOXJidw==" target="_blank" rel="noopener" class="instagram-handle">@capelli_d_angelo_</a>
+      <div>
+        <a href="https://www.instagram.com/capelli_d_angelo_?stkn=MWFxcGxrdGsyOXJidw==" target="_blank" rel="noopener" class="btn btn-gold">Seguici su Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEZIONE PRENOTAZIONE -->
+  <section id="prenota" class="section-padding booking-section">
+    <div class="container">
+      <div class="booking-container text-center">
+        <span class="subtitle">Inizia il tuo percorso</span>
+        <h2>Prenota la tua Consulenza</h2>
+        <p style="max-width: 600px; margin: 1.5rem auto 0; color: var(--text-muted);">
+          Scegli la modalità che preferisci per fissare il tuo appuntamento in atelier.
+        </p>
+        
+        <div class="booking-options">
+          <a href="https://calendar.app.google/HQF8RkEpBKkU8xJt5" target="_blank" rel="noopener" class="btn btn-gold">
+            Prenota con Google
+          </a>
+          <a href="tel:+390464000000" class="btn btn-dark">
+            Chiama in Salone
+          </a>
+        </div>
+        
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2.5rem;">
+          Via Trieste, 42 — Rovereto (TN)
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo-brand" style="margin-bottom: 1rem;">
+            <span class="logo-main">CAPELLI</span>
+            <span class="logo-sub">d'Angelo</span>
+          </a>
+          <p>Hair Atelier · Armocromia · Cura del capello</p>
+          <p style="margin-top: 1rem; color: var(--text-light);">Via Trieste 42 · Rovereto (TN)</p>
+        </div>
+
+        <div class="footer-links">
+          <p style="color: var(--text-light); font-weight: 500; margin-bottom: 1rem;">Orari Atelier</p>
+          <ul style="font-size: 0.8rem; line-height: 1.8;">
+            <li>Mar - Gio: 09:00 - 18:00</li>
+            <li>Ven - Sab: 08:30 - 18:30</li>
+            <li>Dom - Lun: Chiuso</li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <p style="color: var(--text-light); font-weight: 500; margin-bottom: 1rem;">Link Rapidi</p>
+          <ul>
+            <li><a href="#metodo">Il Metodo</a></li>
+            <li><a href="#servizi">I Servizi</a></li>
+            <li><a href="#cura-casa">Cura a Casa</a></li>
+            <li><a href="#ambasciata">Filosofia</a></li>
+            <li><a href="#prenota">Prenota</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <p style="color: var(--text-light); font-weight: 500; margin-bottom: 1rem;">Legal & Social</p>
+          <ul>
+            <li><a href="https://www.instagram.com/capelli_d_angelo_?stkn=MWFxcGxrdGsyOXJidw==" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="javascript:void(0)" id="openPrivacy">Privacy Policy</a></li>
+            <li><a href="javascript:void(0)" id="openCookie">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; Capelli D'Angelo — Hair Atelier Rovereto. Tutti i diritti riservati.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL PRIVACY POLICY -->
+  <div class="policy-modal" id="privacyModal">
+    <div class="policy-modal-content">
+      <button class="policy-modal-close closePrivacy">&times;</button>
+      <h2>Privacy Policy</h2>
+      <p><strong>Informativa sul trattamento dei dati personali (Art. 13 Reg. UE 2016/679 - GDPR)</strong></p>
+
+      <h3>1. Titolare del Trattamento</h3>
+      <p>Il Titolare del Trattamento è <strong>Capelli D'Angelo Hair Atelier</strong>, con sede in Via Trieste 42, Rovereto (TN) - Email: info@capellidangelo.it.</p>
+
+      <h3>2. Tipologia di Dati Raccolti</h3>
+      <p>I dati personali raccolti tramite il sito includono dati identificativi e di contatto (nome, cognome, numero di telefono, e-mail) forniti volontariamente dall'utente per la prenotazione o per richieste di informazioni.</p>
+
+      <h3>3. Finalità del Trattamento</h3>
+      <p>I dati personali sono trattati esclusivamente per gestire le prenotazioni dei servizi e adempiere agli obblighi di legge.</p>
+    </div>
+  </div>
+
+  <!-- MODAL COOKIE POLICY -->
+  <div class="policy-modal" id="cookieModal">
+    <div class="policy-modal-content">
+      <button class="policy-modal-close closeCookie">&times;</button>
+      <h2>Cookie Policy</h2>
+      <p>I cookie sono piccoli file di testo usati per migliorare l'esperienza utente.</p>
+    </div>
+  </div>
+
+  <!-- BANNER COOKIES -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p>Utilizziamo cookie per migliorare la tua esperienza. Puoi accettarli o rifiutarli. Consulta la nostra <a href="javascript:void(0)" id="openCookieFromBanner" style="text-decoration: underline; color: #fff;">Cookie Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-outline" id="declineCookies" style="padding: 0.5rem 1rem; font-size: 0.7rem;">Rifiuta</button>
+      <button class="btn btn-gold" id="acceptCookies" style="padding: 0.5rem 1rem; font-size: 0.7rem;">Accetta</button>
+    </div>
+  </div>
+
+  <!-- SCRIPT JS -->
+  <script>
+    // Menu Mobile
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const navItems = document.querySelectorAll('.nav-item');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Modals
+    const privacyModal = document.getElementById('privacyModal');
+    const cookieModal = document.getElementById('cookieModal');
+    const openPrivacy = document.getElementById('openPrivacy');
+    const openCookie = document.getElementById('openCookie');
+    const openCookieBanner = document.getElementById('openCookieFromBanner');
+    const closeBtns = document.querySelectorAll('.policy-modal-close');
+
+    openPrivacy.onclick = () => privacyModal.style.display = 'block';
+    openCookie.onclick = () => cookieModal.style.display = 'block';
+    if(openCookieBanner) {
+      openCookieBanner.onclick = () => cookieModal.style.display = 'block';
+    }
+
+    closeBtns.forEach(btn => {
+      btn.onclick = () => {
+        privacyModal.style.display = 'none';
+        cookieModal.style.display = 'none';
+      };
+    });
+
+    window.onclick = (e) => {
+      if (e.target === privacyModal) privacyModal.style.display = 'none';
+      if (e.target === cookieModal) cookieModal.style.display = 'none';
+    };
+
+    // Banner Cookie
+    const cookieBanner = document.getElementById('cookieBanner');
+    const acceptCookies = document.getElementById('acceptCookies');
+    const declineCookies = document.getElementById('declineCookies');
+
+    if (localStorage.getItem('cookiesChoice')) {
+      cookieBanner.style.display = 'none';
+    }
+
+    acceptCookies.onclick = () => {
+      localStorage.setItem('cookiesChoice', 'accepted');
+      cookieBanner.style.display = 'none';
+    };
+
+    declineCookies.onclick = () => {
+      localStorage.setItem('cookiesChoice', 'declined');
+      cookieBanner.style.display = 'none';
+    };
+  </script>
+
+</body>
+</html>
