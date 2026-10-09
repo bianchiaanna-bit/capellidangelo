@@ -4,12 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Capelli D'Angelo | Hair Atelier & Armocromia a Rovereto</title>
-  
   <!-- Typography Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&family=Alex+Brush&display=swap" rel="stylesheet">
-  
   <style>
     :root {
       /* Palette Cromatica Minimal & Editorial */
@@ -17,31 +15,26 @@
       --bg-secondary: #F2ECE4;
       --bg-dark: #191716;
       --bg-card: #FFFFFF;
-      
       --text-main: #22201E;
       --text-muted: #6B6560;
       --text-light: #F2ECE4;
-      
       --accent-gold: #B89248;
       --accent-gold-hover: #9E7B3B;
       --border-color: #E2DAD0;
       --border-dark: #2E2A27;
-
       --font-heading: 'Cormorant Garamond', serif;
       --font-body: 'Manrope', sans-serif;
       --font-script: 'Alex Brush', cursive;
     }
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
-
     body {
       background-color: var(--bg-primary);
       color: var(--text-main);
@@ -50,7 +43,6 @@
       font-weight: 300;
       -webkit-font-smoothing: antialiased;
     }
-
     /* UNIFORMAZIONE GERARCHIA TITOLI */
     h1, h2, h3, h4 {
       font-family: var(--font-heading);
@@ -58,16 +50,12 @@
       letter-spacing: 0.02em;
       color: var(--text-main);
     }
-
-    /* Titoli principali h2 uniformi per tutte le sezioni */
     h2, .section-title {
       font-size: clamp(2.1rem, 3.8vw, 3.2rem) !important;
       line-height: 1.25 !important;
       font-weight: 500 !important;
       margin-bottom: 1.2rem;
     }
-
-    /* Sottotitoli/Titoli piccoli uniformi per tutte le sezioni */
     .subtitle {
       font-family: var(--font-body);
       font-size: 0.8rem !important;
@@ -78,8 +66,6 @@
       display: block !important;
       font-weight: 600 !important;
     }
-
-    /* Descrizioni di sezione uniformi */
     .section-desc {
       font-size: 1.05rem;
       color: var(--text-muted);
@@ -88,32 +74,29 @@
       line-height: 1.8;
       font-weight: 300;
     }
-
-    /* Enfasi e parole chiave */
     .highlight-gold {
       color: var(--accent-gold);
       font-style: italic;
     }
-
     a {
       color: inherit;
       text-decoration: none;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
-
     p {
       margin-bottom: 1rem;
     }
-
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 2rem;
     }
-
-    .text-center { text-align: center; }
-    .section-padding { padding: 7rem 0; }
-
+    .text-center {
+      text-align: center;
+    }
+    .section-padding {
+      padding: 7rem 0;
+    }
     /* LOGO BRAND */
     .logo-brand {
       display: flex;
@@ -122,7 +105,6 @@
       line-height: 1;
       text-decoration: none;
     }
-
     .logo-main {
       font-family: var(--font-heading);
       font-size: 1.6rem;
@@ -131,7 +113,6 @@
       color: var(--text-main);
       text-transform: uppercase;
     }
-
     .logo-sub {
       font-family: var(--font-script);
       font-size: 1.8rem;
@@ -139,7 +120,6 @@
       margin-top: -6px;
       margin-left: 2px;
     }
-
     /* BUTTONS */
     .btn {
       display: inline-flex;
@@ -156,46 +136,38 @@
       cursor: pointer;
       transition: all 0.35s ease;
     }
-
     .btn:hover {
       background: var(--text-main);
       color: var(--bg-primary);
     }
-
     .btn-gold {
       border-color: var(--accent-gold);
       background: var(--accent-gold);
       color: #FFF;
     }
-
     .btn-gold:hover {
       background: var(--accent-gold-hover);
       border-color: var(--accent-gold-hover);
       color: #FFF;
     }
-
     .btn-dark {
       background: var(--bg-dark);
       color: var(--text-light);
       border-color: var(--bg-dark);
     }
-
     .btn-dark:hover {
       background: transparent;
       color: var(--bg-dark);
     }
-
     .btn-outline-light {
       border-color: rgba(255, 255, 255, 0.4);
       color: var(--text-light);
     }
-
     .btn-outline-light:hover {
       border-color: #FFF;
       background: rgba(255, 255, 255, 0.1);
       color: #FFF;
     }
-
     /* HEADER & NAV */
     header {
       position: fixed;
@@ -203,24 +175,22 @@
       width: 100%;
       background: rgba(249, 247, 244, 0.94);
       backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       z-index: 1000;
       border-bottom: 1px solid var(--border-color);
     }
-
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       height: 90px;
     }
-
     .nav-links {
       display: flex;
       gap: 2.2rem;
       list-style: none;
       align-items: center;
     }
-
     .nav-links a.nav-item {
       font-size: 0.75rem;
       letter-spacing: 0.18em;
@@ -228,11 +198,9 @@
       color: var(--text-muted);
       font-weight: 500;
     }
-
     .nav-links a.nav-item:hover {
       color: var(--text-main);
     }
-
     .mobile-menu-toggle {
       display: none;
       background: none;
@@ -241,7 +209,6 @@
       padding: 0.5rem;
       z-index: 1002;
     }
-
     .mobile-menu-toggle span {
       display: block;
       width: 24px;
@@ -250,7 +217,6 @@
       margin: 6px 0;
       transition: all 0.3s ease;
     }
-
     /* HERO SECTION */
     .hero {
       position: relative;
@@ -263,7 +229,6 @@
       background: linear-gradient(180deg, rgba(25, 23, 22, 0.55) 0%, rgba(25, 23, 22, 0.65) 100%), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
       color: #FFF;
     }
-
     .hero h1 {
       font-size: clamp(2.5rem, 5vw, 4.2rem);
       line-height: 1.15;
@@ -271,7 +236,6 @@
       color: #FFF;
       font-weight: 400;
     }
-
     .hero p {
       font-size: 1.1rem;
       color: var(--border-color);
@@ -279,26 +243,22 @@
       margin: 0 auto 2.5rem;
       font-weight: 300;
     }
-
     .hero-buttons {
       display: flex;
       gap: 1.2rem;
       justify-content: center;
       flex-wrap: wrap;
     }
-
     /* INTRO EDITORIAL */
     .intro {
       background: var(--bg-secondary);
       border-bottom: 1px solid var(--border-color);
     }
-
     .editorial-content {
       max-width: 850px;
       margin: 0 auto;
       text-align: center;
     }
-
     .editorial-title {
       font-family: var(--font-heading);
       font-size: clamp(2.1rem, 3.8vw, 3.2rem);
@@ -307,14 +267,12 @@
       margin-bottom: 1.5rem;
       font-weight: 500;
     }
-
     .editorial-paragraph {
       font-size: 1.1rem;
       color: var(--text-muted);
       line-height: 1.8;
       margin-bottom: 2.5rem;
     }
-
     .editorial-quote-highlight {
       position: relative;
       font-family: var(--font-heading);
@@ -329,25 +287,29 @@
       border-left: 3px solid var(--accent-gold);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
     }
-
-    /* METODO & I NOSTRI SERVIZI IN SFONDO */
+    /* METODO */
     .metodo-section {
-      position: relative;
-      background: linear-gradient(180deg, rgba(25, 23, 22, 0.75) 0%, rgba(25, 23, 22, 0.85) 100%), url('immagini/sfondo_metodo.jpg') center/cover fixed no-repeat;
-      color: var(--text-light);
-    }
-
-    .metodo-section h2, .metodo-section .subtitle {
+  position: relative;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(25, 23, 22, 0.82) 0%,
+      rgba(25, 23, 22, 0.76) 50%,
+      rgba(25, 23, 22, 0.86) 100%
+    ),
+    url('immagini/sfondo_metodo.jpg') center/cover fixed no-repeat;
+  color: var(--text-light);
+}
+    .metodo-section h2,
+    .metodo-section .subtitle {
       color: var(--text-light) !important;
     }
-
     .metodo-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.8rem;
       margin-top: 3rem;
     }
-
     .metodo-card {
       border: 1px solid var(--border-dark);
       padding: 2.5rem 2rem;
@@ -355,13 +317,11 @@
       backdrop-filter: blur(5px);
       transition: all 0.35s ease;
     }
-
     .metodo-card:hover {
       transform: translateY(-4px);
       border-color: var(--accent-gold);
       background: rgba(255, 255, 255, 0.08);
     }
-
     .metodo-card h3 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
@@ -370,83 +330,219 @@
       align-items: center;
       gap: 0.75rem;
     }
-
     .metodo-card h3 svg {
       width: 22px;
       height: 22px;
       stroke: var(--accent-gold);
+      flex-shrink: 0;
     }
-
     .metodo-card p {
-      font-size: 0.9rem;
-      color: #A39D98;
-      margin: 0;
-    }
+  font-size: 0.92rem;
+  color: #C8C1BA;
+  margin: 0;
+  line-height: 1.8;
+}
+/* =========================================
+   SERVIZI — BOX ELEGANTI
+   ========================================= */
 
-    /* LISTINO SERVIZI ESTETICO (SOTTO IL METODO) */
-    .services-overview-box {
-      margin-top: 5rem;
-      padding-top: 3.5rem;
-      border-top: 1px solid var(--border-dark);
-      text-align: center;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+.services-section {
+  position: relative;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(25, 23, 22, 0.76) 0%,
+      rgba(25, 23, 22, 0.84) 100%
+    ),
+    url('immagini/sfondo_metodo.jpg') center/cover fixed no-repeat;
+  color: var(--text-light);
+  border-top: 1px solid var(--border-dark);
+}
 
-    .services-overview-box h3 {
-      font-size: 1.8rem;
-      color: var(--text-light);
-      margin-bottom: 2.5rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
+/* Titolo e sottotitolo */
 
-    .price-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.8rem;
-      text-align: left;
-    }
+.services-section h2,
+.services-section .subtitle {
+  color: var(--text-light) !important;
+}
 
-    .price-item {
-      padding-bottom: 1.2rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      transition: border-color 0.3s ease;
-    }
+/* Contenitore generale */
 
-    .price-item:hover {
-      border-bottom-color: var(--accent-gold);
-    }
+.services-overview-box {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
 
-    .price-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 0.3rem;
-    }
+/* Titolo della lista */
 
-    .price-title {
-      font-family: var(--font-heading);
-      font-size: 1.5rem;
-      color: var(--text-light);
-      font-weight: 500;
-      letter-spacing: 0.05em;
-    }
+.services-overview-box h3 {
+  font-size: 1.8rem;
+  color: var(--text-light);
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
 
-    .price-line {
-      flex-grow: 1;
-      border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
-      margin: 0 1rem;
-    }
+/* Lista dei servizi */
 
-    .price-desc {
-      font-size: 0.88rem;
-      color: #A39D98;
-      margin: 0;
-      font-weight: 300;
-      line-height: 1.5;
-    }
+.price-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  text-align: left;
+}
+
+/* Singolo box */
+
+.price-item {
+  position: relative;
+  padding: 1.6rem 1.5rem;
+  background: rgba(250, 247, 241, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s ease;
+  overflow: hidden;
+}
+
+/* Dettaglio decorativo dorato */
+
+.price-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--accent-gold);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.35s ease;
+}
+
+/* Effetto al passaggio del mouse */
+
+.price-item:hover {
+  background: rgba(250, 247, 241, 0.12);
+  border-color: var(--accent-gold);
+  transform: translateY(-3px);
+}
+
+.price-item:hover::before {
+  transform: scaleY(1);
+}
+
+/* Intestazione del servizio */
+
+.price-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.7rem;
+}
+
+/* Nome del servizio */
+
+.price-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--text-light);
+  font-weight: 500;
+  letter-spacing: 0.035em;
+  line-height: 1.35;
+}
+
+/* Linea decorativa */
+
+.price-line {
+  flex-grow: 1;
+  min-width: 15px;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+  margin: 0 0.3rem;
+  transform: translateY(-4px);
+}
+
+/* Descrizione */
+
+.price-desc {
+  font-size: 0.9rem;
+  color: #C5BEB5;
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* =========================================
+   RESPONSIVE — TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+  .services-overview-box {
+    max-width: 750px;
+  }
+
+  .price-list {
+    gap: 0.85rem;
+  }
+
+  .price-item {
+    padding: 1.4rem 1.2rem;
+  }
+
+  .price-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* =========================================
+   RESPONSIVE — MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+  .services-section {
+    background-attachment: scroll;
+  }
+
+  .services-overview-box h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.8rem;
+    letter-spacing: 0.07em;
+  }
+
+  .price-list {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .price-item {
+    padding: 1.25rem 1.1rem;
+  }
+
+  .price-title {
+    font-size: 1.25rem;
+  }
+
+  .price-desc {
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+
+  /* Su mobile niente effetti hover persistenti */
+  .price-item:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .price-item,
+  .price-item::before {
+    transition: none;
+  }
+}    
 
     /* PALLINE COLORATE ARMOCROMIA */
     .armocromia-dots-container {
@@ -458,7 +554,6 @@
       margin-bottom: 2.5rem;
       flex-wrap: wrap;
     }
-
     .color-dot {
       width: 34px;
       height: 34px;
@@ -468,19 +563,19 @@
       transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       cursor: pointer;
     }
-
     .color-dot:hover {
       transform: scale(1.28);
     }
-
     /* PRODOTTI CURA A CASA */
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 2rem;
       margin-top: 4rem;
     }
-
+    .products-pagination {
+      display: none;
+    }
     .product-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
@@ -488,11 +583,9 @@
       text-align: center;
       transition: all 0.35s ease;
     }
-
     .product-card:hover {
       border-color: var(--accent-gold);
     }
-
     .product-img-box {
       height: 250px;
       width: 100%;
@@ -503,17 +596,15 @@
       align-items: center;
       justify-content: center;
     }
-
     .product-img-box img {
       max-height: 85%;
+      max-width: 100%;
       object-fit: contain;
       transition: transform 0.5s ease;
     }
-
     .product-card:hover .product-img-box img {
       transform: scale(1.06);
     }
-
     .product-brand {
       font-size: 0.7rem;
       letter-spacing: 0.2em;
@@ -523,27 +614,46 @@
       display: block;
       font-weight: 600;
     }
-
     .product-card h4 {
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.45rem;
+      line-height: 1.2;
+      margin-bottom: 0.35rem;
     }
-
-    /* LAYOUT EDITORIAL PER PERCHÉ CAPELLI D'ANGELO */
+    .product-type {
+      color: var(--accent-gold);
+      font-size: 0.72rem;
+      line-height: 1.5;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .product-description {
+      color: var(--text-muted);
+      font-size: 0.84rem;
+      line-height: 1.75;
+      margin: 0;
+      text-align: left;
+    }
+    .footer-navigation {
+      /* La navigazione rimane visibile su desktop e viene nascosta su mobile. */
+    }
+    /* SEZIONE UNIFICATA: FILOSOFIA E SALONE */
+    .salone-unificato {
+      background: var(--bg-secondary);
+    }
     .editorial-filosofia-wrapper {
       position: relative;
       max-width: 1080px;
       margin: 0 auto;
-      padding: 2rem 0;
+      padding: 0 0 5rem;
     }
-
     .editorial-filosofia-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
       position: relative;
     }
-
     .editorial-filosofia-img {
       position: relative;
       height: 520px;
@@ -552,7 +662,6 @@
       overflow: hidden;
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
     }
-
     .editorial-filosofia-img img {
       width: 100%;
       height: 100%;
@@ -561,13 +670,11 @@
       filter: brightness(0.97);
       transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
     }
-
     .editorial-filosofia-img:hover img {
       transform: scale(1.03);
     }
-
     .editorial-filosofia-card {
-      background: var(--bg-secondary);
+      background: var(--bg-primary);
       padding: 4rem 3.5rem;
       margin-left: -80px;
       z-index: 2;
@@ -575,7 +682,6 @@
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.03);
       position: relative;
     }
-
     .editorial-filosofia-card::after {
       content: '';
       position: absolute;
@@ -587,21 +693,18 @@
       border-right: 2px solid var(--accent-gold);
       pointer-events: none;
     }
-
-    /* FEATURE SALONE */
     .feature-block {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
       align-items: center;
+      padding-top: 1rem;
     }
-
     .feature-text p {
       color: var(--text-muted);
       margin-bottom: 1.2rem;
       line-height: 1.8;
     }
-
     .location-box {
       margin-top: 2rem;
       padding-top: 1.5rem;
@@ -613,28 +716,191 @@
       align-items: center;
       gap: 0.6rem;
     }
-
     .location-box svg {
       width: 20px;
       height: 20px;
       stroke: var(--accent-gold);
       flex-shrink: 0;
     }
-
     .feature-img-box {
       height: 480px;
       width: 100%;
       overflow: hidden;
       border: 1px solid var(--border-color);
     }
-
     .feature-img-box img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
     }
-    
+    .feature-img-box:hover img {
+      transform: scale(1.03);
+    }
+   
 
+    /* =========================================
+   AMBASCIATA DELLA GIOIA
+   Composizione editoriale coordinata al salone
+   ========================================= */
+
+.ambasciata-section {
+  background: var(--bg-secondary);
+  color: var(--text-main);
+  padding: 2rem 0 6rem;
+}
+
+.ambasciata-box {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 3.5rem;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: 4rem;
+
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.035);
+}
+
+/* Dettaglio decorativo superiore */
+.ambasciata-box::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 64px;
+  height: 64px;
+  border-top: 2px solid var(--accent-gold);
+  border-right: 2px solid var(--accent-gold);
+  pointer-events: none;
+}
+
+/* Area del logo */
+.ambasciata-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  padding: 1.5rem;
+}
+
+.ambasciata-logo img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.18));
+}
+
+/* Area testuale */
+.ambasciata-content {
+  text-align: right;
+  padding: 1rem 0;
+}
+
+.ambasciata-eyebrow {
+  display: block;
+  margin-bottom: 1.2rem;
+  color: var(--accent-gold);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.ambasciata-content h2 {
+  color: var(--text-main) !important;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.ambasciata-content p {
+  max-width: 520px;
+  margin: 0 0 1.2rem auto;
+  color: var(--text-main);
+  line-height: 1.9;
+  font-size: 0.96rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .ambasciata-section {
+    padding: 1rem 0 4rem;
+  }
+
+  .ambasciata-box {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .ambasciata-logo {
+    padding: 0.5rem 1rem;
+  }
+
+  .ambasciata-logo img {
+    max-width: 220px;
+  }
+
+  .ambasciata-content {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .ambasciata-content p {
+    margin: 0 auto 1.2rem;
+  }
+
+  .ambasciata-content h2 {
+    font-size: clamp(1.7rem, 7vw, 2.2rem);
+  }
+
+  .ambasciata-box::before {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+
+/* Dettaglio decorativo dorato */
+.ambasciata-box::before {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 1px;
+  background: var(--accent-gold);
+  margin: 0 auto 2rem;
+}
+
+/* Titolo */
+.ambasciata-section h2 {
+  color: var(--text-main) !important;
+  margin-bottom: 1.5rem;
+}
+
+/* Testo */
+.ambasciata-box p {
+  max-width: 650px;
+  margin: 0 auto 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.9;
+}
+
+/* Adattamento mobile */
+@media (max-width: 768px) {
+  .ambasciata-section {
+    padding-top: 0;
+  }
+
+  .ambasciata-box {
+    padding: 3rem 1.4rem;
+  }
+}
     /* GALLERIA / MOSAICO CREAZIONI */
     .mosaic-grid {
       display: grid;
@@ -644,7 +910,6 @@
       width: 100%;
       overflow: hidden;
     }
-
     .mosaic-item {
       position: relative;
       overflow: hidden;
@@ -653,7 +918,6 @@
       border: none;
       min-width: 0;
     }
-
     .mosaic-item img {
       width: 100%;
       height: 100%;
@@ -661,11 +925,9 @@
       display: block;
       transition: transform 0.5s ease;
     }
-
     .mosaic-item:hover img {
       transform: scale(1.04);
     }
-
     /* Foto più grandi su desktop: 2, 10, 15 e 16 */
     .mosaic-item:nth-child(2),
     .mosaic-item:nth-child(10),
@@ -674,28 +936,511 @@
       grid-column: span 2;
       grid-row: span 2;
     }
-
     /* Tablet */
     @media (max-width: 900px) {
       .mosaic-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
       }
+      .editorial-filosofia-container {
+        grid-template-columns: 1fr;
+      }
+      .editorial-filosofia-card {
+        margin-left: 0;
+        margin-top: -50px;
+        padding: 2.5rem 2rem;
+      }
+      .editorial-filosofia-img {
+        height: 380px;
+      }
+      .feature-block {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
     }
+    /* RECENSIONI — EDITORIAL REVIEW SECTION */
+.reviews-section {
+  position: relative;
+  background: var(--bg-primary);
+  overflow: hidden;
+}
 
-    /* Smartphone: 2 colonne e 9 righe, senza spazi */
+.reviews-heading {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.reviews-heading .section-desc {
+  margin-bottom: 0;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 4rem;
+  text-align: left;
+  align-items: stretch;
+}
+
+.review-card-modern {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 2.4rem 2rem 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  transition: border-color 0.35s ease, transform 0.35s ease;
+}
+
+.review-card-modern:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-3px);
+}
+
+.review-card-modern::before {
+  content: "“";
+  display: block;
+  height: 2.8rem;
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--accent-gold);
+  opacity: 0.8;
+}
+
+.review-card-modern .stars {
+  color: var(--accent-gold);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  margin: 0 0 1.2rem;
+}
+
+.review-card-modern .review-text {
+  flex: 1;
+  font-family: var(--font-heading);
+  font-size: 1.32rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.review-card-modern .review-author-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.review-card-modern .review-author {
+  display: block;
+  margin: 0;
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.review-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-muted);
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.review-source svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.reviews-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 3rem;
+}
+
+.reviews-note {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.reviews-cta {
+  gap: 0.8rem;
+}
+
+.reviews-cta .review-arrow {
+  display: inline-block;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.reviews-cta:hover .review-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* Indicatori del carosello recensioni */
+.reviews-pagination {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .reviews-grid {
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+
+  .review-card-modern {
+    padding: 2rem 1.5rem 1.6rem;
+  }
+
+  .review-card-modern .review-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews-grid {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    margin-right: -1.1rem;
+    margin-left: -1.1rem;
+    padding: 0 1.1rem 0.6rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 1.1rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .reviews-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .review-card-modern {
+    flex: 0 0 88%;
+    scroll-snap-align: center;
+    padding: 2rem 1.5rem 1.6rem;
+  }
+
+  .review-card-modern:hover {
+    transform: none;
+  }
+
+  .review-card-modern .review-text {
+    font-size: 1.35rem;
+  }
+
+  .reviews-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.55rem;
+    margin-top: 1.2rem;
+  }
+
+  .reviews-pagination button {
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--border-color);
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+
+  .reviews-pagination button[aria-current="true"] {
+    background: var(--accent-gold);
+    transform: scale(1.35);
+  }
+
+  .reviews-footer {
+    margin-top: 2rem;
+  }
+}
+    
+    /* BOOKING */
+ .booking-container {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+  background: var(--bg-primary);
+  padding: 5.5rem 3rem;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.booking-container::before {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 1px;
+  margin: 0 auto 2rem;
+  background: var(--accent-gold);
+}
+
+.booking-container h2 {
+  margin-bottom: 1.2rem;
+}
+
+.booking-container .section-desc {
+  max-width: 540px;
+  margin: 0 auto 2rem;
+  line-height: 1.85;
+}
+
+.booking-options {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.booking-options .btn {
+  min-width: 220px;
+}    /* FOOTER */
+    footer {
+      background: var(--bg-dark);
+      color: #99938F;
+      padding: 5rem 0 2.5rem;
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border-dark);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+    .footer-brand .logo-main {
+      color: var(--text-light);
+    }
+    .footer-links ul {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 0.6rem;
+    }
+    .footer-links a:hover {
+      color: var(--accent-gold);
+    }
+    /* LOGHI E LINK SOCIAL NEL FOOTER */
+    .social-links-container {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 0.8rem;
+      flex-wrap: wrap;
+    }
+    .social-link-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-light);
+      transition: color 0.3s ease;
+    }
+    .social-link-item:hover {
+      color: var(--accent-gold);
+    }
+    .social-icon-svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+    .footer-bottom {
+      border-top: 1px solid var(--border-dark);
+      padding-top: 2rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #77726E;
+    }
+    /* CONTENUTI AGGIUNTIVI DEL MENU MOBILE */
+    .mobile-menu-close, .mobile-menu-close-row, .mobile-menu-footer { display:none; }
+    .mobile-menu-socials { display:flex; justify-content:center; align-items:center; gap:1.4rem; margin-bottom:1.2rem; }
+    .mobile-menu-socials a { display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border:1px solid var(--border-color); border-radius:50%; color:var(--text-main); }
+    .mobile-menu-socials a:hover { color:var(--accent-gold); border-color:var(--accent-gold); }
+    .mobile-menu-socials svg { width:19px; height:19px; fill:currentColor; }
+    .mobile-menu-contact { font-size:.78rem; line-height:1.8; color:var(--text-muted); text-align:center; }
+    .mobile-menu-contact p { margin:.25rem 0; }
+    .mobile-menu-contact a { color:var(--text-main); text-decoration:none; }
+    .mobile-menu-contact a:hover { color:var(--accent-gold); }
+    /* Quando il pannello è aperto, la chiusura è affidata alla sola X interna. */
+    .mobile-menu-toggle.active { opacity:0; visibility:hidden; pointer-events:none; }
+    .mobile-menu-toggle.active span:first-child { transform:translateY(3.5px) rotate(45deg); }
+    .mobile-menu-toggle.active span:last-child { transform:translateY(-3.5px) rotate(-45deg); }
+
+    /* FILOSOFIA — DETTAGLIO DECORATIVO ORO */
+.editorial-filosofia-card {
+  position: relative;
+}
+
+    /* RESPONSIVE */
     @media (max-width: 768px) {
+      /* Footer mobile: niente colonna Navigazione, contenuti ordinati e leggibili. */
+      footer {
+        padding: 3.5rem 0 1.8rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 2.5rem;
+      }
+      .footer-navigation {
+        display: none;
+      }
+      .footer-brand .logo-brand {
+        margin-bottom: 1.1rem !important;
+      }
+      .footer-brand p {
+        max-width: 340px;
+        line-height: 1.8;
+        margin-bottom: 0;
+      }
+      footer .footer-links h4 {
+        margin-bottom: 0.8rem !important;
+      }
+      footer .footer-links ul {
+        margin-bottom: 0.9rem;
+      }
+      footer .social-links-container {
+        gap: 1.2rem;
+        margin-top: 1rem;
+      }
+      footer .footer-links:last-child p {
+        margin-bottom: 0;
+        font-size: 0.85rem !important;
+        color: #99938F !important;
+      }
+      .footer-bottom {
+        padding-top: 1.4rem;
+      }
+      /* Prodotti: carosello orizzontale touch su mobile */
+      .products-grid {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2.5rem;
+        margin-right: -1.1rem;
+        margin-left: -1.1rem;
+        padding: 0 1.1rem 1rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: 1.1rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .products-grid::-webkit-scrollbar { display: none; }
+      .product-card {
+        flex: 0 0 86%;
+        min-width: 0;
+        scroll-snap-align: center;
+        padding: 1.5rem 1.2rem;
+      }
+      .product-img-box { height: 230px; }
+      .products-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .55rem;
+        margin: .6rem 0 0;
+      }
+      .products-pagination button {
+        width: 7px;
+        height: 7px;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: var(--border-color);
+        cursor: pointer;
+        transition: transform .2s ease, background .2s ease;
+      }
+      .products-pagination button[aria-current="true"] {
+        background: var(--accent-gold);
+        transform: scale(1.35);
+      }
+      nav { position:relative; }
+      .mobile-menu-toggle { display:block; margin-left:auto; order:2; flex-shrink:0; }
+      .nav-links {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        /* Foto editoriale molto tenue: capelli a sinistra, spazio panna a destra. */
+        background-color: var(--bg-primary);
+        background-image: linear-gradient(rgba(249, 247, 244, 0.76), rgba(249, 247, 244, 0.76)), url('immagini/menu_foto.jpg');
+        background-position: left center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.4s ease;
+        padding: 5rem 2rem 15rem;
+        z-index: 1001;
+        overflow-y: auto;
+      }
+      .nav-links.active {
+        left: 0;
+      }
+      .nav-links li {
+        text-align: center;
+      }
+      .nav-links a.nav-item {
+        font-size: 0.85rem;
+      }
+      .nav-links .mobile-menu-close-row { display:block; position:absolute; top:1.2rem; right:1.4rem; text-align:right; }
+      .mobile-menu-close { display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border:1px solid var(--border-color); border-radius:50%; background:transparent; color:var(--text-main); font-family:var(--font-body); font-size:2rem; font-weight:300; line-height:1; cursor:pointer; }
+      .mobile-menu-close:hover { border-color:var(--accent-gold); color:var(--accent-gold); }
+      .nav-links .mobile-menu-footer { display:block; position:absolute; left:2rem; right:2rem; bottom:max(1.5rem, env(safe-area-inset-bottom)); text-align:center; padding-top:1.2rem; border-top:1px solid var(--border-color); }
+
+      .editorial-quote-highlight {
+        padding: 1.5rem 1.2rem;
+      }
+      .ambasciata-box {
+        padding: 2.5rem 1.5rem;
+      }
+      .booking-container {
+        padding: 3rem 1.5rem;
+      }
+      .booking-options {
+        flex-direction: column;
+      }
+      .booking-options .btn {
+        width: 100%;
+      }
       .mosaic-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 0;
         margin-top: 2rem;
       }
-
       .mosaic-item {
         grid-column: span 1;
         grid-row: span 1;
         aspect-ratio: 4 / 5;
       }
-
       /* Su mobile tutte le foto hanno dimensioni uniformi */
       .mosaic-item:nth-child(2),
       .mosaic-item:nth-child(10),
@@ -704,689 +1449,829 @@
         grid-column: span 1;
         grid-row: span 1;
       }
-    }
-
-    /* RECENSIONI */
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 4rem;
-    }
-
-    .review-card-modern {
-      background: var(--bg-card);
-      padding: 3rem 2rem;
-      border: 1px solid var(--border-color);
-      text-align: left;
-    }
-
-    .stars {
-      color: var(--accent-gold);
-      font-size: 0.85rem;
-      letter-spacing: 3px;
-      margin-bottom: 1.5rem;
-    }
-
-    .review-author {
-      font-family: var(--font-heading);
-      font-size: 1.1rem;
-      color: var(--accent-gold);
-      display: block;
-      margin-top: 1.5rem;
-    }
-
-    /* AMBASCIATA DELLA GIOIA */
-    .ambasciata-section {
-      background: var(--bg-dark);
-      color: var(--text-light);
-    }
-
-    .ambasciata-box {
-      max-width: 850px;
-      margin: 0 auto;
-      border: 1px solid var(--border-dark);
-      padding: 4.5rem 3.5rem;
-      background: rgba(255, 255, 255, 0.015);
-    }
-
-    .ambasciata-section h2 {
-      color: var(--text-light) !important;
-    }
-
-    /* BOOKING */
-    .booking-section {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border-color);
-    }
-
-    .booking-container {
-      max-width: 850px;
-      margin: 0 auto;
-      background: var(--bg-card);
-      padding: 5rem 3rem;
-      border: 1px solid var(--border-color);
-    }
-
-    .booking-options {
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-      margin-top: 3rem;
-      flex-wrap: wrap;
-    }
-
-    /* FOOTER */
-    footer {
-      background: var(--bg-dark);
-      color: #99938F;
-      padding: 5rem 0 2.5rem;
-      font-size: 0.85rem;
-      border-top: 1px solid var(--border-dark);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 3rem;
-      margin-bottom: 4rem;
-    }
-
-    .footer-brand .logo-main { color: var(--text-light); }
-    
-    .footer-links ul { list-style: none; }
-    .footer-links li { margin-bottom: 0.6rem; }
-    .footer-links a:hover { color: var(--accent-gold); }
-
-    /* LOGHI E LINK SOCIAL NEL FOOTER */
-    .social-links-container {
-      display: flex;
-      gap: 1.2rem;
-      margin-top: 0.8rem;
-    }
-
-    .social-link-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--text-light);
-      transition: color 0.3s ease;
-    }
-
-    .social-link-item:hover {
-      color: var(--accent-gold);
-    }
-
-    .social-icon-svg {
-      width: 18px;
-      height: 18px;
-      fill: currentColor;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid var(--border-dark);
-      padding-top: 2rem;
-      text-align: center;
-      font-size: 0.75rem;
-      color: #77726E;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .editorial-filosofia-container { grid-template-columns: 1fr; }
-      .editorial-filosofia-card { margin-left: 0; margin-top: -50px; padding: 2.5rem 2rem; }
-      .editorial-filosofia-img { height: 380px; }
-      .feature-block { grid-template-columns: 1fr; gap: 2.5rem; }
-      .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    }
-
-    @media (max-width: 768px) {
-      .mobile-menu-toggle { display: block; }
-
-      .nav-links {
-        position: fixed;
-        top: 0;
-        left: 100%;
-        width: 100%;
-        height: 100vh;
-        background: var(--bg-primary);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: left 0.4s ease;
-        padding: 2rem;
-        z-index: 1001;
+      .section-padding {
+        padding: 5rem 0;
       }
-
-      .nav-links.active { left: 0; }
-
-      .editorial-quote-highlight { padding: 1.5rem 1.2rem; }
-      .ambasciata-box { padding: 2.5rem 1.5rem; }
-      .booking-container { padding: 3rem 1.5rem; }
-      .booking-options { flex-direction: column; }
-      .booking-options .btn { width: 100%; }
+      .hero {
+        padding-top: 170px;
+        padding-bottom: 90px;
+        min-height: 85vh;
+      }
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero-buttons .btn {
+        width: 100%;
+        max-width: 340px;
+      }
+      .feature-img-box {
+        height: 350px;
+      }
+      .editorial-filosofia-wrapper {
+        padding-bottom: 3rem;
+      }
+      .editorial-filosofia-img {
+        height: 340px;
+      }
+      .editorial-filosofia-card {
+        margin-top: -35px;
+        padding: 2rem 1.5rem;
+      }
+      .price-header {
+        gap: 0.5rem;
+      }
+      .price-title {
+        font-size: 1.3rem;
+      }
+      .price-line {
+        margin: 0 0.4rem;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
     }
   </style>
 </head>
 <body>
-
   <!-- HEADER -->
   <header>
-    <div class="container nav">
-      <a href="#" class="logo-brand">
-        <span class="logo-main">CAPELLI</span>
-        <span class="logo-sub">d'Angelo</span>
-      </a>
-      
-      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Menu">
-        <span></span>
-        <span></span>
-      </button>
-
-      <ul class="nav-links" id="navLinks">
+    <div class="container">
+      <nav aria-label="Navigazione principale">
+        <a href="#inizio" class="logo-brand" aria-label="Capelli D'Angelo - Home">
+          <span class="logo-main">CAPELLI</span>
+          <span class="logo-sub">d'Angelo</span>
+        </a>
+        <button
+          class="mobile-menu-toggle"
+          id="menuToggle"
+          aria-label="Apri il menu"
+          aria-controls="navLinks"
+          aria-expanded="false"
+          type="button"
+        >
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li class="mobile-menu-close-row"><button class="mobile-menu-close" id="menuClose" type="button" aria-label="Chiudi il menu">&times;</button></li>
         <li><a href="#metodo" class="nav-item">Il Metodo</a></li>
-        <li><a href="#creazioni" class="nav-item">Creazioni</a></li>
-        <li><a href="#cura-casa" class="nav-item">Cura a Casa</a></li>
-        <li><a href="#salone" class="nav-item">Salone</a></li>
-        <li><a href="#prenota" class="nav-item">Prenota</a></li>
-        <li>
-          <a href="#prenota" class="btn btn-gold" style="padding: 0.65rem 1.6rem; font-size: 0.7rem;">Consulenza</a>
+          <li><a href="#servizi" class="nav-item">Servizi</a></li>
+          <li><a href="#creazioni" class="nav-item">Creazioni</a></li>
+          <li><a href="#cura-casa" class="nav-item">Cura a Casa</a></li>
+          <li>
+            <a href="#prenota" class="btn btn-gold" style="padding: 0.65rem 1.6rem; font-size: 0.7rem;">Prenota</a>
+          </li>
+        <li class="mobile-menu-footer">
+          <div class="mobile-menu-socials" aria-label="Seguici sui social">
+            <a href="https://www.instagram.com/capelli_d_angelo_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/></svg></a>
+            <a href="https://www.facebook.com/capellidangelorovereto/?locale=it_IT" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3V13h2.8v8h3.4Z"/></svg></a>
+            <a href="https://wa.me/393396577389" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9.7 9.7 0 0 0-8.3 14.7L2.4 22l5.4-1.4A9.8 9.8 0 1 0 12 2Zm0 2a7.7 7.7 0 0 1 0 15.4 7.6 7.6 0 0 1-3.9-1.1l-.4-.2-2.9.8.8-2.8-.3-.5A7.7 7.7 0 0 1 12 4Z"/></svg></a>
+          </div>
+          <div class="mobile-menu-contact">
+            <p><strong>Capelli D'Angelo</strong><br>Via Trieste 42, 38068 Rovereto (TN)</p>
+            <p><a href="tel:+393396577389">339 6577389</a> · <a href="tel:+390464431296">0464 431296</a></p>
+          </div>
         </li>
-      </ul>
+        </ul>
+      </nav>
     </div>
   </header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <span class="subtitle">Rovereto</span>
-      <h1>Prima di scegliere il colore,<br>ascoltiamo te.</h1>
-      <p>Consulenza sartoriale, armocromia e cura profonda del capello a Rovereto.</p>
-      <div class="hero-buttons">
-        <a href="#prenota" class="btn btn-gold">Prenota una consulenza</a>
-        <a href="#metodo" class="btn btn-outline-light">Scopri il nostro metodo</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- INTRO EDITORIAL -->
-  <section class="section-padding intro">
-    <div class="container">
-      <div class="editorial-content">
-        <h2 class="editorial-title">I capelli non sono tutti uguali. <span class="highlight-gold">E nemmeno le persone.</span></h2>
-        <p class="editorial-paragraph">
-          Per questo, prima di parlare di trattamento, partiamo dall'<span class="highlight-gold">ascolto profondo</span>. Osserviamo la struttura e comprendiamo le tue vere esigenze.
-        </p>
-        
-        <!-- Frase Evidenziata con Barra Verticale Dorata -->
-        <div class="editorial-quote-highlight">
-          Non vendiamo solo servizi di parruccheria. Creiamo uno <span class="highlight-gold">spazio di ascolto</span> e valorizzazione sartoriale della tua immagine
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inizio">
+      <div class="container">
+        <span class="subtitle">Rovereto</span>
+        <h1>Prima di scegliere il colore,<br>ascoltiamo te.</h1>
+        <p>Consulenza sartoriale, armocromia e cura profonda del capello a Rovereto.</p>
+        <div class="hero-buttons">
+          <a href="#prenota" class="btn btn-gold">Prenota una consulenza</a>
+          <a href="#metodo" class="btn btn-outline-light">Scopri il nostro metodo</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- METODO & I NOSTRI SERVIZI IN SFONDO -->
-  <section id="metodo" class="section-padding metodo-section">
-    <div class="container text-center">
-      <span class="subtitle">Concept Atelier</span>
-      <h2>Il Nostro Metodo</h2>
-      <p class="section-desc" style="color: #A39D98;">
-        <em>Ascoltare. Capire. Valorizzare.</em> Un percorso costruito interamente intorno alla tua <span class="highlight-gold">unicità</span>.
-      </p>
-
-      <div class="metodo-grid">
-        <div class="metodo-card">
-          <h3>
-            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"/></svg>
-            Ascolto
-          </h3>
-          <p>Ci prendiamo il tempo per comprendere i tuoi desideri e ciò che desideri comunicare con il tuo look.</p>
-        </div>
-
-        <div class="metodo-card">
-          <h3>
-            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.46 6.288a15.99 15.99 0 00-4.648 4.763m3.42 3.42a6.761 6.761 0 01-1.436 1.436"/></svg>
-            Armonia
-          </h3>
-          <p>Analizziamo i tratti e le proporzioni per impostare un lavoro coerente con la tua immagine.</p>
-        </div>
-
-        <div class="metodo-card">
-          <h3>
-            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
-            Colore
-          </h3>
-          <p>Tecniche avanzate di colorazione sartoriale concepite esclusivamente per esaltare la tua persona.</p>
-        </div>
-
-        <div class="metodo-card">
-          <h3>
-            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
-            Cura
-          </h3>
-          <p>Trattamenti mirati a preservare salute, luminosità e qualità del capello nel tempo.</p>
-        </div>
-      </div>
-
-      <!-- LISTINO PREZZI SERVIZI (Senza prezzi) -->
-      <div class="services-overview-box">
-        <h3>I Nostri Servizi</h3>
-        <div class="price-list">
-          
-          <div class="price-item">
-            <div class="price-header">
-              <span class="price-title">Colore</span>
-              <span class="price-line"></span>
-            </div>
-            <p class="price-desc">Sfumature, riflessi e tonalità costruite sulle tue caratteristiche.</p>
-          </div>
-
-          <div class="price-item">
-            <div class="price-header">
-              <span class="price-title">Taglio</span>
-              <span class="price-line"></span>
-            </div>
-            <p class="price-desc">Forma, movimento e proporzione in equilibrio con il tuo stile.</p>
-          </div>
-
-          <div class="price-item">
-            <div class="price-header">
-              <span class="price-title">Armocromia</span>
-              <span class="price-line"></span>
-            </div>
-            <p class="price-desc">Una consulenza per comprendere i colori che ti valorizzano.</p>
-          </div>
-
-          <div class="price-item">
-            <div class="price-header">
-              <span class="price-title">Trattamenti</span>
-              <span class="price-line"></span>
-            </div>
-            <p class="price-desc">Percorsi mirati per mantenere qualità, luminosità e benessere del capello.</p>
-          </div>
-
-          <div class="price-item">
-            <div class="price-header">
-              <span class="price-title">Styling</span>
-              <span class="price-line"></span>
-            </div>
-            <p class="price-desc">Il tocco finale che completa il risultato.</p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LA NOSTRA SPECIALIZZAZIONE -->
-  <section class="section-padding text-center" style="background: var(--bg-primary);">
-    <div class="container">
-      <span class="subtitle">La nostra specializzazione</span>
-      <h2>
-        Il colore giusto non è quello che scegli. <br><span class="highlight-gold">È quello che ti valorizza.</span>
-      </h2>
-      <p class="section-desc">
-        Ogni colore nasce dall'incontro tra desiderio, caratteristiche naturali e conoscenza tecnica. Il risultato deve essere bello oggi, ma soprattutto <span class="highlight-gold">sentirti tuo</span>.
-      </p>
-      <div>
-        <a href="#prenota" class="btn btn-gold">Parliamo del tuo colore</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ASCOLTO & ARMOCROMIA -->
-  <section class="section-padding text-center" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-    <div class="container">
-      <span class="subtitle">Ascolto & Armocromia</span>
-      <h2>
-        Il colore parte <span class="highlight-gold">da te.</span>
-      </h2>
-      <p class="section-desc">
-        L'armocromia aiuta a comprendere quali tonalità dialogano meglio con il tuo incarnato, con i tuoi colori naturali e con la tua immagine. Non si tratta di seguire una regola, ma di <span class="highlight-gold">trovare una direzione</span>.
-      </p>
-
-      <!-- Palline Colorate dell'Armocromia -->
-      <div class="armocromia-dots-container">
-        <div class="color-dot" style="background-color: #E2B29F;" title="Cipria caldo"></div>
-        <div class="color-dot" style="background-color: #C87D55;" title="Terracotta"></div>
-        <div class="color-dot" style="background-color: #925035;" title="Nocciola intenso"></div>
-        <div class="color-dot" style="background-color: #DDA15E;" title="Miele dorato"></div>
-        <div class="color-dot" style="background-color: #BC6C25;" title="Rame caldo"></div>
-        <div class="color-dot" style="background-color: #D4A373;" title="Sabbia"></div>
-        <div class="color-dot" style="background-color: #E0C3FC;" title="Lilla freddo"></div>
-        <div class="color-dot" style="background-color: #8E9AAF;" title="Salvia polvere"></div>
-        <div class="color-dot" style="background-color: #4A5759;" title="Antracite freddo"></div>
-        <div class="color-dot" style="background-color: #3D5A80;" title="Ottanio avvolgente"></div>
-      </div>
-
-      <div>
-        <a href="#prenota" class="btn btn-dark">Prenota una consulenza</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- LE NOSTRE CREAZIONI -->
-  <section id="creazioni" class="section-padding">
-    <div class="container text-center">
-      <span class="subtitle">Portfolio & Armocromia</span>
-      <h2>Lasciati ispirare</h2>
-      <p class="section-desc">
-        Una selezione di colori, texture e trasformazioni per iniziare a <span class="highlight-gold">immaginare il tuo prossimo look</span>.
-      </p>
-
-      <!-- Mosaico Foto: 18 creazioni reali -->
-      <div class="mosaic-grid">
-
-        <div class="mosaic-item">
-          <img src="immagini/creazioni/taglio_1.jpg" alt="Creazione capelli 1" loading="lazy">
-        </div>
-
-        <div class="mosaic-item">
-          <img src="immagini/creazioni/taglio_2.jpg" alt="Creazione capelli 2" loading="lazy">
-        </div>
-
-        <div class="mosaic-item">
-          <img src="immagini/creazioni/taglio_3.jpg" alt="Creazione capelli 3" loading="lazy">
-        </div>
-
-        <div class="mosaic-item">
-          <img src="immagini/creazioni/taglio_4.jpg" alt="Creazione capelli 4" loading="lazy">
-        </div>
-
-        <div class="mosaic-item">
-          <img src="immagini/creazioni/taglio_5.jpg" alt="Creazione capelli 5" loading="lazy">
-        </div>
-
-        <div class="mosaic-item">
-          <img src="immagini/creazioni/taglio_6.jpg" alt="Creazione capelli 6" loading="lazy">
-        </div>
-
-        <div class="mosaic-item">
-          <img src="immagini/creazioni/taglio_7.jpg" alt="Creazione capelli 7" loading="lazy">
-        </div>
-
-        <div class="mosaic-item">
-          <img src="immagini/creazioni/taglio_8.jpg" alt="Creazione capelli 8" loading="lazy">
-        </div>
-
-        <div class="mosaic-item">
-          <img src="immagini/creazioni/taglio_9.jpg" alt="Creazione capelli 9" loading="lazy">
-        </div>
-
-        <div class="mosaic-item">
-          <img src="immagini/creazioni/taglio_10.jpg" alt="Creazione capelli 10" loading="lazy">
-        </div>
-
-        <div class="mosaic-item">
-          <img src="immagini/creazioni/taglio_11.jpg" alt="Creazione capelli 11" loading="lazy">
-        </div>
-
-        <div class="mosaic-item">
-          <img src="immagini/creazioni/taglio_12.jpg" alt="Creazione capelli 12" loading="lazy">
-        </div>
-
-        <div class="mosaic-item">
-          <img src="immagini/creazioni/taglio_13.jpg" alt="Creazione capelli 13" loading="lazy">
-        </div>
-
-        <div class="mosaic-item">
-          <img src="immagini/creazioni/taglio_14.jpg" alt="Creazione capelli 14" loading="lazy">
-        </div>
-
-        <div class="mosaic-item">
-          <img src="immagini/creazioni/taglio_15.jpg" alt="Creazione capelli 15" loading="lazy">
-        </div>
-
-        <div class="mosaic-item">
-          <img src="immagini/creazioni/taglio_16.jpg" alt="Creazione capelli 16" loading="lazy">
-        </div>
-
-        <div class="mosaic-item">
-          <img src="immagini/creazioni/taglio_17.jpg" alt="Creazione capelli 17" loading="lazy">
-        </div>
-
-        <div class="mosaic-item">
-          <img src="immagini/creazioni/taglio_18.jpg" alt="Creazione capelli 18" loading="lazy">
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- LA CURA CONTINUA A CASA -->
-  <section id="cura-casa" class="section-padding" style="background: var(--bg-secondary);">
-    <div class="container">
-      <div class="text-center">
-        <span class="subtitle">Home Care Routine</span>
-        <h2>La Cura Continua a Casa</h2>
-        <p class="section-desc">
-          Il risultato non finisce quando esci dal salone. La cura dei capelli continua anche nel quotidiano.<br>
-          Per questo selezioniamo e proponiamo prodotti professionali, <strong style="color: var(--text-main);">Philip Martin's</strong>, scelti per accompagnare lesigenze dei tuoi capelli e <span class="highlight-gold">mantenere nel tempo il risultato</span> ottenuto nel salone.<br><br>
-          <em>Non sai cosa utilizzare? Ti aiutiamo a trovare la routine più adatta a te.</em>
-        </p>
-      </div>
-
-      <div class="products-grid">
-        <div class="product-card">
-          <div class="product-img-box">
-            <img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80&w=600" alt="Philip Martin's Shampoo">
-          </div>
-          <span class="product-brand">Philip Martin's</span>
-          <h4>Shampoo Organico & Nutritivo</h4>
-          <p style="font-size: 0.85rem; color: var(--text-muted);">Detersione delicata per mantenere la brillantezza del colore e l'idratazione della cute.</p>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-box">
-            <img src="https://images.unsplash.com/photo-1608248597261-8131e4e32239?auto=format&fit=crop&q=80&w=600" alt="Philip Martin's Maschera Ristrutturante">
-          </div>
-          <span class="product-brand">Philip Martin's</span>
-          <h4>Maschera Ristrutturante</h4>
-          <p style="font-size: 0.85rem; color: var(--text-muted);">Trattamento intensivo per capelli sfibrati, dona morbidezza e lucentezza naturale.</p>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-box">
-            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=600" alt="Philip Martin's Siero Protettivo">
-          </div>
-          <span class="product-brand">Philip Martin's</span>
-          <h4>Siero Protettivo & Elixir</h4>
-          <p style="font-size: 0.85rem; color: var(--text-muted);">Protezione termica e finitura seta senza appesantire lo styling.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PERCHÉ CAPELLI D'ANGELO (LAYOUT EDITORIAL SOVRAPPOSTO) -->
-  <section class="section-padding">
-    <div class="container">
-      <div class="editorial-filosofia-wrapper">
-        <div class="editorial-filosofia-container">
-          
-          <div class="editorial-filosofia-img">
-            <img src="immagini/chisiamo_foto.jpg" alt="Il proprietario di Capelli D'Angelo al lavoro">
-          </div>
-
-          <div class="editorial-filosofia-card">
-            <span class="subtitle" style="margin-bottom: 0.5rem !important;">La Nostra Filosofia</span>
-            <h2 style="font-size: clamp(2rem, 3.2vw, 2.7rem) !important; margin-bottom: 1.5rem;">Perché Capelli D'Angelo</h2>
-            <p style="font-size: 1.1rem; line-height: 1.85; color: var(--text-muted); margin: 0;">
-              Dietro ogni risultato, c'è prima di tutto una <span class="highlight-gold">persona che ascolta, osserva e consiglia</span>. L'idea di Capelli D'Angelo nasce da questo: creare un luogo in cui <span class="highlight-gold">tecnica, gusto personale e attenzione</span> possono incontrarsi. Qui il lavoro incomincia prima ancora che inizi il servizio.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- IL SALONE -->
-  <section id="salone" class="section-padding" style="background: var(--bg-secondary);">
-    <div class="container">
-      <div class="feature-block">
-        <div class="feature-text">
-          <span class="subtitle">Lo Spazio a Rovereto</span>
-          <h2>Il Salone</h2>
-          <p style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--text-main); font-style: italic; margin-bottom: 1rem;">
-            Un luogo pensato per <span class="highlight-gold">rigenerare mente e capelli</span>.
+    </section>
+    <!-- INTRO EDITORIAL -->
+    <section class="section-padding intro">
+      <div class="container">
+        <div class="editorial-content">
+          <h2 class="editorial-title">
+            I capelli non sono tutti uguali.
+            <span class="highlight-gold">E nemmeno le persone.</span>
+          </h2>
+          <p class="editorial-paragraph">
+            Per questo, prima di parlare di trattamento, partiamo dall'
+            <span class="highlight-gold">ascolto profondo</span>.
+            Osserviamo la struttura e comprendiamo le tue vere esigenze.
           </p>
-          <p>Luce naturale diffusa, design essenziale e materiali caldi. Il nostro atelier a Rovereto è stato progettato per offrirti un'atmosfera riservata, elegante e lontana dalla confusione dei saloni tradizionali.</p>
-          <p>Un ambiente dove ogni dettaglio riflette la nostra attenzione per il tuo benessere. <span class="highlight-gold">Luce, materiali e silenzio</span>. Abbiamo immaginato il salone come uno spazio diverso dalla frenesia dei classici ambienti di parruccheria. Un luogo in cui dedicarsi un momento, lasciarsi consigliare e uscire sentendosi bene.</p>
-          
-          <!-- Indirizzo Separato -->
-          <div class="location-box">
-            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-            </svg>
-            <span><strong>Ci trovi a:</strong> Via Trieste 42, 38068 Rovereto (TN)</span>
+          <div class="editorial-quote-highlight">
+            Non vendiamo solo servizi di parruccheria. Creiamo uno
+            <span class="highlight-gold">spazio di ascolto</span>
+            e valorizzazione sartoriale della tua immagine.
           </div>
         </div>
-        <div class="feature-img-box">
-          <img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&q=80&w=800" alt="Interno Salone Capelli D'Angelo Rovereto">
-        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- RECENSIONI -->
-  <section class="section-padding">
-    <div class="container text-center">
-      <span class="subtitle">Testimonianze</span>
-      <h2>Esperienze in Atelier</h2>
-      <p class="section-desc">Cosa dicono le clienti che hanno scelto il nostro metodo.</p>
-
-      <div class="reviews-grid">
-        <div class="review-card-modern">
-          <div class="stars">★★★★★</div>
-          <p>"Un livello di ascolto e consulenza mai provato prima. L'armocromia mi ha fatto scoprire toni che valorizzano davvero il mio viso."</p>
-          <span class="review-author">Elena R.</span>
-        </div>
-
-        <div class="review-card-modern">
-          <div class="stars">★★★★★</div>
-          <p>"Non è un semplice passaggio in salone, ma un momento di vera cura. Ho finalmente trovato il colore perfetto e naturale."</p>
-          <span class="review-author">Chiara M.</span>
-        </div>
-
-        <div class="review-card-modern">
-          <div class="stars">★★★★★</div>
-          <p>"Atmosfera rilassante e grande professionalità. Ti senti ascoltata dal primo minuto fino al risultato finale."</p>
-          <span class="review-author">Sofia T.</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRENOTAZIONE -->
-  <section id="prenota" class="section-padding booking-section">
-    <div class="container">
-      <div class="booking-container text-center">
-        <span class="subtitle">Esperienza Atelier</span>
-        <h2>Prenota la tua Consulenza</h2>
-        <p class="section-desc" style="max-width: 550px; margin-bottom: 2rem;">
-          Inizia il tuo percorso con noi. Scegli il canale che preferisci per riservare il tuo momento di ascolto e bellezza.
+    </section>
+    <!-- IL METODO -->
+    <section id="metodo" class="section-padding metodo-section">
+      <div class="container text-center">
+        <span class="subtitle">Concept Atelier</span>
+        <h2>Il Nostro Metodo</h2>
+        <p class="section-desc" style="color: #A39D98;">
+          <em>Ascoltare. Capire. Valorizzare.</em>
+          Un percorso costruito interamente intorno alla tua
+          <span class="highlight-gold">unicità</span>.
         </p>
-        <div class="booking-options">
-          <a href="https://wa.me/" target="_blank" class="btn btn-gold">Prenota su WhatsApp</a>
-          <a href="tel:+39000000000" class="btn btn-dark">Chiama in Salone</a>
+        <div class="metodo-grid">
+          <div class="metodo-card">
+            <h3>
+              <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"/>
+              </svg>
+              Ascolto
+            </h3>
+            <p>Ci prendiamo il tempo per comprendere i tuoi desideri e ciò che desideri comunicare con il tuo look.</p>
+          </div>
+          <div class="metodo-card">
+            <h3>
+              <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.46 6.288a15.99 15.99 0 00-4.648 4.763m3.42 3.42a6.761 6.761 0 01-1.436 1.436"/>
+              </svg>
+              Armonia
+            </h3>
+            <p>Analizziamo i tratti e le proporzioni per impostare un lavoro coerente con la tua immagine.</p>
+          </div>
+          <div class="metodo-card">
+            <h3>
+              <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
+              </svg>
+              Colore
+            </h3>
+            <p>Tecniche avanzate di colorazione sartoriale concepite esclusivamente per esaltare la tua persona.</p>
+          </div>
+          <div class="metodo-card">
+            <h3>
+              <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/>
+              </svg>
+              Cura
+            </h3>
+            <p>Trattamenti mirati a preservare salute, luminosità e qualità del capello nel tempo.</p>
+          </div>
+        </div>
+        <div style="margin-top: 3rem;">
+          <a href="#servizi" class="btn btn-outline-light">Scopri i nostri servizi</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+<!-- SERVIZI: SEZIONE AUTONOMA -->
+<section id="servizi" class="section-padding services-section">
+  <div class="container text-center">
 
-  <!-- AMBASCIATA DELLA GIOIA -->
-  <section id="ambasciata" class="section-padding ambasciata-section text-center">
-    <div class="container">
-      <div class="ambasciata-box">
-        <span class="subtitle">Progetto & Valori</span>
-        <h2>Ambasciata della Gioia</h2>
-        <p style="font-size: 1.3rem; font-family: var(--font-heading); color: var(--accent-gold); margin-bottom: 1.5rem; font-style: italic;">
-          Un modo diverso di vivere la bellezza.
-        </p>
-        <p style="color: #A39D98; font-size: 1.05rem; line-height: 1.8; margin: 0;">
-          <strong style="color: var(--text-light);">Capelli D'Angelo</strong> fa parte del progetto <strong style="color: var(--accent-gold);">Ambasciata della Gioia</strong>, un percorso che mette al centro la persona, l'ascolto e la valorizzazione della propria immagine. Un approccio che condividiamo e che ritroviamo ogni giorno nel nostro modo di lavorare.
-        </p>
+    <span class="subtitle">L'esperienza Atelier</span>
+    <h2>I Nostri Servizi</h2>
+
+    <p class="section-desc" style="color: #A39D98;">
+      Ogni servizio viene pensato in base alle caratteristiche del capello,
+      ai tuoi desideri e al risultato che vuoi ottenere.
+    </p>
+
+    <div class="services-overview-box">
+
+      <div class="price-list">
+
+        <!-- COLORE -->
+        <div class="price-item">
+          <div class="price-header">
+            <span class="price-title">Colore</span>
+            <span class="price-line"></span>
+          </div>
+          <p class="price-desc">
+            Sfumature, riflessi e tonalità costruite sulle tue caratteristiche.
+          </p>
+        </div>
+
+        <!-- TAGLIO -->
+        <div class="price-item">
+          <div class="price-header">
+            <span class="price-title">Taglio</span>
+            <span class="price-line"></span>
+          </div>
+          <p class="price-desc">
+            Forma, movimento e proporzione in equilibrio con il tuo stile.
+          </p>
+        </div>
+
+        <!-- ARMOCROMIA -->
+        <div class="price-item">
+          <div class="price-header">
+            <span class="price-title">Armocromia</span>
+            <span class="price-line"></span>
+          </div>
+          <p class="price-desc">
+            Una consulenza per comprendere i colori che ti valorizzano.
+          </p>
+        </div>
+
+        <!-- TRATTAMENTI -->
+        <div class="price-item">
+          <div class="price-header">
+            <span class="price-title">Trattamenti</span>
+            <span class="price-line"></span>
+          </div>
+          <p class="price-desc">
+            Percorsi mirati per mantenere qualità, luminosità e benessere del capello.
+          </p>
+        </div>
+
+        <!-- STYLING -->
+        <div class="price-item">
+          <div class="price-header">
+            <span class="price-title">Styling</span>
+            <span class="price-line"></span>
+          </div>
+          <p class="price-desc">
+            Il tocco finale che completa il risultato.
+          </p>
+        </div>
+
+        <!-- CONSULENZA PERSONALIZZATA -->
+        <div class="price-item">
+          <div class="price-header">
+            <span class="price-title">Consulenza personalizzata</span>
+            <span class="price-line"></span>
+          </div>
+          <p class="price-desc">
+            Un momento dedicato ad ascoltare i tuoi desideri e individuare
+            il percorso più adatto ai tuoi capelli.
+          </p>
+        </div>
+
       </div>
     </div>
-  </section>
 
+    <div style="margin-top: 3rem;">
+      <a href="#prenota" class="btn btn-gold">
+        Parliamo delle tue esigenze
+      </a>
+    </div>
+
+  </div>
+</section>
+    <!-- LA NOSTRA SPECIALIZZAZIONE -->
+    <section class="section-padding text-center" style="background: var(--bg-primary);">
+      <div class="container">
+        <span class="subtitle">La nostra specializzazione</span>
+        <h2>
+          Il colore giusto non è quello che scegli.
+          <br>
+          <span class="highlight-gold">È quello che ti valorizza.</span>
+        </h2>
+        <p class="section-desc">
+          Ogni colore nasce dall'incontro tra desiderio, caratteristiche naturali e conoscenza tecnica.
+          Il risultato deve essere bello oggi, ma soprattutto
+          <span class="highlight-gold">sentirtelo tuo</span>.
+        </p>
+        <div>
+          <a href="#prenota" class="btn btn-gold">Parliamo del tuo colore</a>
+        </div>
+      </div>
+    </section>
+    <!-- ASCOLTO & ARMOCROMIA -->
+    <section class="section-padding text-center" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <span class="subtitle">Ascolto & Armocromia</span>
+        <h2>
+          Il colore parte <span class="highlight-gold">da te.</span>
+        </h2>
+        <p class="section-desc">
+          L'armocromia aiuta a comprendere quali tonalità dialogano meglio con il tuo incarnato,
+          con i tuoi colori naturali e con la tua immagine.
+          Non si tratta di seguire una regola, ma di
+          <span class="highlight-gold">trovare una direzione</span>.
+        </p>
+        <div class="armocromia-dots-container" aria-label="Esempi di tonalità cromatiche">
+          <div class="color-dot" style="background-color: #E2B29F;" title="Cipria caldo"></div>
+          <div class="color-dot" style="background-color: #C87D55;" title="Terracotta"></div>
+          <div class="color-dot" style="background-color: #925035;" title="Nocciola intenso"></div>
+          <div class="color-dot" style="background-color: #DDA15E;" title="Miele dorato"></div>
+          <div class="color-dot" style="background-color: #BC6C25;" title="Rame caldo"></div>
+          <div class="color-dot" style="background-color: #D4A373;" title="Sabbia"></div>
+          <div class="color-dot" style="background-color: #E0C3FC;" title="Lilla freddo"></div>
+          <div class="color-dot" style="background-color: #8E9AAF;" title="Salvia polvere"></div>
+          <div class="color-dot" style="background-color: #4A5759;" title="Antracite freddo"></div>
+          <div class="color-dot" style="background-color: #3D5A80;" title="Ottanio avvolgente"></div>
+        </div>
+        <div>
+          <a href="#prenota" class="btn btn-dark">Prenota una consulenza</a>
+        </div>
+      </div>
+    </section>
+    <!-- LE NOSTRE CREAZIONI -->
+    <section id="creazioni" class="section-padding">
+      <div class="container text-center">
+        <span class="subtitle">Portfolio & Armocromia</span>
+        <h2>Lasciati ispirare</h2>
+        <p class="section-desc">
+          Una selezione di colori, texture e trasformazioni per iniziare a
+          <span class="highlight-gold">immaginare il tuo prossimo look</span>.
+        </p>
+        <!-- Mosaico: 18 creazioni reali. Le foto 2, 10, 15 e 16 sono più grandi su desktop. -->
+        <div class="mosaic-grid">
+          <div class="mosaic-item">
+            <img src="immagini/creazioni/taglio_1.jpg" alt="Creazione capelli 1" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="immagini/creazioni/taglio_2.jpg" alt="Creazione capelli 2" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="immagini/creazioni/taglio_3.jpg" alt="Creazione capelli 3" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="immagini/creazioni/taglio_4.jpg" alt="Creazione capelli 4" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="immagini/creazioni/taglio_5.jpg" alt="Creazione capelli 5" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="immagini/creazioni/taglio_6.jpg" alt="Creazione capelli 6" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="immagini/creazioni/taglio_7.jpg" alt="Creazione capelli 7" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="immagini/creazioni/taglio_8.jpg" alt="Creazione capelli 8" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="immagini/creazioni/taglio_9.jpg" alt="Creazione capelli 9" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="immagini/creazioni/taglio_10.jpg" alt="Creazione capelli 10" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="immagini/creazioni/taglio_11.jpg" alt="Creazione capelli 11" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="immagini/creazioni/taglio_12.jpg" alt="Creazione capelli 12" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="immagini/creazioni/taglio_13.jpg" alt="Creazione capelli 13" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="immagini/creazioni/taglio_14.jpg" alt="Creazione capelli 14" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="immagini/creazioni/taglio_15.jpg" alt="Creazione capelli 15" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="immagini/creazioni/taglio_16.jpg" alt="Creazione capelli 16" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="immagini/creazioni/taglio_17.jpg" alt="Creazione capelli 17" loading="lazy">
+          </div>
+          <div class="mosaic-item">
+            <img src="immagini/creazioni/taglio_18.jpg" alt="Creazione capelli 18" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- LA CURA CONTINUA A CASA -->
+    <section id="cura-casa" class="section-padding" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="text-center">
+          <span class="subtitle">Home Care Routine</span>
+          <h2>La Cura Continua a Casa</h2>
+          <p class="section-desc">
+            Il risultato non finisce quando esci dal salone: la cura dei capelli continua ogni giorno, a casa.
+            Scopri una selezione di prodotti professionali <strong style="color: var(--text-main);">Philip Martin's</strong>,
+            pensati per rispondere a esigenze diverse, dalla cute grassa ai capelli ricci, fino ai lavaggi frequenti.
+            <br><br>
+            <em>Ti aiutiamo a scegliere il prodotto e la routine più adatti ai tuoi capelli.</em>
+          </p>
+        </div>
+        <div class="products-grid" id="productsCarousel" aria-label="Prodotti per la cura dei capelli">
+          <article class="product-card">
+            <div class="product-img-box">
+              <img src="immagini/prodotto_puryfing.jpg" alt="Purifying Wash, shampoo purificante per cute grassa" loading="lazy">
+            </div>
+            <span class="product-brand">Philip Martin's</span>
+            <h4>Purifying Wash</h4>
+            <p class="product-type">Shampoo Cute Grassa</p>
+            <p class="product-description">
+              Una detersione purificante e rinfrescante pensata per la cute che tende a produrre sebo in eccesso. La Bardana Bio e il Rosmarino, insieme agli oli essenziali di Menta ed Eucalipto, donano freschezza e aiutano a lasciare il cuoio capelluto pulito e i capelli leggeri più a lungo.
+            </p>
+          </article>
+          <article class="product-card">
+            <div class="product-img-box">
+              <img src="immagini/prodotto_scalp.jpg" alt="Scalp Benefit, maschera per cute grassa e cuoio capelluto" loading="lazy">
+            </div>
+            <span class="product-brand">Philip Martin's</span>
+            <h4>Scalp Benefit</h4>
+            <p class="product-type">Maschera Cute Grassa &amp; Cuoio Capelluto</p>
+            <p class="product-description">
+              Un trattamento idratante e lenitivo per la cute soggetta a sebo o impurità. Il Burro di Karité e l'Estratto di Bardana Bio si uniscono al Mentolo per regalare una piacevole sensazione rinfrescante, mentre la fibra capillare viene nutrita per capelli soffici, vitali e dall'aspetto purificato.
+            </p>
+          </article>
+          <article class="product-card">
+            <div class="product-img-box">
+              <img src="immagini/prodotto_moringa.jpg" alt="Moringa Wash, shampoo per capelli ricci e mossi" loading="lazy">
+            </div>
+            <span class="product-brand">Philip Martin's</span>
+            <h4>Moringa Wash</h4>
+            <p class="product-type">Shampoo Capelli Ricci</p>
+            <p class="product-description">
+              Shampoo nutriente e disciplinante per capelli ricci o mossi. Gli estratti di Moringa, Aloe Bio e Viola Tricolor Bio aiutano a idratare la chioma, contenere l'effetto crespo e valorizzare elasticità e definizione dei ricci, senza appesantirli.
+            </p>
+          </article>
+          <article class="product-card">
+            <div class="product-img-box">
+              <img src="immagini/prodotto_24.jpg" alt="24 Wash, shampoo delicato per uso frequente" loading="lazy">
+            </div>
+            <span class="product-brand">Philip Martin's</span>
+            <h4>24 Wash</h4>
+            <p class="product-type">Shampoo Uso Frequente</p>
+            <p class="product-description">
+              Un detergente delicato e idratante, ideale per lavaggi quotidiani o frequenti e adatto a tutti i tipi di capelli. Gli estratti di Camomilla, Elicriso e Amamelide aiutano a riequilibrare la cute, lasciando i capelli morbidi, luminosi e protetti dalle aggressioni esterne.
+            </p>
+          </article>
+          <article class="product-card">
+            <div class="product-img-box">
+              <img src="immagini/prodotto_aloe.jpg" alt="Aloe Pure Gel, trattamento purificante per la cute" loading="lazy">
+            </div>
+            <span class="product-brand">Philip Martin's</span>
+            <h4>Aloe Pure Gel</h4>
+            <p class="product-type">Trattamento Pulizia Cute</p>
+            <p class="product-description">
+              Trattamento detossinante e purificante per il cuoio capelluto a base di Succo di Aloe Bio. Pulisce in profondità, lenisce la cute e restituisce benessere e freschezza alla chioma.
+            </p>
+          </article>
+          <article class="product-card">
+            <div class="product-img-box">
+              <img src="immagini/prodotto_canapa.jpg" alt="Canapa Rinse, maschera ristrutturante per capelli stressati" loading="lazy">
+            </div>
+            <span class="product-brand">Philip Martin's</span>
+            <h4>Canapa Rinse</h4>
+            <p class="product-type">Maschera Capelli Stressati</p>
+            <p class="product-description">
+              Maschera ristrutturante e rigenerante con Estratto di Canapa Bio, Prolina e Ceramidi. Nutre intensamente i capelli danneggiati e stressati, restituendo elasticità e forza.
+            </p>
+          </article>
+        </div>
+        <div class="products-pagination" id="productsPagination" aria-label="Seleziona un prodotto"></div>
+      </div>
+    </section>
+    <!-- FILOSOFIA E SALONE: SEZIONE UNIFICATA -->
+    <section id="salone" class="section-padding salone-unificato">
+      <div class="container">
+        <!-- FILOSOFIA -->
+        <div class="editorial-filosofia-wrapper">
+          <div class="editorial-filosofia-container">
+            <div class="editorial-filosofia-img">
+              <img src="immagini/chisiamo_foto.jpg" alt="Il proprietario di Capelli D'Angelo al lavoro" loading="lazy">
+            </div>
+            <div class="editorial-filosofia-card">
+              <span class="subtitle" style="margin-bottom: 0.5rem !important;">La Nostra Filosofia</span>
+              <h2 style="font-size: clamp(2rem, 3.2vw, 2.7rem) !important; margin-bottom: 1.5rem;">
+                Perché Capelli D'Angelo
+              </h2>
+              <p style="font-size: 1.1rem; line-height: 1.85; color: var(--text-muted); margin: 0;">
+                Dietro ogni risultato c'è una persona che ascolta, osserva e consiglia.
+                Capelli D'Angelo nasce dal desiderio di creare un luogo in cui
+                <span class="highlight-gold">tecnica, gusto personale e attenzione</span>
+                si incontrano per valorizzare ogni cliente.
+                Qui il lavoro comincia prima ancora che inizi il servizio.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- SPAZIO DEL SALONE -->
+        <div class="feature-block">
+          <div class="feature-text">
+            <span class="subtitle">Lo Spazio a Rovereto</span>
+            <h2>Il Salone</h2>
+            <p style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--text-main); font-style: italic; margin-bottom: 1rem;">
+              Un luogo pensato per <span class="highlight-gold">rigenerare mente e capelli</span>.
+            </p>
+            <p>
+              Luce naturale diffusa, design essenziale e materiali caldi.
+              Il nostro atelier a Rovereto è stato progettato per offrirti
+              un'atmosfera riservata ed elegante, lontana dalla confusione.
+            </p>
+            <p>
+              Ogni dettaglio contribuisce a creare uno spazio in cui dedicarsi
+              un momento, lasciarsi consigliare e vivere la propria esperienza
+              di bellezza con tranquillità.
+            </p>
+            <div class="location-box">
+              <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+              </svg>
+              <span><strong>Ci trovi a:</strong> Via Trieste 42, 38068 Rovereto (TN)</span>
+            </div>
+          </div>
+          <div class="feature-img-box">
+            <img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&q=80&w=800" alt="Interno del salone Capelli D'Angelo a Rovereto" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+     <!-- AMBASCIATA DELLA GIOIA -->
+    <section class="ambasciata-section">
+  <div class="container">
+
+    <div class="ambasciata-box">
+
+      <div class="ambasciata-logo">
+        <img
+          src="immagini/Logo-Ambasciata.png"
+          alt="Logo Ambasciata della Gioia"
+          loading="lazy"
+        >
+      </div>
+
+<div class="ambasciata-content">
+
+  <span class="ambasciata-eyebrow">
+    La nostra identità
+  </span>
+
+  <h2>Ambasciata della Gioia</h2>
+
+  <p style="font-size: 1.3rem; font-family: var(--font-heading); color: var(--accent-gold); margin-bottom: 1.5rem; font-style: italic;">
+    Un modo diverso di vivere la bellezza.
+  </p>
+
+  <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; margin: 0;">
+<strong>Capelli D'Angelo</strong>
+    fa parte del progetto
+    <strong style="color: var(--accent-gold);">Ambasciata della Gioia</strong>,
+    un percorso che mette al centro la persona, l'ascolto e la valorizzazione
+    della propria immagine. Un approccio che condividiamo e che ritroviamo
+    ogni giorno nel nostro modo di lavorare.
+  </p>
+
+</div>
+      </div>
+    </section>
+   <!-- RECENSIONI -->
+<section class="section-padding reviews-section" id="recensioni">
+  <div class="container text-center">
+
+    <div class="reviews-heading">
+      <span class="subtitle">Le parole di chi ci ha scelto</span>
+      <h2>La fiducia si costruisce, una visita alla volta.</h2>
+      <p class="section-desc">
+        Ogni esperienza racconta qualcosa del nostro modo di prenderci cura
+        delle persone, dei loro capelli e della loro unicità.
+      </p>
+    </div>
+
+    <div class="reviews-grid" id="reviewsCarousel"
+         aria-label="Selezione di recensioni delle clienti">
+
+      <!-- Recensione 1 -->
+      <article class="review-card-modern">
+        <div class="stars" aria-label="5 stelle su 5">★★★★★</div>
+
+        <p class="review-text">
+          «Molta attenzione ai miei desideri, con ascolto e confronto prima
+          di procedere al taglio. Pur non avendo una situazione semplice
+          causa trattamenti precedenti, sono uscita con un taglio molto
+          più adatto al mio viso e con dei capelli morbidissimi.»
+        </p>
+
+        <div class="review-author-wrap">
+          <span class="review-author">Mary Molinari</span>
+          <span class="review-source">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.05 5.05 0 0 1-2.2 3.31v2.77h3.57c2.09-1.92 3.27-4.75 3.27-8.09Z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.99 7.28-2.66l-3.57-2.77c-.99.66-2.25 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.15v2.84A11 11 0 0 0 12 23Z"/>
+              <path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.15a11 11 0 0 0 0 9.88l3.69-2.84Z"/>
+              <path fill="#EA4335" d="M12 5.37c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1a11 11 0 0 0-9.85 6.06l3.69 2.84C6.71 7.3 9.14 5.37 12 5.37Z"/>
+            </svg>
+            Google
+          </span>
+        </div>
+      </article>
+
+      <!-- Recensione 2 -->
+      <article class="review-card-modern">
+        <div class="stars" aria-label="5 stelle su 5">★★★★★</div>
+
+        <p class="review-text">
+          «Si entra nel salone e si fa una consulenza per capire il trattamento
+          adeguato alla tipologia del tuo capello, il taglio che ti può star
+          bene e il trattamento che puoi continuare a casa. Angelo ha
+          effettuato un taglio stupendo! 100% soddisfatta.»
+        </p>
+
+        <div class="review-author-wrap">
+          <span class="review-author">Alessandra</span>
+          <span class="review-source">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.05 5.05 0 0 1-2.2 3.31v2.77h3.57c2.09-1.92 3.27-4.75 3.27-8.09Z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.99 7.28-2.66l-3.57-2.77c-.99.66-2.25 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.15v2.84A11 11 0 0 0 12 23Z"/>
+              <path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.15a11 11 0 0 0 0 9.88l3.69-2.84Z"/>
+              <path fill="#EA4335" d="M12 5.37c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1a11 11 0 0 0-9.85 6.06l3.69 2.84C6.71 7.3 9.14 5.37 12 5.37Z"/>
+            </svg>
+            Google
+          </span>
+        </div>
+      </article>
+
+      <!-- Recensione 3 -->
+      <article class="review-card-modern">
+        <div class="stars" aria-label="5 stelle su 5">★★★★★</div>
+
+        <p class="review-text">
+          «Qui si percepisce subito che si prendono davvero il tempo per ogni
+          cliente: non ci si sente mai “una di tanti” da fare in fretta,
+          ma accolta e ascoltata. La consulenza è attenta e personale,
+          e l’atmosfera rilassante.»
+        </p>
+
+        <div class="review-author-wrap">
+          <span class="review-author">Mireille Pellegrino</span>
+          <span class="review-source">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.05 5.05 0 0 1-2.2 3.31v2.77h3.57c2.09-1.92 3.27-4.75 3.27-8.09Z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.99 7.28-2.66l-3.57-2.77c-.99.66-2.25 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.15v2.84A11 11 0 0 0 12 23Z"/>
+              <path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.15a11 11 0 0 0 0 9.88l3.69-2.84Z"/>
+              <path fill="#EA4335" d="M12 5.37c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1a11 11 0 0 0-9.85 6.06l3.69 2.84C6.71 7.3 9.14 5.37 12 5.37Z"/>
+            </svg>
+            Google
+          </span>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="reviews-pagination" id="reviewsPagination"
+         aria-label="Seleziona una recensione"></div>
+
+    <div class="reviews-footer">
+      <p class="reviews-note">
+        Le parole delle nostre clienti, direttamente da Google.
+      </p>
+
+      <!-- Sostituire GOOGLE_REVIEWS_URL con il link ufficiale alle recensioni del salone -->
+      <a
+        href="GOOGLE_REVIEWS_URL"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-dark reviews-cta"
+      >
+        Leggi tutte le recensioni
+        <span class="review-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+    <!-- PRENOTAZIONE -->
+    <section id="prenota" class="section-padding booking-section">
+      <div class="container">
+        <div class="booking-container text-center">
+          <span class="subtitle">Esperienza Atelier</span>
+          <h2>Prenota la tua Consulenza</h2>
+          <p class="section-desc" style="max-width: 550px; margin-bottom: 2rem;">
+            Inizia il tuo percorso con noi. Scegli il canale che preferisci
+            per riservare il tuo momento di ascolto e bellezza.
+          </p>
+          <div class="booking-options">
+            <a href="https://wa.me/393396577389" target="_blank" rel="noopener noreferrer" class="btn btn-gold">Prenota su WhatsApp</a>
+            <a href="tel:+390464431296" class="btn btn-dark">Chiama in Salone</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
   <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="logo-brand" style="margin-bottom: 1rem;">
+          <a href="#inizio" class="logo-brand" style="margin-bottom: 1rem;">
             <span class="logo-main">CAPELLI</span>
             <span class="logo-sub">d'Angelo</span>
-          </div>
-          <p style="font-size: 0.85rem; color: #77726E;">Hair Atelier, Armocromia e Consulenza Sartoriale dell'Immagine a Rovereto.</p>
+          </a>
+          <p style="font-size: 0.85rem; color: #77726E;">
+            Hair Atelier, Armocromia e Consulenza Sartoriale dell'Immagine a Rovereto.
+          </p>
         </div>
-
-        <div class="footer-links">
+        <div class="footer-links footer-navigation">
           <h4 style="color: var(--text-light); margin-bottom: 1rem; font-size: 1rem;">Navigazione</h4>
           <ul>
             <li><a href="#metodo">Il Metodo</a></li>
-            <li><a href="#creazioni">Le Creazioni</a></li>
+            <li><a href="#servizi">Servizi</a></li>
+            <li><a href="#creazioni">Creazioni</a></li>
             <li><a href="#cura-casa">Cura a Casa</a></li>
+            <li><a href="#salone">Il Salone</a></li>
             <li><a href="#ambasciata">Ambasciata della Gioia</a></li>
+            <li><a href="#prenota">Prenota</a></li>
           </ul>
         </div>
-
         <div class="footer-links">
           <h4 style="color: var(--text-light); margin-bottom: 1rem; font-size: 1rem;">Contatti & Social</h4>
           <ul>
             <li style="margin-bottom: 0.8rem;">Via Trieste 42, Rovereto (TN)</li>
-            <li style="margin-bottom: 0.8rem;">Tel: +39 000 000000</li>
+            <li style="margin-bottom: 0.8rem;">Tel: <a href="tel:+393396577389">339 6577389</a><br>Tel: <a href="tel:+390464431296">0464 431296</a></li>
           </ul>
-          <!-- LOGHI E LINK SOCIAL -->
           <div class="social-links-container">
-            <a href="https://www.instagram.com/capelli_d_angelo_/" target="_blank" rel="noopener" class="social-link-item" title="Instagram">
-              <svg class="social-icon-svg" viewBox="0 0 24 24">
+            <a href="https://www.instagram.com/capelli_d_angelo_/" target="_blank" rel="noopener noreferrer" class="social-link-item" title="Instagram">
+              <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
               </svg>
               <span>Instagram</span>
             </a>
-            <a href="https://www.facebook.com/capellidangelorovereto/?locale=it_IT" target="_blank" rel="noopener" class="social-link-item" title="Facebook">
-              <svg class="social-icon-svg" viewBox="0 0 24 24">
+            <a href="https://www.facebook.com/capellidangelorovereto/?locale=it_IT" target="_blank" rel="noopener noreferrer" class="social-link-item" title="Facebook">
+              <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"/>
               </svg>
               <span>Facebook</span>
             </a>
           </div>
         </div>
-
         <div class="footer-links">
           <h4 style="color: var(--text-light); margin-bottom: 1rem; font-size: 1rem;">Orari</h4>
           <p style="font-size: 0.8rem; color: #77726E;">
-            Mar - Sab: 09:00 - 18:00<br>
-            Dom - Lun: Chiuso
+            Lun - Ven: 09:00 - 18:00
           </p>
         </div>
       </div>
-
       <div class="footer-bottom">
         <p>&copy; 2026 Capelli D'Angelo. Tutti i diritti riservati.</p>
       </div>
     </div>
   </footer>
-
   <script>
-    // Toggle Mobile Menu
+    // Toggle del menu mobile
     const menuToggle = document.getElementById('menuToggle');
+    const menuClose = document.getElementById('menuClose');
     const navLinks = document.getElementById('navLinks');
 
     if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-      });
+      const closeMenu = () => {
+        navLinks.classList.remove('active');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Apri il menu');
+      };
+      const openMenu = () => {
+        navLinks.classList.add('active');
+        menuToggle.classList.add('active');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        menuToggle.setAttribute('aria-label', 'Chiudi il menu');
+      };
+      menuToggle.addEventListener('click', () => navLinks.classList.contains('active') ? closeMenu() : openMenu());
+      if (menuClose) menuClose.addEventListener('click', closeMenu);
+      navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+    }
 
-      document.querySelectorAll('.nav-item').forEach(link => {
-        link.addEventListener('click', () => {
-          navLinks.classList.remove('active');
+    // Carosello prodotti mobile con indicatori cliccabili.
+    const productsCarousel = document.getElementById('productsCarousel');
+    const productsPagination = document.getElementById('productsPagination');
+    if (productsCarousel && productsPagination) {
+      const productCards = Array.from(productsCarousel.querySelectorAll('.product-card'));
+      const paginationButtons = productCards.map((card, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.setAttribute('aria-label', `Mostra prodotto ${index + 1} di ${productCards.length}`);
+        button.setAttribute('aria-current', index === 0 ? 'true' : 'false');
+        button.addEventListener('click', () => {
+          productsCarousel.scrollTo({ left: card.offsetLeft - productCards[0].offsetLeft, behavior: 'smooth' });
         });
+        productsPagination.appendChild(button);
+        return button;
       });
+      let scrollTicking = false;
+      productsCarousel.addEventListener('scroll', () => {
+        if (scrollTicking) return;
+        scrollTicking = true;
+        window.requestAnimationFrame(() => {
+          const center = productsCarousel.scrollLeft + productsCarousel.clientWidth / 2;
+          let closestIndex = 0;
+          let closestDistance = Infinity;
+          productCards.forEach((card, index) => {
+            const cardCenter = card.offsetLeft - productsCarousel.offsetLeft + card.offsetWidth / 2;
+            const distance = Math.abs(cardCenter - center);
+            if (distance < closestDistance) { closestDistance = distance; closestIndex = index; }
+          });
+          paginationButtons.forEach((button, index) => button.setAttribute('aria-current', index === closestIndex ? 'true' : 'false'));
+          scrollTicking = false;
+        });
+      }, { passive: true });
     }
   </script>
 </body>
