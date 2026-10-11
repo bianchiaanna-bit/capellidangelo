@@ -628,26 +628,53 @@
 
 /* =========================================
    SFONDO CONDIVISO — MOBILE
+   Foto ferma, contenuti scorrevoli
 ========================================= */
 
 @media (max-width: 768px) {
 
-  /* Una sola immagine per l'intero wrapper.
-     Non applicare lo sfondo separatamente alle sezioni. */
-
   .metodo-servizi-wrapper {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(25, 23, 22, 0.30) 0%,
-        rgba(25, 23, 22, 0.40) 50%,
-        rgba(25, 23, 22, 0.48) 100%
-      ),
-      url('immagini/sfondo_metodo_mobile.jpg') center center / cover fixed no-repeat;
+    position: relative;
+    isolation: isolate;
+
+    /* Lo sfondo viene gestito dal livello fotografico */
+    background: transparent !important;
   }
 
-  .metodo-section,
-  .services-section {
+  /* Livello fotografico condiviso */
+  .metodo-servizi-wrapper::before {
+    content: "";
+    position: sticky;
+    top: 0;
+
+    display: block;
+    width: 100%;
+    height: 100vh;
+
+    /* Evita di aggiungere altezza al contenitore */
+    margin-bottom: -100vh;
+
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(25, 23, 22, 0.12) 0%,
+        rgba(25, 23, 22, 0.22) 50%,
+        rgba(25, 23, 22, 0.30) 100%
+      ),
+      url("immagini/sfondo_metodo_mobile.jpg");
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  /* Le sezioni lasciano trasparire la fotografia */
+  .metodo-servizi-wrapper .metodo-section,
+  .metodo-servizi-wrapper .services-section {
+    position: relative;
     background: transparent !important;
     background-image: none !important;
     background-color: transparent !important;
@@ -667,8 +694,10 @@
       rgba(250, 247, 241, 0.17) 0%,
       rgba(250, 247, 241, 0.10) 100%
     );
+
     -webkit-backdrop-filter: blur(9px);
     backdrop-filter: blur(9px);
+
     border-color: rgba(255, 255, 255, 0.25);
   }
 
