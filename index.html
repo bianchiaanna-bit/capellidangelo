@@ -454,26 +454,53 @@
 .price-item {
   position: relative;
   padding: 1.6rem 1.5rem;
+
+  /* Vetro satinato più opaco */
   background: linear-gradient(
     135deg,
-    rgba(250, 247, 241, 0.17) 0%,
-    rgba(250, 247, 241, 0.10) 100%
+    rgba(248, 246, 242, 0.84) 0%,
+    rgba(237, 231, 223, 0.76) 100%
   );
-  -webkit-backdrop-filter: blur(9px);
-  backdrop-filter: blur(9px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
   border-radius: 3px;
+
   box-shadow:
-    0 8px 28px rgba(0, 0, 0, 0.10),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    0 8px 28px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+
   transition:
     background 0.35s ease,
     border-color 0.35s ease,
     box-shadow 0.35s ease,
     transform 0.35s ease;
+
   overflow: hidden;
 }
+/* TESTI CARD SATINATE */
 
+.metodo-card h3 {
+  color: #252321;
+}
+
+.metodo-card p {
+  color: #514941;
+}
+
+.price-title {
+  color: #252321;
+}
+
+.price-desc {
+  color: #514941;
+}
+
+.price-line {
+  border-bottom-color: rgba(64, 56, 50, 0.35);
+}
 /* Dettaglio decorativo laterale */
 
 .metodo-card::before,
@@ -753,7 +780,40 @@
     transform: none;
   }
 }
+/* =========================================
+   MOBILE — MAGGIORE LEGGIBILITÀ TESTI
+   Metodo e Servizi
+========================================= */
 
+@media (max-width: 768px) {
+
+  /* Titoli principali */
+  .metodo-section h2,
+  .services-section h2 {
+    color: #FFFFFF !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+  }
+
+  /* Sottotitoli e testi introduttivi */
+  .metodo-section .subtitle,
+  .services-section .subtitle,
+  .metodo-section > p,
+  .services-section > p,
+  .metodo-section .section-intro,
+  .services-section .section-intro {
+    color: #F5F1EA !important;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
+  }
+
+  /* Eventuali testi descrittivi fuori dalle card */
+  .metodo-section > div > p,
+  .services-section > div > p,
+  .services-section .services-overview-box > p {
+    color: #F5F1EA !important;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
+  }
+
+}
 /* =========================================
    ACCESSIBILITÀ — RIDUZIONE ANIMAZIONI
 ========================================= */
@@ -2135,9 +2195,7 @@
       </div>
 
       <div style="margin-top: 3rem;">
-        <a href="#servizi" class="btn btn-outline-light">
-          Scopri i nostri servizi
-        </a>
+       <a href="#servizi" class="btn btn-gold">I nostri servizi</a>
       </div>
 
     </div>
