@@ -2204,7 +2204,150 @@
   border-color: #FFFFFF !important;
 }
     
-  </style>
+  /* =====================================================
+   LIQUID EDITORIAL — palette del negozio
+   panna · grigio cemento · bianco · nero
+===================================================== */
+@property --tone{syntax:'<color>';inherits:true;initial-value:#C87D55}
+:root{--bg-primary:#F5F2EC;--bg-secondary:#E6E3DD;--bg-dark:#1B1B1C;--bg-card:#FBFAF7;--text-main:#1F1F20;--text-muted:#66656A;--accent-gold:#1F1F20;--accent-gold-hover:#5A5A5D;--accent-taupe:#77767A;--border-color:#D6D3CC;--border-dark:#3A3A3C;
+--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .4 0 0 0 0 .4 0 0 0 .7 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+body::after{content:"";position:fixed;inset:0;z-index:5;pointer-events:none;opacity:.14;mix-blend-mode:multiply;background:var(--grain)}
+header{background:rgba(245,242,236,.78);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4)}
+.subtitle{font-family:var(--font-heading)!important;font-style:italic;font-size:1.2rem!important;letter-spacing:.03em!important;text-transform:none!important;font-weight:500!important;color:var(--accent-taupe)!important}
+.metodo-section .subtitle{color:#fff!important}
+.footer-links a:hover,.social-link-item:hover{color:#fff}
+.btn-gold{color:#fff}.btn-dark:hover{color:var(--text-main)}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes zoomout{from{transform:scale(1.08)}to{transform:scale(1)}}
+/* hero: la foto del salone è protagonista */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);padding:0;min-height:100svh;background:var(--bg-primary);color:var(--text-main);text-align:left}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:150px 4vw 80px max(5vw,calc((100vw - 1200px)/2 + 2rem));animation:rise 1.2s cubic-bezier(.16,1,.3,1) both}
+.hero .hero-copy h1{color:var(--text-main);font-size:clamp(2.3rem,4.4vw,3.9rem);margin-bottom:1.3rem}
+.hero .hero-copy p{color:var(--text-muted);margin:0 0 2.2rem;max-width:30em}
+.hero .subtitle{color:var(--accent-taupe)!important}
+.hero-buttons{justify-content:flex-start}
+.hero .btn-outline-light{border-color:var(--text-main);color:var(--text-main)}.hero .btn-outline-light:hover{background:var(--text-main);color:var(--bg-primary)}
+.hero-photo{position:relative;overflow:hidden;border-radius:280px 0 0 0;min-height:72svh}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 62%;animation:zoomout 2.4s ease-out both}
+.hero-tag{position:absolute;left:1.6rem;bottom:1.6rem;padding:.7rem 1.4rem;font-size:.78rem;letter-spacing:.06em;color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:30px 3px 30px 3px;background:rgba(255,255,255,.14);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+/* servizi + per lei / per lui */
+.servizi-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:6vw;align-items:start}
+.serv-list{list-style:none;margin:2rem 0 2.5rem;border-top:1px solid var(--border-color)}
+.serv-list li{display:grid;grid-template-columns:.8fr 1.4fr;gap:.4rem 2rem;padding:1.3rem 0;border-bottom:1px solid var(--border-color);transition:padding-left .5s}
+.serv-list li:hover{padding-left:.8rem}.serv-list h3{font-size:1.6rem}.serv-list p{margin:0;font-size:.92rem;color:var(--text-muted)}
+/* trattamenti: rituali e prodotti */
+.trattamenti{background:var(--bg-dark);color:#E8E5DF}.trattamenti h2{color:#fff}.trattamenti .subtitle{color:#B9B6B0!important}.trattamenti .section-desc{color:#B9B6B0}.trattamenti strong{color:#fff;font-weight:500}
+.trattamenti .btn-gold{background:#fff;border-color:#fff;color:#1F1F20}.trattamenti .btn-gold:hover{background:transparent;color:#fff}
+.rituals{margin-top:3.5rem;border-bottom:1px solid rgba(255,255,255,.16)}
+.ritual{border-top:1px solid rgba(255,255,255,.16)}
+.ritual summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.7rem 0;cursor:pointer;list-style:none}
+.ritual summary::-webkit-details-marker{display:none}
+.ritual summary h3{color:#fff;font-size:clamp(1.7rem,3.2vw,2.5rem);transition:padding-left .5s}.ritual summary:hover h3{padding-left:.8rem}
+.ritual .for{display:block;color:#B9B6B0;font-size:.9rem;margin-top:.2rem}
+.ritual summary::after{content:"+";flex:none;width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.35);border-radius:50%;color:#fff;font-size:1.6rem;font-weight:200;transition:transform .5s,background .4s}
+.ritual[open] summary::after{transform:rotate(135deg);background:rgba(255,255,255,.12)}
+.ritual[open] .prod-row,.ritual[open] .rit-note{animation:rise .8s cubic-bezier(.16,1,.3,1) both}
+.rit-note{max-width:60em;margin:0 0 1.6rem;color:#B9B6B0;font-family:var(--font-heading);font-style:italic;font-size:1.25rem;line-height:1.5}
+.prod-row{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.2rem 0 2.2rem;scrollbar-width:thin;scrollbar-color:#555 transparent}
+.prod{flex:0 0 min(270px,76vw);scroll-snap-align:start;overflow:hidden;border:1px solid rgba(255,255,255,.18);border-radius:34px 4px 34px 4px;background:linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,.03))}
+.prod-body{padding:1.2rem 1.3rem 1.5rem}.prod-step{font-size:.75rem;letter-spacing:.05em;color:#B9B6B0}
+.prod h4{color:#fff;font-size:1.45rem;margin:.1rem 0}.prod .kind{font-size:.8rem;color:#CFCBC3;margin:0 0 .6rem}.prod-body p:last-child{font-size:.85rem;line-height:1.65;color:#B9B6B0;margin:0}
+
+/* per lei / per lui: foto con due angoli opposti arrotondati */
+.duo-photos{display:grid;grid-template-columns:1fr 1fr;gap:1rem;position:sticky;top:120px}
+.duo-card{position:relative;margin:0;overflow:hidden;aspect-ratio:3/5;border-radius:56px 4px 56px 4px}
+.duo-card img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}.duo-card:hover img{transform:scale(1.04)}
+.duo-card figcaption{position:absolute;left:.7rem;right:.7rem;bottom:.7rem;padding:1rem 1.1rem;color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:26px 3px 26px 3px;background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.06));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.duo-card h3{color:#fff;font-size:1.5rem}.duo-card p{margin:0;font-size:.8rem;line-height:1.5;color:#F0EDE8}
+.feature-img-box,.editorial-filosofia-img{border-radius:56px 4px 56px 4px;overflow:hidden}
+/* prodotti: la foto resta dentro il suo riquadro */
+.prod-img{position:relative;height:270px;overflow:hidden;background:radial-gradient(75% 60% at 50% 28%,#FBF9F5,#D8D5CE)}
+.prod-img img{display:block;width:100%;height:100%;object-fit:contain;padding:1.4rem 1rem;filter:drop-shadow(0 14px 14px rgba(0,0,0,.25));transition:transform .8s ease}.prod:hover .prod-img img{transform:scale(1.04)}
+.prod-img.photo img{object-fit:cover;padding:0;filter:none}
+/* ambasciata: solo un’etichetta */
+.ambasciata-section{background:var(--bg-primary)!important;padding:0 0 3.5rem!important}
+.amb-label{display:flex;align-items:center;gap:1.2rem;max-width:720px;margin:0 auto;padding:.9rem 1.6rem;border:1px solid var(--border-color);border-radius:36px 4px 36px 4px;background:rgba(255,255,255,.5)}
+.amb-label img{flex:none;height:46px;width:auto}.amb-label p{margin:0;font-size:.88rem;line-height:1.55;color:var(--text-muted)}.amb-label strong{color:var(--text-main);font-weight:500}
+/* armocromia: perle di vetro satinato */
+.arm{position:relative;overflow:hidden;background:var(--bg-secondary);border-block:1px solid var(--border-color);transition:--tone 1.1s ease}
+.arm-aura{position:absolute;left:50%;top:50%;width:min(980px,130vw);aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle,var(--tone),transparent 64%);opacity:.42;filter:blur(28px);animation:breathe 12s ease-in-out infinite;pointer-events:none}
+@keyframes breathe{50%{scale:1.06;opacity:.52}}
+.pearls{display:flex;justify-content:center;align-items:flex-start;flex-wrap:wrap;gap:2rem clamp(2rem,6vw,5rem);margin:3rem 0 .6rem}
+.pgroup{display:flex;flex-direction:column;align-items:center;gap:1.3rem}
+.pgroup>span{display:flex;align-items:center;gap:.9rem;font-family:var(--font-heading);font-style:italic;font-size:1.05rem;color:var(--text-muted)}
+.pgroup>span::before,.pgroup>span::after{content:"";width:28px;height:1px;background:var(--accent-taupe);opacity:.6}
+.prow{display:flex;justify-content:center;flex-wrap:wrap;gap:clamp(.7rem,1.8vw,1.3rem)}
+.pearl{--s:clamp(40px,5.4vw,62px);position:relative;width:var(--s);height:var(--s);padding:0;border:0;cursor:pointer;
+background:radial-gradient(circle at 32% 26%,rgba(255,255,255,.75) 0 4%,rgba(255,255,255,.22) 14%,transparent 34%),radial-gradient(circle at 70% 86%,rgba(0,0,0,.3),transparent 58%),var(--c);
+border-radius:50% 50% 48% 52%/52% 48% 52% 48%;
+box-shadow:inset 0 -6px 12px rgba(0,0,0,.16),inset 0 5px 9px rgba(255,255,255,.3),0 0 0 1px rgba(255,255,255,.4),0 18px 18px -14px var(--c);
+animation:morph 11s ease-in-out infinite,bob 7s ease-in-out infinite;animation-delay:calc(var(--i)*-1.3s);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.pearl::after{content:"";position:absolute;inset:0;border-radius:inherit;background:var(--grain);mix-blend-mode:overlay;opacity:.4}
+.pearl:hover{transform:scale(1.14)}
+.pearl[aria-pressed=true]{transform:scale(1.18);outline:1px solid var(--text-main);outline-offset:6px}
+.pearl:focus-visible{outline:2px solid var(--text-main);outline-offset:6px}
+@keyframes morph{50%{border-radius:46% 54% 52% 48%/54% 46% 54% 46%}}
+@keyframes bob{50%{translate:0 -6px}}
+.pearl-cap{display:flex;flex-direction:column;align-items:center;gap:.2rem;margin:2.2rem 0 2.2rem;min-height:4rem}
+.pearl-cap strong{font-family:var(--font-heading);font-style:italic;font-size:clamp(1.8rem,3vw,2.3rem);font-weight:400}
+.pearl-cap span{color:var(--text-muted);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+/* ============ MOBILE ============ */
+@media(max-width:860px){.servizi-grid{grid-template-columns:1fr}.duo-photos{position:static;grid-template-columns:1fr;margin-bottom:2.4rem}.duo-card{aspect-ratio:4/3}.serv-list li{grid-template-columns:1fr}
+.hero{grid-template-columns:1fr;min-height:0}.hero-photo{order:-1;margin-top:88px;height:30svh;min-height:200px;max-height:300px;border-radius:0 0 100px 0}.hero-photo img{object-position:center 58%}.hero-tag{display:none}
+.hero-copy{padding:1.5rem 1.4rem 2.2rem}.hero .hero-copy h1{font-size:clamp(1.9rem,8vw,2.4rem);margin-bottom:.9rem}.hero .hero-copy p{font-size:.95rem;margin-bottom:1.4rem}
+.hero-buttons{flex-direction:column;align-items:stretch;width:100%;gap:.6rem}.hero-buttons .btn{max-width:none;width:100%;text-align:center}
+.hero .btn-outline-light{border:0;padding:.5rem 0;text-decoration:underline;text-underline-offset:6px}}
+@media(max-width:768px){
+.metodo-servizi-wrapper{background:var(--bg-primary)!important}
+.metodo-section{background:var(--bg-primary)!important;padding-top:calc(230px + 3.6rem)!important}
+.metodo-section::before{inset:1.2rem 1.2rem auto 1.2rem!important;height:230px!important;border-radius:48px 4px 48px 4px;background-image:url("immagini/sfondo_metodo_mobile.jpg")!important;background-size:cover!important;background-position:center!important}
+.metodo-section .subtitle{color:var(--accent-taupe)!important}
+.amb-label{flex-direction:column;text-align:center;border-radius:30px 4px 30px 4px}
+.prod-row{margin-inline:-1.2rem;padding-inline:1.2rem}
+/* menu a tutto schermo */
+.nav-links{left:0!important;transform:translateX(100%);visibility:hidden;transition:transform .55s cubic-bezier(.77,0,.18,1),visibility 0s .55s!important;align-items:stretch!important;justify-content:flex-start!important;padding:calc(env(safe-area-inset-top,0px) + 104px) 8vw 230px!important;background:linear-gradient(160deg,#F8F5EF,#E8E4DC)!important}
+.nav-links.active{transform:none;visibility:visible;transition:transform .55s cubic-bezier(.77,0,.18,1),visibility 0s!important}
+.nav-links li{text-align:left!important;width:100%}
+.nav-links a.nav-item{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;border-bottom:1px solid var(--border-color);font-family:var(--font-heading)!important;font-size:2rem!important;letter-spacing:0!important;text-transform:none!important;color:var(--text-main)!important;font-weight:400!important}
+.nav-links a.nav-item::after{content:"→";font-family:var(--font-body);font-size:1rem;color:var(--accent-taupe)}
+.nav-links li:has(.btn){margin-top:1.8rem}
+.nav-links .btn{display:block;width:100%;text-align:center;padding:1.1rem 1.4rem!important;font-size:.75rem!important}
+.nav-links .mobile-menu-close-row{top:calc(env(safe-area-inset-top,0px) + 1.3rem)!important}
+.nav-links.active li{animation:rise .7s cubic-bezier(.16,1,.3,1) both}
+.nav-links.active li:nth-child(3){animation-delay:.07s}.nav-links.active li:nth-child(4){animation-delay:.13s}.nav-links.active li:nth-child(5){animation-delay:.19s}.nav-links.active li:nth-child(6){animation-delay:.25s}
+.nav-links{gap:0!important}
+.nav-links .mobile-menu-close-row{width:auto!important;left:auto!important;right:1.4rem!important;text-align:right!important}
+.nav-links a.nav-item{padding:.85rem 0}
+.metodo-desc,.metodo-desc em{color:var(--text-muted)!important;-webkit-text-fill-color:currentColor!important;text-shadow:none!important}
+}
+.metodo-desc{color:#fff;-webkit-text-fill-color:#fff;text-shadow:0 1px 5px rgba(0,0,0,.4)}
+
+/* il colore: colore, effetti, vegetali */
+.colore{background:var(--bg-primary)}
+.colore-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3.2rem;text-align:left}
+.cpil{padding:2.3rem 2rem;border:1px solid var(--border-color);border-radius:44px 4px 44px 4px;background:linear-gradient(135deg,rgba(255,255,255,.8),rgba(255,255,255,.35))}
+.cpil h3{font-size:1.9rem;margin:0 0 .7rem}.cpil p{font-size:.95rem;color:var(--text-muted);margin:0}
+.cpil.veg{background:radial-gradient(90% 70% at 15% 0%,rgba(142,154,175,.38),transparent 62%),linear-gradient(160deg,#27292c,#16171a);border-color:rgba(255,255,255,.14)}
+.cpil.veg h3{color:#fff}.cpil.veg p{color:#C9C5BD}
+.cpil .ico{display:flex;gap:.9rem;margin-bottom:1.2rem}.cpil .ico svg{width:34px;height:34px;fill:none;stroke:#B9C2B2;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
+.cpil .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}.cpil .tags span{font-size:.78rem;padding:.3rem .95rem;border:1px solid rgba(255,255,255,.3);border-radius:16px 2px 16px 2px;color:#E8E5DF}
+.cpil small{display:block;margin-top:1.1rem;font-size:.8rem;line-height:1.55;color:#A9A59D}
+.ecolor{background:var(--bg-secondary)}
+.ecolor-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:6vw;align-items:center}
+.mach{position:relative;margin:0;aspect-ratio:3/4;overflow:hidden;border-radius:56px 4px 56px 4px;background:#222}
+.mach img{width:100%;height:100%;object-fit:cover}
+.video-slot{position:absolute;left:1rem;right:1rem;bottom:1rem;display:flex;align-items:center;gap:.8rem;padding:.75rem 1.1rem;color:#fff;font-size:.8rem;border:1px solid rgba(255,255,255,.4);border-radius:26px 3px 26px 3px;background:rgba(20,20,22,.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.video-slot i{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid #fff;display:grid;place-items:center;font-style:normal;font-size:.65rem}
+.steps{list-style:none;padding:0;margin:1.8rem 0;border-top:1px solid var(--border-color)}
+.steps li{display:grid;grid-template-columns:9rem 1fr;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border-color)}
+.steps b{font-family:var(--font-heading);font-weight:400;font-size:1.45rem;font-style:italic}.steps span{font-size:.92rem;color:var(--text-muted)}
+.facts{display:flex;flex-wrap:wrap;gap:1.4rem 2.6rem;margin:1.6rem 0 1.2rem}
+.facts div{display:flex;flex-direction:column}.facts strong{font-family:var(--font-heading);font-size:2.4rem;font-weight:400;line-height:1}.facts span{font-size:.78rem;color:var(--text-muted);margin-top:.35rem}
+.ecolor .note{font-size:.88rem;font-style:italic;max-width:none;margin:0}
+@media(max-width:860px){.colore-grid{grid-template-columns:1fr}.ecolor-grid{grid-template-columns:1fr}.mach{aspect-ratio:4/5}.steps li{grid-template-columns:1fr;gap:.2rem}}
+
+.cpil:not(.veg) .tags span{border-color:var(--border-color);color:var(--text-muted)}
+</style>
 </head>
 <body>
   <!-- HEADER -->
@@ -2229,8 +2372,10 @@
           <li class="mobile-menu-close-row"><button class="mobile-menu-close" id="menuClose" type="button" aria-label="Chiudi il menu">&times;</button></li>
         <li><a href="#metodo" class="nav-item">Il Metodo</a></li>
           <li><a href="#servizi" class="nav-item">Servizi</a></li>
+          <li><a href="#colore" class="nav-item">Colore</a></li>
+          <li><a href="#trattamenti" class="nav-item">Trattamenti</a></li>
           <li><a href="#creazioni" class="nav-item">Creazioni</a></li>
-          <li><a href="#cura-casa" class="nav-item">Cura a Casa</a></li>
+          
           <li>
             <a href="#prenota" class="btn btn-gold" style="padding: 0.65rem 1.6rem; font-size: 0.7rem;">Prenota</a>
           </li>
@@ -2252,14 +2397,18 @@
   <main>
     <!-- HERO -->
     <section class="hero" id="inizio">
-      <div class="container">
-        <span class="subtitle">Rovereto</span>
-        <h1>Prima di scegliere il colore,<br>ascoltiamo te.</h1>
-        <p>Consulenza, armocromia e cura personalizzata del capello a Rovereto.</p>
+      <div class="hero-copy">
+        <span class="subtitle">Parrucchiere a Rovereto</span>
+        <h1>Prima di scegliere il colore, ascoltiamo te.</h1>
+        <p>Colore, taglio, armocromia e cura personalizzata del capello, in un atelier riservato in Via Trieste.</p>
         <div class="hero-buttons">
           <a href="#prenota" class="btn btn-gold">Prenota una consulenza</a>
-          <a href="#metodo" class="btn btn-outline-light">Scopri il nostro metodo</a>
+          <a href="#metodo" class="btn btn-outline-light">Scopri il metodo</a>
         </div>
+      </div>
+      <div class="hero-photo">
+        <img src="immagini/hero.jpg" alt="L’interno del salone Capelli D’Angelo a Rovereto, con specchi e poltrone color panna" width="816" height="1020" fetchpriority="high">
+        <span class="hero-tag">Via Trieste 42 · Rovereto</span>
       </div>
     </section>
     <!-- INTRO EDITORIAL -->
@@ -2292,7 +2441,7 @@
       <span class="subtitle">Il nostro approccio</span>
       <h2>Il Nostro Metodo</h2>
 
-      <p class="section-desc" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF;">
+      <p class="section-desc metodo-desc">
   <em>Ascoltare, comprendere, trovare insieme la direzione giusta.</em>
 </p>
 
@@ -2355,150 +2504,114 @@
     </div>
   </section>
 
-  <!-- SERVIZI -->
-  <section id="servizi" class="section-padding services-section">
-    <div class="container text-center">
-
-      <span class="subtitle">L'esperienza Atelier</span>
-      <h2>I Nostri Servizi</h2>
-
-      <p class="section-desc services-desc">
-      Ogni servizio parte dalle caratteristiche dei tuoi capelli,
-      da ciò che desideri e dal risultato che vuoi ottenere.
-    </p>
-
-      <div class="services-overview-box">
-        <div class="price-list">
-
-          <!-- COLORE -->
-          <div class="price-item">
-            <div class="price-header">
-              <span class="price-title">Colore</span>
-              <span class="price-line"></span>
-            </div>
-            <p class="price-desc">
-              Riflessi, sfumature e tonalità studiate in base ai tuoi capelli e al risultato che desideri.
-            </p>
-          </div>
-
-          <!-- TAGLIO -->
-          <div class="price-item">
-            <div class="price-header">
-              <span class="price-title">Taglio</span>
-              <span class="price-line"></span>
-            </div>
-            <p class="price-desc">
-              Un taglio pensato per valorizzare i tuoi lineamenti e accompagnare il tuo stile.
-            </p>
-          </div>
-
-          <!-- ARMOCROMIA -->
-          <div class="price-item">
-            <div class="price-header">
-              <span class="price-title">Armocromia</span>
-              <span class="price-line"></span>
-            </div>
-            <p class="price-desc">
-              Una consulenza per scoprire quali colori si armonizzano meglio con le tue caratteristiche naturali.
-            </p>
-          </div>
-
-          <!-- TRATTAMENTI -->
-          <div class="price-item">
-            <div class="price-header">
-              <span class="price-title">Trattamenti</span>
-              <span class="price-line"></span>
-            </div>
-            <p class="price-desc">
-              Soluzioni mirate in base alle esigenze della cute e dei capelli.
-            </p>
-          </div>
-
-          <!-- STYLING -->
-          <div class="price-item">
-            <div class="price-header">
-              <span class="price-title">Styling</span>
-              <span class="price-line"></span>
-            </div>
-            <p class="price-desc">
-              Piega e definizione per completare il tuo look.
-            </p>
-          </div>
-
-          <!-- CONSULENZA PERSONALIZZATA -->
-          <div class="price-item">
-            <div class="price-header">
-              <span class="price-title">Consulenza personalizzata</span>
-              <span class="price-line"></span>
-            </div>
-            <p class="price-desc">
-              Un confronto per capire le tue esigenze e valutare insieme
-              il servizio più adatto ai tuoi capelli.
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-      <div style="margin-top: 3rem;">
-        <a href="#prenota" class="btn btn-gold">
-          Parliamo delle tue esigenze
-        </a>
-      </div>
-
-    </div>
-  </section>
+  
 
 </div>
-</section>
-    <!-- LA NOSTRA SPECIALIZZAZIONE -->
-    <section class="section-padding text-center" style="background: var(--bg-primary);">
-      <div class="container">
-        <span class="subtitle">La nostra specializzazione</span>
-        <h2>
-          Il colore giusto non è quello che scegli.
-          <br>
-          <span class="highlight-gold">È quello che ti valorizza.</span>
-        </h2>
-        <p class="section-desc">
-          Il colore prende forma dall'incontro tra ciò che desideri e ciò che valorizza davvero i tuoi colori naturali.
-          L'obiettivo è trovare una tonalità che ti piaccia, si armonizzi con la tua immagine
-          e ti faccia sentire a tuo agio.
-        </p>
+
+    <!-- SERVIZI -->
+    <section id="servizi" class="section-padding">
+      <div class="container servizi-grid">
         <div>
-          <a href="#prenota" class="btn btn-gold">Parliamo del tuo colore</a>
+          <span class="subtitle">L’esperienza atelier</span>
+          <h2>I nostri servizi</h2>
+          <p class="section-desc" style="margin-left:0">Ogni servizio parte dalle caratteristiche dei tuoi capelli, da ciò che desideri e dal risultato che vuoi ottenere.</p>
+          <ul class="serv-list">
+            <li><h3>Colore</h3><p>Riflessi, sfumature e tonalità studiate in base ai tuoi capelli e al risultato che desideri.</p></li>
+            <li><h3>Taglio</h3><p>Un taglio pensato per valorizzare i tuoi lineamenti e accompagnare il tuo stile.</p></li>
+            <li><h3>Armocromia</h3><p>Una consulenza per scoprire quali colori si armonizzano meglio con le tue caratteristiche naturali.</p></li>
+            <li><h3>Trattamenti</h3><p>Soluzioni mirate in base alle esigenze della cute e dei capelli.</p></li>
+            <li><h3>Styling</h3><p>Piega e definizione per completare il tuo look.</p></li>
+            <li><h3>Consulenza</h3><p>Un confronto per capire le tue esigenze e scegliere insieme il servizio più adatto.</p></li>
+          </ul>
+          <a href="#prenota" class="btn btn-dark">Parliamo delle tue esigenze</a>
+        </div>
+        <div class="duo-photos">
+          <figure class="duo-card"><img src="immagini/creazioni/taglio_4.jpg" alt="Capelli ramati con onde morbide, realizzati in salone" loading="lazy"><figcaption><h3>Per lei</h3><p>Colore, taglio e armocromia in uno spazio luminoso.</p></figcaption></figure>
+          <figure class="duo-card"><img src="immagini/creazioni/taglio_10.jpg" alt="Taglio maschile moderno, visto da dietro" loading="lazy"><figcaption><h3>Per lui</h3><p>Taglio e cura su misura, in un’area dedicata.</p></figcaption></figure>
         </div>
       </div>
     </section>
-    <!-- ASCOLTO & ARMOCROMIA -->
-    <section class="section-padding text-center" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <!-- IL COLORE: colore, effetti cromatici, colorazioni vegetali -->
+    <!-- NOTA: contenuti dalla richiesta del cliente. Da confermare con Angelo: prodotto/marchio delle colorazioni vegetali e testi sulle allergie. -->
+    <section id="colore" class="section-padding colore">
       <div class="container">
-        <span class="subtitle">Ascolto & Armocromia</span>
-        <h2>
-          Il colore parte <span class="highlight-gold">da te.</span>
-        </h2>
-        <p class="section-desc">
-          Ogni persona ha caratteristiche cromatiche che contribuiscono alla sua immagine.
-          L'armocromia ci aiuta a esplorare le tonalità che possono valorizzarle
-          e a individuare nuovi spunti per scegliere il colore dei capelli.
-        </p>
-        <div class="armocromia-dots-container" aria-label="Esempi di tonalità cromatiche">
-          <div class="color-dot" style="background-color: #E2B29F;" title="Cipria caldo"></div>
-          <div class="color-dot" style="background-color: #C87D55;" title="Terracotta"></div>
-          <div class="color-dot" style="background-color: #925035;" title="Nocciola intenso"></div>
-          <div class="color-dot" style="background-color: #DDA15E;" title="Miele dorato"></div>
-          <div class="color-dot" style="background-color: #BC6C25;" title="Rame caldo"></div>
-          <div class="color-dot" style="background-color: #D4A373;" title="Sabbia"></div>
-          <div class="color-dot" style="background-color: #E0C3FC;" title="Lilla freddo"></div>
-          <div class="color-dot" style="background-color: #8E9AAF;" title="Salvia polvere"></div>
-          <div class="color-dot" style="background-color: #4A5759;" title="Antracite freddo"></div>
-          <div class="color-dot" style="background-color: #3D5A80;" title="Ottanio avvolgente"></div>
+        <div class="text-center">
+          <span class="subtitle">Il colore</span>
+          <h2>Il colore giusto è quello che <span class="highlight-gold">ti valorizza.</span></h2>
+          <p class="section-desc">Il colore prende forma dall’incontro tra ciò che desideri e ciò che valorizza davvero i tuoi colori naturali: una tonalità che ti piace, si armonizza con la tua immagine e ti fa sentire a tuo agio.</p>
         </div>
-        <div>
-          <a href="#prenota" class="btn btn-dark">Prenota una consulenza</a>
+        <div class="colore-grid">
+          <article class="cpil"><h3>Colore</h3><p>Colorazioni, riflessi e ricerca: partiamo dai tuoi colori naturali per costruire la tonalità più adatta a te.</p><div class="tags"><span>Colorazioni</span><span>Riflessi</span><span>Ricerca</span></div></article>
+          <article class="cpil"><h3>Effetti cromatici</h3><p>Sfumature, luce e profondità: giochi di riflessi che danno movimento ai capelli, dal naturale più sottile all’effetto più deciso.</p><div class="tags"><span>Sfumature</span><span>Luce</span><span>Profondità</span></div></article>
+          <article class="cpil veg">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 19C5 9 11 4 20 4c0 9-5 15-15 15zM5 19c3-5 6-8 10-10"/></svg>
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M12 10c-1-3 0-6 0-6s1 3 0 6zM12 14c1 3 0 6 0 6s-1-3 0-6zM10 12c-3 1-6 0-6 0s3-1 6 0zM14 12c3-1 6 0 6 0s-3 1-6 0z"/></svg>
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="11" r="2.2"/><circle cx="15" cy="11" r="2.2"/><circle cx="12" cy="15.5" r="2.2"/><path d="M12 8.5V4M12 5c2 0 4-1 5-2"/></svg>
+            </div>
+            <h3>Colorazioni vegetali</h3>
+            <p>Erbe, fiori e tannini del vino per un colore dal carattere naturale. Pensate per la donna green e per chi ha allergie o sensibilità ai coloranti tradizionali.</p>
+            <div class="tags"><span>Erbe</span><span>Fiori</span><span>Tannini del vino</span></div>
+            <small>Se hai allergie o la pelle sensibile, ne parliamo prima, in consulenza.</small>
+          </article>
         </div>
       </div>
     </section>
+    <!-- ARMOCROMIA: perle di colore -->
+    <section id="armocromia" class="section-padding text-center arm" style="--tone:#C87D55">
+      <div class="arm-aura" aria-hidden="true"></div>
+      <div class="container" style="position:relative">
+        <span class="subtitle">Ascolto &amp; armocromia</span>
+        <h2>Il colore parte <span class="highlight-gold">da te.</span></h2>
+        <p class="section-desc">Ogni persona ha caratteristiche cromatiche che contribuiscono alla sua immagine. L’armocromia ci aiuta a esplorare le tonalità che possono valorizzarle e a individuare nuovi spunti per scegliere il colore dei capelli.</p>
+        <div class="pearls" role="group" aria-label="Esempi di tonalità"><div class="pgroup"><span>Toni caldi</span><div class="prow"><button type="button" class="pearl" style="--c:#E2B29F;--i:0" data-c="#E2B29F" data-n="Cipria caldo" data-u="Toni caldi" aria-pressed="false" aria-label="Cipria caldo"></button><button type="button" class="pearl" style="--c:#C87D55;--i:1" data-c="#C87D55" data-n="Terracotta" data-u="Toni caldi" aria-pressed="false" aria-label="Terracotta"></button><button type="button" class="pearl" style="--c:#925035;--i:2" data-c="#925035" data-n="Nocciola intenso" data-u="Toni caldi" aria-pressed="false" aria-label="Nocciola intenso"></button><button type="button" class="pearl" style="--c:#DDA15E;--i:3" data-c="#DDA15E" data-n="Miele dorato" data-u="Toni caldi" aria-pressed="false" aria-label="Miele dorato"></button><button type="button" class="pearl" style="--c:#BC6C25;--i:4" data-c="#BC6C25" data-n="Rame caldo" data-u="Toni caldi" aria-pressed="false" aria-label="Rame caldo"></button><button type="button" class="pearl" style="--c:#D4A373;--i:5" data-c="#D4A373" data-n="Sabbia" data-u="Toni caldi" aria-pressed="false" aria-label="Sabbia"></button></div></div><div class="pgroup"><span>Toni freddi</span><div class="prow"><button type="button" class="pearl" style="--c:#E0C3FC;--i:6" data-c="#E0C3FC" data-n="Lilla freddo" data-u="Toni freddi" aria-pressed="false" aria-label="Lilla freddo"></button><button type="button" class="pearl" style="--c:#8E9AAF;--i:7" data-c="#8E9AAF" data-n="Salvia polvere" data-u="Toni freddi" aria-pressed="false" aria-label="Salvia polvere"></button><button type="button" class="pearl" style="--c:#4A5759;--i:8" data-c="#4A5759" data-n="Antracite freddo" data-u="Toni freddi" aria-pressed="false" aria-label="Antracite freddo"></button><button type="button" class="pearl" style="--c:#3D5A80;--i:9" data-c="#3D5A80" data-n="Ottanio avvolgente" data-u="Toni freddi" aria-pressed="false" aria-label="Ottanio avvolgente"></button></div></div></div>
+        <p class="pearl-cap" aria-live="polite"><strong id="tn">Terracotta</strong><span id="tu">Toni caldi</span></p>
+        <a href="#prenota" class="btn btn-dark">Prenota una consulenza</a>
+      </div>
+    </section>
+    <!-- NOVITA: MACCHINARIO e-color -->
+    <!-- NOTA: dati tecnici dal sito del produttore (e-color.it). Video e altre foto in arrivo dal cliente. -->
+    <section id="ecolor" class="section-padding ecolor">
+      <div class="container ecolor-grid">
+        <figure class="mach">
+          <img src="immagini/macchinario.jpg" alt="La color machine e•color in salone, con lo schermo per comporre la colorazione" loading="lazy">
+          <!-- VIDEO: quando arriva il file, sostituire .video-slot con: <video controls playsinline poster="immagini/macchinario.jpg" src="immagini/ecolor.mp4"></video> -->
+          <figcaption class="video-slot"><i>▶</i><span>Il video della color machine, in arrivo</span></figcaption>
+        </figure>
+        <div>
+          <span class="subtitle">La novità del salone</span>
+          <h2>e•color: il colore composto con precisione</h2>
+          <p>In salone è arrivata e•color, la prima color machine intelligente: dosa e miscela il colore al grammo. Non sostituisce la mano di Angelo, la valorizza: la formula la sceglie sempre lui, la macchina la prepara con precisione e senza sprechi.</p>
+          <ul class="steps">
+            <li><b>Scopriamo</b><span>Con l’armocromia individuiamo i toni che ti valorizzano.</span></li>
+            <li><b>Componiamo</b><span>Angelo sceglie la formula, e•color la dosa al grammo.</span></li>
+            <li><b>Ritroviamo</b><span>Il tuo profilo resta salvato: lo stesso colore, ogni volta che vuoi.</span></li>
+          </ul>
+          <div class="facts">
+            <div><strong>18″</strong><span>per preparare il colore</span></div>
+            <div><strong>6 + 2</strong><span>basi colore e ossidanti</span></div>
+            <div><strong>3 mln</strong><span>di formule possibili</span></div>
+          </div>
+          <p class="note">I colori e•color sono senza ammoniaca.</p>
+          <a href="#prenota" class="btn btn-dark" style="margin-top:1.4rem">Prenota una consulenza colore</a>
+        </div>
+      </div>
+    </section>
+    <!-- TRATTAMENTI E PRODOTTI (ex "Cura a casa") -->
+    <!-- Prodotti e descrizioni dalle schede Philip Martin's. Esclusi prezzi di acquisto e materiale commerciale. -->
+    <section id="trattamenti" class="section-padding trattamenti">
+      <div class="container">
+        <div class="text-center">
+          <span class="subtitle">Rituali e prodotti</span>
+          <h2>I nostri trattamenti</h2>
+          <p class="section-desc">Per ogni esigenza scegliamo insieme il rituale giusto. Usiamo prodotti professionali <strong>Philip Martin’s</strong> e ti aiutiamo a continuare la cura a casa con quelli più adatti ai tuoi capelli.<br><em>Per un tocco di luce in più, chiedici informazioni su Soffio di Luce.</em></p>
+        </div>
+        <div class="rituals"><details class="ritual" name="rit" open><summary><span><h3>Cute in equilibrio</h3><span class="for">Cute grassa, sensibile o appesantita</span></span></summary><div class="prod-row"><article class="prod"><div class="prod-img photo"><img src="immagini/prodotti/scalp-peel.webp" alt="Scalp Peel, peeling cuoio capelluto" loading="lazy"></div><div class="prod-body"><span class="prod-step">Prima dello shampoo</span><h4>Scalp Peel</h4><p class="kind">Peeling cuoio capelluto</p><p>Esfoliazione controllata che libera la cute da impurità, sebo in eccesso e cellule morte, preparandola ai trattamenti successivi.</p></div></article><article class="prod"><div class="prod-img"><img src="immagini/prodotto_aloe.jpg" alt="Aloe Pure Gel, trattamento pulizia cute" loading="lazy"></div><div class="prod-body"><span class="prod-step">Prima dello shampoo</span><h4>Aloe Pure Gel</h4><p class="kind">Trattamento pulizia cute</p><p>Gel all’aloe bio che detossina e riequilibra la cute grassa o irritata, con un’immediata sensazione di freschezza.</p></div></article><article class="prod"><div class="prod-img"><img src="immagini/prodotti/purifying.webp" alt="Purifying Wash, shampoo cute grassa" loading="lazy"></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Purifying Wash</h4><p class="kind">Shampoo cute grassa</p><p>Purifica in profondità, rimuove l’eccesso di sebo e lenisce la cute con una freschezza che dura.</p></div></article><article class="prod"><div class="prod-img"><img src="immagini/prodotti/scalp-benefit.webp" alt="Scalp Benefit, maschera cute grassa" loading="lazy"></div><div class="prod-body"><span class="prod-step">Maschera</span><h4>Scalp Benefit</h4><p class="kind">Maschera cute grassa</p><p>Texture leggera, lenitiva e rinfrescante: calma le irritazioni e riporta benessere al cuoio capelluto.</p></div></article><article class="prod"><div class="prod-img"><img src="immagini/prodotti/calming-wash.webp" alt="Calming Wash, shampoo cute sensibile e con forfora" loading="lazy"></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Calming Wash</h4><p class="kind">Shampoo cute sensibile e con forfora</p><p>Detersione delicata che purifica la cute sensibile e con forfora e ne mantiene il naturale benessere.</p></div></article><article class="prod"><div class="prod-img"><img src="immagini/prodotti/calming-rinse.webp" alt="Calming Rinse, maschera cute con forfora" loading="lazy"></div><div class="prod-body"><span class="prod-step">Maschera</span><h4>Calming Rinse</h4><p class="kind">Maschera cute con forfora</p><p>Nutre le lunghezze e aiuta a riequilibrare il cuoio capelluto, per capelli morbidi e luminosi.</p></div></article></div></details><details class="ritual" name="rit"><summary><span><h3>Capelli secchi e stressati</h3><span class="for">Idratazione, forza ed elasticità</span></span></summary><div class="prod-row"><article class="prod"><div class="prod-img"><img src="immagini/prodotti/maple-wash.webp" alt="Maple Aqua Wash, shampoo capelli secchi" loading="lazy"></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Maple Aqua Wash</h4><p class="kind">Shampoo capelli secchi</p><p>Deterge con dolcezza i capelli secchi e crespi, migliorando la pettinabilità e lasciandoli morbidi.</p></div></article><article class="prod"><div class="prod-img"><img src="immagini/prodotti/maple-rinse.webp" alt="Maple Aqua Rinse, maschera capelli secchi" loading="lazy"></div><div class="prod-body"><span class="prod-step">Maschera</span><h4>Maple Aqua Rinse</h4><p class="kind">Maschera capelli secchi</p><p>Texture ricca e vellutata che nutre e idrata in profondità, restituendo elasticità e setosità.</p></div></article><article class="prod"><div class="prod-img"><img src="immagini/prodotti/canapa-wash.webp" alt="Canapa Wash, shampoo capelli stressati" loading="lazy"></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Canapa Wash</h4><p class="kind">Shampoo capelli stressati</p><p>Delicato e riequilibrante: contrasta lo stress ossidativo, lenisce la cute e lascia i capelli puliti e morbidi.</p></div></article><article class="prod"><div class="prod-img"><img src="immagini/prodotti/canapa-rinse.webp" alt="Canapa Rinse, maschera capelli stressati" loading="lazy"></div><div class="prod-body"><span class="prod-step">Maschera</span><h4>Canapa Rinse</h4><p class="kind">Maschera capelli stressati</p><p>Rinforzante e protettiva, districa e fortifica la fibra per capelli più resistenti e vitali.</p></div></article><article class="prod"><div class="prod-img photo"><img src="immagini/prodotti/fusion.webp" alt="Fusion Luxury Mask, maschera super idratante" loading="lazy"></div><div class="prod-body"><span class="prod-step">Maschera</span><h4>Fusion Luxury Mask</h4><p class="kind">Maschera super idratante</p><p>Per capelli trattati e stressati: castagna bio, fico d’India e olio d’oliva bio per luminosità e setosità senza peso.</p></div></article></div></details><details class="ritual" name="rit"><summary><span><h3>Ricci e mossi</h3><span class="for">Definizione morbida, senza crespo</span></span></summary><div class="prod-row"><article class="prod"><div class="prod-img"><img src="immagini/prodotti/moringa.webp" alt="Moringa Wash, shampoo capelli ricci" loading="lazy"></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Moringa Wash</h4><p class="kind">Shampoo capelli ricci</p><p>Deterge senza appesantire e preserva morbidezza, elasticità e definizione di ricci e mossi.</p></div></article><article class="prod"><div class="prod-img"><img src="immagini/prodotti/potion.webp" alt="Potion Spray, spray idratante e disciplinante" loading="lazy"></div><div class="prod-body"><span class="prod-step">Finish</span><h4>Potion Spray</h4><p class="kind">Spray idratante e disciplinante</p><p>Riduce il crespo, definisce onde e ricci e migliora la pettinabilità, con olio di lino ed estratto di baobab.</p></div></article></div></details><details class="ritual" name="rit"><summary><span><h3>Biondi, grigi e colorati</h3><span class="for">Un colore luminoso più a lungo</span></span></summary><p class=rit-note>Per i capelli chiari abbiamo anche un rituale completo, il Blonde Radiance: 24 Wash, Ultra Violet Wash, Maple Aqua Rinse e Infusion Spray per detergere, neutralizzare e illuminare.</p><div class="prod-row"><article class="prod"><div class="prod-img"><img src="immagini/prodotti/uv.webp" alt="Ultra Violet Wash, shampoo anti-giallo" loading="lazy"></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Ultra Violet Wash</h4><p class="kind">Shampoo anti-giallo</p><p>Pigmento viola e mirtillo bio neutralizzano i riflessi gialli di biondi, decolorati, grigi e bianchi.</p></div></article><article class="prod"><div class="prod-img"><img src="immagini/prodotti/color-m.webp" alt="Color Maintenance, shampoo capelli colorati" loading="lazy"></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Color Maintenance</h4><p class="kind">Shampoo capelli colorati</p><p>Ripara, rivitalizza e illumina, mantenendo il colore intenso e brillante più a lungo.</p></div></article><article class="prod"><div class="prod-img"><img src="immagini/prodotti/color-r.webp" alt="Color Repair, maschera capelli colorati" loading="lazy"></div><div class="prod-body"><span class="prod-step">Maschera</span><h4>Color Repair</h4><p class="kind">Maschera capelli colorati</p><p>Estratti botanici e burri vegetali per capelli morbidi, setosi e perfettamente controllati.</p></div></article></div></details><details class="ritual" name="rit"><summary><span><h3>Ogni giorno e capelli sottili</h3><span class="for">Detersione delicata e volume naturale</span></span></summary><div class="prod-row"><article class="prod"><div class="prod-img"><img src="immagini/prodotti/w24.webp" alt="24 Wash, shampoo uso frequente" loading="lazy"></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>24 Wash</h4><p class="kind">Shampoo uso frequente</p><p>La detersione delicata di ogni giorno, adatta a tutti i capelli: leggeri, luminosi e pieni di vitalità.</p></div></article><article class="prod"><div class="prod-img"><img src="immagini/prodotti/babassu.webp" alt="Babassu Wash, shampoo capelli sottili" loading="lazy"></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Babassu Wash</h4><p class="kind">Shampoo capelli sottili</p><p>Sostiene la fibra senza appesantire e restituisce volume naturale, movimento e luminosità.</p></div></article></div></details><details class="ritual" name="rit"><summary><span><h3>Finish e styling</h3><span class="for">Luce, protezione e texture</span></span></summary><div class="prod-row"><article class="prod"><div class="prod-img"><img src="immagini/prodotti/infusion.webp" alt="Infusion Spray, spray protettivo e illuminante" loading="lazy"></div><div class="prod-body"><span class="prod-step">Finish</span><h4>Infusion Spray</h4><p class="kind">Spray protettivo e illuminante</p><p>Protegge dal calore e dallo stress ambientale e dona una lucentezza setosa senza appesantire.</p></div></article><article class="prod"><div class="prod-img"><img src="immagini/prodotti/marvel.webp" alt="Marvel Oil, olio secco spray lucidante" loading="lazy"></div><div class="prod-body"><span class="prod-step">Finish</span><h4>Marvel Oil</h4><p class="kind">Olio secco spray lucidante</p><p>Senza siliconi, per capelli medio-grossi: luce istantanea, protezione termica e pettinabilità.</p></div></article><article class="prod"><div class="prod-img"><img src="immagini/prodotti/stylix.webp" alt="Stylix, spray texturizzante" loading="lazy"></div><div class="prod-body"><span class="prod-step">Finish</span><h4>Stylix</h4><p class="kind">Spray texturizzante</p><p>Volume immediato e texture leggera per un look opaco e naturale, senza residui.</p></div></article><article class="prod"><div class="prod-img"><img src="immagini/prodotti/infinito.webp" alt="Infinito, elisir idratante barba e capelli" loading="lazy"></div><div class="prod-body"><span class="prod-step">Finish</span><h4>Infinito</h4><p class="kind">Elisir idratante barba e capelli</p><p>Oli di argan, oliva, jojoba e carota nutrono e donano morbidezza e lucentezza a barba e capelli.</p></div></article></div></details></div>
+        <div class="text-center" style="margin-top:3rem"><a href="#prenota" class="btn btn-gold">Scopri il rituale per te</a></div>
+      </div>
+    </section>
+    
+    
     <!-- LE NOSTRE CREAZIONI -->
     <section id="creazioni" class="section-padding">
       <div class="container text-center">
@@ -2567,92 +2680,16 @@
         </div>
       </div>
     </section>
-    <!-- LA CURA CONTINUA A CASA -->
-    <section id="cura-casa" class="section-padding" style="background: var(--bg-secondary);">
-      <div class="container">
-        <div class="text-center">
-          <span class="subtitle">La cura a casa</span>
-          <h2>La cura continua a casa</h2>
-          <p class="section-desc">
-            Il lavoro sui tuoi capelli continua anche dopo l'appuntamento in salone.
-            La scelta dei prodotti e delle attenzioni quotidiane può fare la differenza nel mantenerli curati e luminosi.
-            Proponiamo prodotti professionali <strong style="color: var(--text-main);">Philip Martin's</strong>
-            e ti aiutiamo a individuare quelli più adatti alle esigenze dei tuoi capelli.
-            <br><br>
-            <em>Per dare ai capelli un tocco di luce in più, chiedici informazioni su Soffio di Luce.</em><br>
-            Ti aiuteremo a trovare la routine più adatta a te.
-          </p>
-        </div>
-        <div class="products-grid" id="productsCarousel" aria-label="Prodotti per la cura dei capelli">
-          <article class="product-card">
-            <div class="product-img-box">
-              <img src="immagini/prodotto_puryfing.jpg" alt="Purifying Wash, shampoo purificante per cute grassa" loading="lazy">
-            </div>
-            <span class="product-brand">Philip Martin's</span>
-            <h4>Purifying Wash</h4>
-            <p class="product-type">Shampoo Cute Grassa</p>
-            <p class="product-description">
-              Una detersione purificante e rinfrescante pensata per la cute che tende a produrre sebo in eccesso. La Bardana Bio e il Rosmarino, insieme agli oli essenziali di Menta ed Eucalipto, donano freschezza e aiutano a lasciare il cuoio capelluto pulito e i capelli leggeri più a lungo.
-            </p>
-          </article>
-          <article class="product-card">
-            <div class="product-img-box">
-              <img src="immagini/prodotto_scalp.jpg" alt="Scalp Benefit, maschera per cute grassa e cuoio capelluto" loading="lazy">
-            </div>
-            <span class="product-brand">Philip Martin's</span>
-            <h4>Scalp Benefit</h4>
-            <p class="product-type">Maschera Cute Grassa &amp; Cuoio Capelluto</p>
-            <p class="product-description">
-              Un trattamento idratante e lenitivo per la cute soggetta a sebo o impurità. Il Burro di Karité e l'Estratto di Bardana Bio si uniscono al Mentolo per regalare una piacevole sensazione rinfrescante, mentre la fibra capillare viene nutrita per capelli soffici, vitali e dall'aspetto purificato.
-            </p>
-          </article>
-          <article class="product-card">
-            <div class="product-img-box">
-              <img src="immagini/prodotto_moringa.jpg" alt="Moringa Wash, shampoo per capelli ricci e mossi" loading="lazy">
-            </div>
-            <span class="product-brand">Philip Martin's</span>
-            <h4>Moringa Wash</h4>
-            <p class="product-type">Shampoo Capelli Ricci</p>
-            <p class="product-description">
-              Shampoo nutriente e disciplinante per capelli ricci o mossi. Gli estratti di Moringa, Aloe Bio e Viola Tricolor Bio aiutano a idratare la chioma, contenere l'effetto crespo e valorizzare elasticità e definizione dei ricci, senza appesantirli.
-            </p>
-          </article>
-          <article class="product-card">
-            <div class="product-img-box">
-              <img src="immagini/prodotto_24.jpg" alt="24 Wash, shampoo delicato per uso frequente" loading="lazy">
-            </div>
-            <span class="product-brand">Philip Martin's</span>
-            <h4>24 Wash</h4>
-            <p class="product-type">Shampoo Uso Frequente</p>
-            <p class="product-description">
-              Un detergente delicato e idratante, ideale per lavaggi quotidiani o frequenti e adatto a tutti i tipi di capelli. Gli estratti di Camomilla, Elicriso e Amamelide aiutano a riequilibrare la cute, lasciando i capelli morbidi, luminosi e protetti dalle aggressioni esterne.
-            </p>
-          </article>
-          <article class="product-card">
-            <div class="product-img-box">
-              <img src="immagini/prodotto_aloe.jpg" alt="Aloe Pure Gel, trattamento purificante per la cute" loading="lazy">
-            </div>
-            <span class="product-brand">Philip Martin's</span>
-            <h4>Aloe Pure Gel</h4>
-            <p class="product-type">Trattamento Pulizia Cute</p>
-            <p class="product-description">
-              Trattamento detossinante e purificante per il cuoio capelluto a base di Succo di Aloe Bio. Pulisce in profondità, lenisce la cute e restituisce benessere e freschezza alla chioma.
-            </p>
-          </article>
-          <article class="product-card">
-            <div class="product-img-box">
-              <img src="immagini/prodotto_canapa.jpg" alt="Canapa Rinse, maschera ristrutturante per capelli stressati" loading="lazy">
-            </div>
-            <span class="product-brand">Philip Martin's</span>
-            <h4>Canapa Rinse</h4>
-            <p class="product-type">Maschera Capelli Stressati</p>
-            <p class="product-description">
-              Maschera ristrutturante e rigenerante con Estratto di Canapa Bio, Prolina e Ceramidi. Nutre intensamente i capelli danneggiati e stressati, restituendo elasticità e forza.
-            </p>
-          </article>
-        </div>
-        <div class="products-pagination" id="productsPagination" aria-label="Seleziona un prodotto"></div>
-      </div>
+    
+    <!-- STYLING E STRUMENTI -->
+    <!-- NOTA: marchio visibile nella foto vetrina (Bio Ionic). Da confermare con Angelo. -->
+    <section id="styling" class="section-padding">
+      <div class="container"><div class="feature-block">
+        <div class="feature-img-box"><img src="immagini/vetrina.jpg" alt="Phon, piastre e spazzole professionali in vetrina" loading="lazy"></div>
+        <div class="feature-text"><span class="subtitle">Styling e strumenti</span><h2>Anche la piega parte dagli strumenti giusti.</h2>
+        <p>In vetrina trovi phon, piastre e spazzole professionali Bio Ionic, gli stessi con cui completiamo il look in salone.</p>
+        <p>Chiedici quale è più adatto ai tuoi capelli: ti consigliamo con calma, senza fretta.</p></div>
+      </div></div>
     </section>
     <!-- FILOSOFIA E SALONE: SEZIONE UNIFICATA -->
     <section id="salone" class="section-padding salone-unificato">
@@ -2705,48 +2742,13 @@
             </div>
           </div>
           <div class="feature-img-box">
-            <img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&q=80&w=800" alt="Interno del salone Capelli D'Angelo a Rovereto" loading="lazy">
+            <img src="immagini/vetrina_esterno1.jpg" alt="Interno del salone Capelli D'Angelo a Rovereto" loading="lazy">
           </div>
         </div>
       </div>
     </section>
      <!-- AMBASCIATA DELLA GIOIA -->
-    <section class="ambasciata-section">
-  <div class="container">
-
-    <div class="ambasciata-box">
-
-      <div class="ambasciata-logo">
-        <img
-          src="immagini/Logo-Ambasciata.png"
-          alt="Logo Ambasciata della Gioia"
-          loading="lazy"
-        >
-      </div>
-
-<div class="ambasciata-content">
-
-  <span class="ambasciata-eyebrow">
-    La nostra identità
-  </span>
-
-  <h2>Ambasciata della Gioia</h2>
-
-  <p style="font-size: 1.3rem; font-family: var(--font-heading); color: var(--accent-gold); margin-bottom: 1.5rem; font-style: italic;">
-    Un modo diverso di vivere la bellezza.
-  </p>
-
-  <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; margin: 0;">
-    <strong>Capelli D'Angelo</strong> fa parte del progetto
-    <strong style="color: var(--accent-gold);">Ambasciata della Gioia</strong>,
-    che promuove una visione della bellezza attenta alla persona, all'ascolto
-    e alla valorizzazione della propria immagine. Un approccio che condividiamo
-    e che guida il nostro modo di accogliere e accompagnare ogni cliente.
-  </p>
-
-</div>
-      </div>
-    </section>
+    <section class="ambasciata-section" id="ambasciata"><div class="container"><div class="amb-label"><img src="immagini/Logo-Ambasciata.png" alt="Logo Ambasciata della Gioia" loading="lazy"><p><strong>Capelli D’Angelo fa parte del progetto Ambasciata della Gioia</strong>: un modo diverso di vivere la bellezza, con ascolto e attenzione alla persona.</p></div></div></section>
    <!-- RECENSIONI -->
 <section class="section-padding reviews-section" id="recensioni">
   <div class="container text-center">
@@ -2895,7 +2897,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#home" class="footer-logo" aria-label="Capelli D'Angelo - Torna all'inizio">
+          <a href="#inizio" class="footer-logo" aria-label="Capelli D'Angelo - Torna all'inizio">
             <img src="immagini/logo_footer.png" alt="Capelli D'Angelo">
           </a>
           <p style="font-size: 0.85rem; color: #77726E;">
@@ -2908,7 +2910,7 @@
             <li><a href="#metodo">Il Metodo</a></li>
             <li><a href="#servizi">Servizi</a></li>
             <li><a href="#creazioni">Creazioni</a></li>
-            <li><a href="#cura-casa">Cura a Casa</a></li>
+            <li><a href="#trattamenti">Trattamenti e prodotti</a></li>
             <li><a href="#salone">Il Salone</a></li>
             <li><a href="#ambasciata">Ambasciata della Gioia</a></li>
             <li><a href="#prenota">Prenota</a></li>
@@ -3007,6 +3009,13 @@
         });
       }, { passive: true });
     }
+  </script>
+<script>
+    // Palette armocromia: la tonalità scelta colora l'alone dietro la sezione
+    (function(){var a=document.getElementById('armocromia'),tn=document.getElementById('tn'),tu=document.getElementById('tu'),ps=document.querySelectorAll('.pearl');
+    if(!a)return;function pick(b){a.style.setProperty('--tone',b.dataset.c);tn.textContent=b.dataset.n;tu.textContent=b.dataset.u;ps.forEach(function(x){x.setAttribute('aria-pressed',x===b)})}
+    ps.forEach(function(b){['mouseenter','focus','click'].forEach(function(e){b.addEventListener(e,function(){pick(b)})})});pick(ps[1]);})();
+    (function(){var n=document.getElementById('navLinks');if(!n)return;new MutationObserver(function(){document.body.style.overflow=n.classList.contains('active')?'hidden':''}).observe(n,{attributes:true,attributeFilter:['class']})})();
   </script>
 </body>
 </html>
