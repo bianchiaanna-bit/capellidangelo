@@ -1585,7 +1585,12 @@ header{background:rgba(245,242,236,.78);backdrop-filter:blur(18px) saturate(1.4)
 .ritual .for{display:block;color:#B9B6B0;font-size:.9rem;margin-top:.2rem}
 .ritual summary::after{content:"+";flex:none;width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.35);border-radius:50%;color:#fff;font-size:1.6rem;font-weight:200;transition:transform .5s,background .4s}
 .ritual[open] summary::after{transform:rotate(135deg);background:rgba(255,255,255,.12)}
-.ritual[open] .prod-row,.ritual[open] .rit-note{animation:rise .8s cubic-bezier(.16,1,.3,1) both}
+/* Evita transform sul contenitore con scroll orizzontale: su Safari la barra
+   di scorrimento può restare dipinta nella posizione precedente. */
+.ritual[open] .prod-row{animation:fade-row .8s ease both}
+.ritual[open] .prod-row .prod{animation:rise .8s cubic-bezier(.16,1,.3,1) both}
+.ritual[open] .rit-note{animation:rise .8s cubic-bezier(.16,1,.3,1) both}
+@keyframes fade-row{from{opacity:0}to{opacity:1}}
 .rit-note{max-width:60em;margin:0 0 1.6rem;color:#B9B6B0;font-family:var(--font-heading);font-style:italic;font-size:1.25rem;line-height:1.5}
 .prod-row{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.2rem 0 2.2rem;scrollbar-width:thin;scrollbar-color:#555 transparent}
 .prod{flex:0 0 min(270px,76vw);scroll-snap-align:start;overflow:hidden;border:1px solid rgba(255,255,255,.18);border-radius:34px 4px 34px 4px;background:linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,.03))}
@@ -2397,6 +2402,14 @@ footer{padding-bottom:5.5rem}
       button.setAttribute('aria-expanded',String(expanded));
       button.querySelector('span').textContent=expanded?'Mostra meno':'Scopri';
       button.setAttribute('aria-label',(expanded?'Nascondi':'Scopri')+' i dettagli di '+(card.querySelector('h4')?card.querySelector('h4').textContent.trim():'questo prodotto'));
+      // Forza un aggiornamento del layout del carosello dopo la variazione di altezza.
+      var row=card.closest('.prod-row');
+      if(row){
+        requestAnimationFrame(function(){
+          row.style.setProperty('--scroll-layout-refresh',String(card.offsetHeight));
+          row.getBoundingClientRect();
+        });
+      }
     });
   });
 })();
