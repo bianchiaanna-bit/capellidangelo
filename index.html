@@ -2214,7 +2214,6 @@
 body::after{content:"";position:fixed;inset:0;z-index:5;pointer-events:none;opacity:.14;mix-blend-mode:multiply;background:var(--grain)}
 header{background:rgba(245,242,236,.78);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4)}
 .subtitle{font-family:var(--font-heading)!important;font-style:italic;font-size:1.2rem!important;letter-spacing:.03em!important;text-transform:none!important;font-weight:500!important;color:var(--accent-taupe)!important}
-.metodo-section .subtitle{color:#fff!important}
 .footer-links a:hover,.social-link-item:hover{color:#fff}
 .btn-gold{color:#fff}.btn-dark:hover{color:var(--text-main)}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
@@ -2269,28 +2268,10 @@ header{background:rgba(245,242,236,.78);backdrop-filter:blur(18px) saturate(1.4)
 .amb-label{display:flex;align-items:center;gap:1.2rem;max-width:720px;margin:0 auto;padding:.9rem 1.6rem;border:1px solid var(--border-color);border-radius:36px 4px 36px 4px;background:rgba(255,255,255,.5)}
 .amb-label img{flex:none;height:46px;width:auto}.amb-label p{margin:0;font-size:.88rem;line-height:1.55;color:var(--text-muted)}.amb-label strong{color:var(--text-main);font-weight:500}
 /* armocromia: perle di vetro satinato */
-.arm{position:relative;overflow:hidden;background:var(--bg-secondary);border-block:1px solid var(--border-color);transition:--tone 1.1s ease}
-.arm-aura{position:absolute;left:50%;top:50%;width:min(980px,130vw);aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle,var(--tone),transparent 64%);opacity:.42;filter:blur(28px);animation:breathe 12s ease-in-out infinite;pointer-events:none}
-@keyframes breathe{50%{scale:1.06;opacity:.52}}
-.pearls{display:flex;justify-content:center;align-items:flex-start;flex-wrap:wrap;gap:2rem clamp(2rem,6vw,5rem);margin:3rem 0 .6rem}
-.pgroup{display:flex;flex-direction:column;align-items:center;gap:1.3rem}
-.pgroup>span{display:flex;align-items:center;gap:.9rem;font-family:var(--font-heading);font-style:italic;font-size:1.05rem;color:var(--text-muted)}
-.pgroup>span::before,.pgroup>span::after{content:"";width:28px;height:1px;background:var(--accent-taupe);opacity:.6}
-.prow{display:flex;justify-content:center;flex-wrap:wrap;gap:clamp(.7rem,1.8vw,1.3rem)}
-.pearl{--s:clamp(40px,5.4vw,62px);position:relative;width:var(--s);height:var(--s);padding:0;border:0;cursor:pointer;
 background:radial-gradient(circle at 32% 26%,rgba(255,255,255,.75) 0 4%,rgba(255,255,255,.22) 14%,transparent 34%),radial-gradient(circle at 70% 86%,rgba(0,0,0,.3),transparent 58%),var(--c);
 border-radius:50% 50% 48% 52%/52% 48% 52% 48%;
 box-shadow:inset 0 -6px 12px rgba(0,0,0,.16),inset 0 5px 9px rgba(255,255,255,.3),0 0 0 1px rgba(255,255,255,.4),0 18px 18px -14px var(--c);
 animation:morph 11s ease-in-out infinite,bob 7s ease-in-out infinite;animation-delay:calc(var(--i)*-1.3s);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
-.pearl::after{content:"";position:absolute;inset:0;border-radius:inherit;background:var(--grain);mix-blend-mode:overlay;opacity:.4}
-.pearl:hover{transform:scale(1.14)}
-.pearl[aria-pressed=true]{transform:scale(1.18);outline:1px solid var(--text-main);outline-offset:6px}
-.pearl:focus-visible{outline:2px solid var(--text-main);outline-offset:6px}
-@keyframes morph{50%{border-radius:46% 54% 52% 48%/54% 46% 54% 46%}}
-@keyframes bob{50%{translate:0 -6px}}
-.pearl-cap{display:flex;flex-direction:column;align-items:center;gap:.2rem;margin:2.2rem 0 2.2rem;min-height:4rem}
-.pearl-cap strong{font-family:var(--font-heading);font-style:italic;font-size:clamp(1.8rem,3vw,2.3rem);font-weight:400}
-.pearl-cap span{color:var(--text-muted);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
 /* ============ MOBILE ============ */
 @media(max-width:860px){.servizi-grid{grid-template-columns:1fr}.duo-photos{position:static;grid-template-columns:1fr;margin-bottom:2.4rem}.duo-card{aspect-ratio:4/3}.serv-list li{grid-template-columns:1fr}
 .hero{grid-template-columns:1fr;min-height:0}.hero-photo{order:-1;margin-top:88px;height:30svh;min-height:200px;max-height:300px;border-radius:0 0 100px 0}.hero-photo img{object-position:center 58%}.hero-tag{display:none}
@@ -2298,14 +2279,9 @@ animation:morph 11s ease-in-out infinite,bob 7s ease-in-out infinite;animation-d
 .hero-buttons{flex-direction:column;align-items:stretch;width:100%;gap:.6rem}.hero-buttons .btn{max-width:none;width:100%;text-align:center}
 .hero .btn-outline-light{border:0;padding:.5rem 0;text-decoration:underline;text-underline-offset:6px}}
 @media(max-width:768px){
-.metodo-servizi-wrapper{background:var(--bg-primary)!important}
-.metodo-section{background:var(--bg-primary)!important;padding-top:calc(230px + 3.6rem)!important}
-.metodo-section::before{inset:1.2rem 1.2rem auto 1.2rem!important;height:230px!important;border-radius:48px 4px 48px 4px;background-image:url("immagini/sfondo_metodo_mobile.jpg")!important;background-size:cover!important;background-position:center!important}
-.metodo-section .subtitle{color:var(--accent-taupe)!important}
-.amb-label{flex-direction:column;text-align:center;border-radius:30px 4px 30px 4px}
 .prod-row{margin-inline:-1.2rem;padding-inline:1.2rem}
 /* menu a tutto schermo */
-.nav-links{left:0!important;transform:translateX(100%);visibility:hidden;transition:transform .55s cubic-bezier(.77,0,.18,1),visibility 0s .55s!important;align-items:stretch!important;justify-content:flex-start!important;padding:calc(env(safe-area-inset-top,0px) + 104px) 8vw 230px!important;background:linear-gradient(160deg,#F8F5EF,#E8E4DC)!important}
+.nav-links{left:0!important;transform:translateX(100%);visibility:hidden;transition:transform .55s cubic-bezier(.77,0,.18,1),visibility 0s .55s!important;align-items:stretch!important;justify-content:flex-start!important;padding:calc(env(safe-area-inset-top,0px) + 92px) 8vw 230px!important;background:linear-gradient(160deg,#F8F5EF,#E8E4DC)!important}
 .nav-links.active{transform:none;visibility:visible;transition:transform .55s cubic-bezier(.77,0,.18,1),visibility 0s!important}
 .nav-links li{text-align:left!important;width:100%}
 .nav-links a.nav-item{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;border-bottom:1px solid var(--border-color);font-family:var(--font-heading)!important;font-size:2rem!important;letter-spacing:0!important;text-transform:none!important;color:var(--text-main)!important;font-weight:400!important}
@@ -2315,12 +2291,11 @@ animation:morph 11s ease-in-out infinite,bob 7s ease-in-out infinite;animation-d
 .nav-links .mobile-menu-close-row{top:calc(env(safe-area-inset-top,0px) + 1.3rem)!important}
 .nav-links.active li{animation:rise .7s cubic-bezier(.16,1,.3,1) both}
 .nav-links.active li:nth-child(3){animation-delay:.07s}.nav-links.active li:nth-child(4){animation-delay:.13s}.nav-links.active li:nth-child(5){animation-delay:.19s}.nav-links.active li:nth-child(6){animation-delay:.25s}
-.nav-links{gap:0!important}
+.nav-links{gap:0!important;display:flex!important;flex-direction:column;overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:1.5rem!important}
+.nav-links .mobile-menu-footer{position:static!important;flex:none;margin-top:auto;width:100%;padding:2.2rem 0 calc(env(safe-area-inset-bottom,0px) + .4rem);text-align:center;border-top:1px solid var(--border-color)}
 .nav-links .mobile-menu-close-row{width:auto!important;left:auto!important;right:1.4rem!important;text-align:right!important}
-.nav-links a.nav-item{padding:.85rem 0}
-.metodo-desc,.metodo-desc em{color:var(--text-muted)!important;-webkit-text-fill-color:currentColor!important;text-shadow:none!important}
+.nav-links a.nav-item{padding:.7rem 0;font-size:1.85rem!important}
 }
-.metodo-desc{color:#fff;-webkit-text-fill-color:#fff;text-shadow:0 1px 5px rgba(0,0,0,.4)}
 
 /* il colore: colore, effetti, vegetali */
 .colore{background:var(--bg-primary)}
@@ -2347,6 +2322,159 @@ animation:morph 11s ease-in-out infinite,bob 7s ease-in-out infinite;animation-d
 @media(max-width:860px){.colore-grid{grid-template-columns:1fr}.ecolor-grid{grid-template-columns:1fr}.mach{aspect-ratio:4/5}.steps li{grid-template-columns:1fr;gap:.2rem}}
 
 .cpil:not(.veg) .tags span{border-color:var(--border-color);color:var(--text-muted)}
+
+/* metodo unito */
+.metodo-new{background:var(--bg-primary)}
+.metodo-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:6vw;align-items:center}
+.metodo-intro p{max-width:34em}.metodo-intro h2{margin-bottom:1.4rem}
+.mquote{font-family:var(--font-heading);font-style:italic;font-size:1.4rem;line-height:1.45;color:var(--text-main)!important;border-left:1px solid var(--accent-taupe);padding-left:1.2rem;margin:1.6rem 0 2rem!important}
+.msteps{padding:clamp(1.6rem,3.4vw,2.8rem);color:#E8E5DF;border-radius:56px 4px 56px 4px;background:linear-gradient(160deg,#27292c,#151618);box-shadow:0 40px 80px -40px rgba(0,0,0,.5)}
+.mhead h3{color:#fff;font-size:1.9rem}.mhead em{display:block;color:#B9B6B0;font-size:.9rem;margin:.3rem 0 1.2rem}
+.msteps ul{list-style:none;padding:0;margin:0}
+.msteps li{display:grid;grid-template-columns:34px 1fr;gap:1.2rem;padding:1.15rem 0;border-top:1px solid rgba(255,255,255,.14);transition:padding-left .5s}
+.msteps li:hover{padding-left:.6rem}
+.msteps svg{width:30px;height:30px;fill:none;stroke:#D9D5CC;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;margin-top:.2rem}
+.msteps h4{color:#fff;font-size:1.45rem;margin:0 0 .2rem}.msteps p{margin:0;font-size:.88rem;line-height:1.6;color:#B9B6B0}
+/* servizi (elenco) e lei/lui */
+.duo-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:3.2rem}
+.duo-grid .duo-card{aspect-ratio:4/5}
+.duo-grid .duo-card figcaption{left:1rem;right:1rem;bottom:1rem;padding:1.3rem 1.5rem}.duo-grid .duo-card h3{font-size:2rem}.duo-grid .duo-card p{font-size:.92rem}
+/* cta finale */
+.booking-new{background:var(--bg-primary)}
+.cta-card{display:grid;grid-template-columns:.85fr 1.15fr;overflow:hidden;border-radius:64px 4px 64px 4px;background:linear-gradient(160deg,#252528,#131315);color:#E8E5DF;box-shadow:0 40px 90px -40px rgba(0,0,0,.55)}
+.cta-photo{position:relative;min-height:440px}.cta-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cta-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 55%,rgba(19,19,21,.92)),linear-gradient(0deg,rgba(0,0,0,.28),transparent 45%)}
+.cta-body{padding:clamp(2rem,5vw,4.5rem);display:flex;flex-direction:column;justify-content:center}
+.cta-body .subtitle{color:#B9B6B0!important}.cta-body h2{color:#fff;font-size:clamp(2.2rem,4.4vw,3.6rem);margin:.2rem 0}.cta-body h2 span{font-style:italic;color:#CFCBC3}
+.cta-body p{color:#B9B6B0;max-width:34em;margin:1.2rem 0 2rem}
+.cta-actions{display:flex;gap:.8rem;flex-wrap:wrap}
+.cta-wa{background:#fff;color:#1B1B1C;border-color:#fff}.cta-wa:hover{background:transparent;color:#fff}
+.cta-tel{border:1px solid rgba(255,255,255,.4);color:#fff;background:rgba(255,255,255,.06)}.cta-tel:hover{background:#fff;color:#1B1B1C}
+.cta-info{list-style:none;padding:1.2rem 0 0;margin:2rem 0 0;display:flex;flex-wrap:wrap;gap:.4rem 2rem;font-size:.85rem;color:#9C978F;border-top:1px solid rgba(255,255,255,.14)}.cta-info a{color:#E8E5DF;text-decoration:none}
+@media(max-width:860px){.metodo-wrap{grid-template-columns:1fr}.serv-2col{grid-template-columns:1fr}.duo-grid{grid-template-columns:1fr}.duo-grid .duo-card{aspect-ratio:5/6}.cta-card{grid-template-columns:1fr;border-radius:44px 4px 44px 4px}.cta-photo{min-height:230px}.cta-photo::after{background:linear-gradient(0deg,rgba(19,19,21,.95),transparent 70%)}.cta-actions .btn{width:100%;text-align:center}}
+
+/* servizi + per lei / per lui */
+.servizi-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:6vw;align-items:start;margin-top:3rem}
+.servizi-grid .serv-list{margin:0}
+.duo-photos{display:grid;grid-template-columns:1fr 1fr;gap:1rem;position:sticky;top:120px}
+.duo-head{grid-column:1/-1;margin:0 0 .3rem;font-family:var(--font-heading);font-style:italic;font-size:1.3rem;color:var(--text-muted);max-width:none}
+.duo-photos .duo-card{aspect-ratio:3/5}
+/* il colore: ventaglio di tonalità */
+.fan-wrap{position:relative;margin:3.2rem auto 3.6rem;max-width:1000px;transition:--tone 1.1s ease}
+.fan-wrap::before{content:"";position:absolute;left:6%;right:6%;bottom:-8%;height:50%;border-radius:50%;background:var(--tone);opacity:.34;filter:blur(48px);pointer-events:none}
+.fan-lead{max-width:42em;margin:0 auto 2.4rem;text-align:center;color:var(--text-muted)}
+.fan{position:relative;display:flex;gap:clamp(.8rem,2.4vw,2rem)}
+.fan-group{display:flex;flex-direction:column;gap:1rem;min-width:0}
+.fan-row{display:flex;gap:6px;height:clamp(230px,34vw,330px)}
+.swatch{position:relative;flex:1 1 0;min-width:0;padding:0;border:0;cursor:pointer;overflow:hidden;border-radius:28px 3px 28px 3px;
+background:linear-gradient(180deg,rgba(255,255,255,.34),transparent 40%,rgba(0,0,0,.26)),var(--c);box-shadow:inset 0 0 0 1px rgba(255,255,255,.28);transition:flex .75s cubic-bezier(.2,.8,.2,1),transform .5s}
+.swatch::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.32) 48%,transparent 62%);background-size:260% 100%;background-position:130% 0;transition:background-position 1.5s ease}
+.swatch[aria-pressed=true]::before{background-position:-20% 0}
+.swatch::after{content:"";position:absolute;inset:0;background:var(--grain);mix-blend-mode:overlay;opacity:.5}
+.swatch[aria-pressed=true]{flex:4.5}
+.swatch:hover{transform:translateY(-6px)}
+.swatch:focus-visible{outline:2px solid var(--text-main);outline-offset:3px}
+.fan-label{display:flex;align-items:center;gap:.8rem;font-family:var(--font-heading);font-style:italic;color:var(--text-muted)}
+.fan-label::before,.fan-label::after{content:"";flex:1;height:1px;background:var(--accent-taupe);opacity:.5}
+.fan-cap{display:flex;flex-direction:column;align-items:center;gap:.2rem;margin:2.2rem 0 0;min-height:4.4rem}
+.fan-cap strong{font-family:var(--font-heading);font-style:italic;font-weight:400;font-size:clamp(2rem,3.4vw,2.8rem);line-height:1.1}
+.fan-cap span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted)}
+@media(max-width:860px){.servizi-grid{grid-template-columns:1fr;gap:2rem}.duo-photos{order:-1;position:static;grid-template-columns:1fr 1fr;margin:0}.duo-photos .duo-card{aspect-ratio:3/4;border-radius:36px 4px 36px 4px}.duo-photos figcaption{left:.5rem;right:.5rem;bottom:.5rem;padding:.7rem .9rem}.duo-photos h3{font-size:1.3rem}.duo-photos figcaption p{display:none}.serv-list li{grid-template-columns:1fr}}
+@media(max-width:600px){.fan{gap:.6rem}.fan-row{gap:4px;height:240px}.swatch{border-radius:18px 3px 18px 3px}.fan-label{font-size:.9rem}}
+
+/* ===== v5: spazi uniformi, hero, menu, colore ===== */
+:root{--sec-y:clamp(3rem,6vw,5rem)}
+section.section-padding{padding-top:var(--sec-y)!important;padding-bottom:var(--sec-y)!important}
+.servizi{background:var(--bg-secondary)}
+.serv-list li{border-color:rgba(0,0,0,.1)}
+.colore-grid{margin-top:3rem}.fan-wrap{margin:2.6rem auto 3rem}.rituals{margin-top:3rem}
+/* metodo: pannello con foto di capelli */
+.msteps{background:linear-gradient(165deg,rgba(21,22,24,.55),rgba(21,22,24,.93) 72%),url("immagini/web/metodo.webp") center/cover,#151618}
+/* menu mobile con foto */
+@media(max-width:768px){.nav-links{background:linear-gradient(rgba(248,245,239,.9),rgba(240,236,228,.95)),url("immagini/web/menu.webp") center/cover!important}}
+/* schede colore con foto */
+.cpil{padding:0;overflow:hidden}
+.cpil-img{aspect-ratio:16/10;overflow:hidden}.cpil-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}.cpil:hover .cpil-img img{transform:scale(1.04)}
+.cpil-body{padding:1.8rem 1.8rem 2rem}
+.cpil.veg .ico{margin-bottom:1rem}
+/* ventaglio: quadrati piccoli per stagione */
+.fan{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem 1.4rem;max-width:880px;margin:0 auto}
+.fan-group{display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:0}
+.fan-row{display:flex;gap:.55rem;justify-content:center;height:auto}
+.swatch{flex:none;width:clamp(42px,5.2vw,62px);height:auto;aspect-ratio:1/.92;border-radius:16px 3px 16px 3px;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.swatch[aria-pressed=true]{flex:none;transform:scale(1.18);outline:1px solid var(--text-main);outline-offset:4px}
+.swatch:hover{transform:translateY(-4px)}.swatch[aria-pressed=true]:hover{transform:scale(1.18)}
+.fan-label{display:flex;flex-direction:column;align-items:center;gap:.1rem;text-align:center}
+.fan-label::before,.fan-label::after{display:none}
+.fan-label b{font-family:var(--font-heading);font-style:italic;font-weight:400;font-size:1.25rem;color:var(--text-main)}
+.fan-label i{font-style:normal;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted)}
+.fan-cap{margin-top:2.4rem}
+@media(max-width:700px){.fan{grid-template-columns:1fr 1fr;gap:1.8rem .8rem}.swatch{width:clamp(44px,12vw,54px)}.fan-row{gap:.45rem}}
+/* e-color */
+.video-slot{text-decoration:none;transition:background .4s,transform .4s}.video-slot:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+.video-slot i{font-size:.8rem}
+@media(max-width:600px){.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}.facts strong{font-size:1.7rem}.facts span{font-size:.66rem;line-height:1.35}}
+/* ambasciata integrata tra filosofia e salone */
+.amb-band{display:flex;align-items:center;justify-content:center;gap:clamp(1.4rem,4vw,3rem);max-width:860px;margin:var(--sec-y) auto;padding:2.2rem 0;border-block:1px solid var(--border-color)}
+.amb-band img{flex:none;width:clamp(96px,14vw,132px);height:auto}
+.amb-band h3{font-size:clamp(1.7rem,3vw,2.3rem);margin:.1rem 0 .5rem}.amb-band p{margin:0;font-size:.95rem;color:var(--text-muted);max-width:34em}
+@media(max-width:700px){.amb-band{flex-direction:column;text-align:center;padding:1.8rem 0}.amb-band img{width:104px}}
+/* cta */
+.cta-photo img{object-position:50% 35%}
+/* footer: bottone privacy */
+.link-btn{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-align:left;text-decoration:underline;text-underline-offset:3px}
+/* banner cookie, popup privacy, barra contatti */
+.ck-banner{position:fixed;left:50%;bottom:1rem;translate:-50% 0;z-index:1100;width:min(780px,calc(100% - 1.4rem));padding:1.2rem 1.4rem;display:flex;gap:1rem 1.6rem;align-items:center;flex-wrap:wrap;color:#E8E5DF;font-size:.88rem;line-height:1.55;border:1px solid rgba(255,255,255,.18);border-radius:30px 4px 30px 4px;background:rgba(24,24,26,.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 24px 60px -20px rgba(0,0,0,.6)}
+.ck-banner[hidden],.pv-modal[hidden]{display:none}
+.ck-banner p{margin:0;flex:1 1 280px;color:#C9C5BD;max-width:none}.ck-banner strong{color:#fff;font-weight:500}
+.ck-link{background:none;border:0;padding:0;color:#fff;text-decoration:underline;text-underline-offset:3px;cursor:pointer;font:inherit}
+.ck-actions{display:flex;gap:.5rem;flex-wrap:wrap}
+.ck-btn{min-height:44px;padding:.6rem 1.3rem;font:inherit;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;color:#1B1B1C;background:#fff;border:1px solid #fff;border-radius:20px 3px 20px 3px}
+.ck-btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.ck-btn.dark{background:var(--text-main);color:#fff;border-color:var(--text-main)}.ck-btn.ghost.dark{background:transparent;color:var(--text-main)}
+.pv-modal{position:fixed;inset:0;z-index:1200;display:grid;place-items:center;padding:1rem;background:rgba(18,18,20,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.pv-card{position:relative;width:min(760px,100%);max-height:min(86vh,760px);display:flex;flex-direction:column;padding:2rem 2rem 1.2rem;background:var(--bg-primary);border-radius:44px 4px 44px 4px;box-shadow:0 40px 90px -30px rgba(0,0,0,.6)}
+.pv-card h2{font-size:clamp(1.7rem,3vw,2.2rem);margin:0 2.4rem 1rem 0}
+.pv-close{position:absolute;top:1.1rem;right:1.2rem;width:44px;height:44px;border:1px solid var(--border-color);border-radius:50%;background:transparent;font-size:1.5rem;line-height:1;cursor:pointer;color:var(--text-main)}
+.pv-tabs{display:flex;gap:.4rem;border-bottom:1px solid var(--border-color);margin-bottom:1rem;overflow-x:auto}
+.pv-tab{min-height:44px;padding:.5rem 1rem;background:none;border:0;border-bottom:2px solid transparent;font:inherit;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);cursor:pointer;white-space:nowrap}
+.pv-tab[aria-selected=true]{color:var(--text-main);border-bottom-color:var(--text-main)}
+.pv-body{overflow-y:auto;padding:0 .4rem 1rem 0;-webkit-overflow-scrolling:touch}
+.pv-body h3{font-size:1.5rem;margin-bottom:.3rem}.pv-body h4{font-family:var(--font-body);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-main);margin:1.3rem 0 .3rem;font-weight:500}
+.pv-body p{font-size:.92rem;line-height:1.7;max-width:none;margin:0 0 .4rem}.pv-small{font-size:.78rem!important;color:var(--text-muted)}
+.pv-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border-color);cursor:pointer}
+.pv-row small{display:block;color:var(--text-muted);font-size:.82rem}.pv-row input{width:22px;height:22px;accent-color:var(--text-main)}
+.pv-actions{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.4rem}
+.m-bar{display:none}
+@media(max-width:768px){
+html{scroll-padding-top:76px}
+a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+#menuToggle{min-width:44px;min-height:44px}
+.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center}
+.ck-banner{bottom:.6rem;padding:1rem 1.1rem;border-radius:26px 4px 26px 4px}.ck-actions{width:100%}.ck-actions .ck-btn{flex:1 1 auto}.ck-actions .ck-btn:last-child{flex-basis:100%;order:-1}
+.pv-card{padding:1.5rem 1.2rem .8rem;border-radius:32px 4px 32px 4px;max-height:90vh}
+.m-bar{position:fixed;left:.7rem;right:.7rem;bottom:calc(env(safe-area-inset-bottom,0px) + .7rem);z-index:900;display:flex;gap:.5rem;padding:.45rem;border:1px solid var(--border-color);border-radius:28px 4px 28px 4px;background:rgba(245,242,236,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 14px 40px -16px rgba(0,0,0,.4);transform:translateY(160%);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.m-bar.show{transform:none}
+.m-bar a{flex:1;min-height:46px;display:grid;place-items:center;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-radius:22px 3px 22px 3px;color:var(--text-main);border:1px solid var(--text-main)}
+.m-bar a.wa{background:var(--text-main);color:#fff}
+footer{padding-bottom:5.5rem}
+/* hero: foto sopra, testo sotto, bottone sempre in vista */
+.hero-photo{height:42svh;min-height:250px;max-height:430px;margin-top:88px;border-radius:0 0 110px 0}
+.hero-photo img{object-position:center 55%}
+.hero-copy{padding:1.3rem 1.4rem 2rem}
+.hero .hero-copy h1{font-size:clamp(1.8rem,7.6vw,2.3rem);margin-bottom:.8rem}
+.hero .hero-copy p{font-size:.92rem;margin-bottom:1.1rem}
+}
+@media(max-width:768px) and (max-height:800px){.hero .hero-copy p{display:none}.hero-photo{height:40svh}}
+/* alternanza dei fondi e aree di tocco */
+#styling{background:var(--bg-secondary)}
+.salone-unificato{background:var(--bg-primary)!important}
+#recensioni{background:var(--bg-secondary)!important}
+.swatch{min-width:44px}
+@media(max-width:768px){footer a{display:inline-block;padding:.45rem 0}.social-link-item{min-height:44px;display:inline-flex;align-items:center}.footer-logo{display:inline-block;padding:.4rem 0}}
+.fan-cap span{text-align:center}
+/* hero mobile: foto sopra, testo sotto (ripristino layout a colonna) */
+@media(max-width:860px){.hero{grid-template-columns:1fr;min-height:0}.hero-photo{order:-1;border-radius:0 0 110px 0}.hero-tag{display:none}.hero-buttons{flex-direction:column;align-items:stretch;width:100%;gap:.6rem}.hero-buttons .btn{width:100%;max-width:none;text-align:center}.hero .btn-outline-light{border:0;min-height:44px;padding:.5rem 0;text-decoration:underline;text-underline-offset:6px}.hero-copy{align-items:stretch}.hero .subtitle{font-size:1.05rem!important}}
 </style>
 </head>
 <body>
@@ -2407,114 +2535,40 @@ animation:morph 11s ease-in-out infinite,bob 7s ease-in-out infinite;animation-d
         </div>
       </div>
       <div class="hero-photo">
-        <img src="immagini/hero.jpg" alt="L’interno del salone Capelli D’Angelo a Rovereto, con specchi e poltrone color panna" width="816" height="1020" fetchpriority="high">
+        <img src="immagini/web/hero.jpg" alt="L’interno del salone Capelli D’Angelo a Rovereto, con specchi e poltrone color panna" width="816" height="1020" fetchpriority="high">
         <span class="hero-tag">Via Trieste 42 · Rovereto</span>
       </div>
     </section>
-    <!-- INTRO EDITORIAL -->
-    <section class="section-padding intro">
-      <div class="container">
-        <div class="editorial-content">
-          <h2 class="editorial-title">
-            I capelli non sono tutti uguali.
-            <span class="highlight-gold">E nemmeno le persone.</span>
-          </h2>
-          <p class="editorial-paragraph">
-            Ogni capello ha una struttura, una storia e delle esigenze diverse.
-            Per questo, prima di scegliere un trattamento o una tecnica,
-            ci prendiamo il tempo di capire cosa cerchi e quale risultato desideri ottenere.
-          </p>
-          <div class="editorial-quote-highlight">
-            La bellezza parte dall'ascolto, prende forma con la consulenza
-            e si esprime in un risultato che senti davvero tuo.
-          </div>
+    <!-- IL NOSTRO APPROCCIO + METODO (sezione unica) -->
+    <section id="metodo" class="section-padding metodo-new">
+      <div class="container metodo-wrap">
+        <div class="metodo-intro">
+          <span class="subtitle">Il nostro approccio</span>
+          <h2>I capelli non sono tutti uguali. <span class="highlight-gold">E nemmeno le persone.</span></h2>
+          <p>Ogni capello ha una struttura, una storia e delle esigenze diverse. Per questo, prima di scegliere un trattamento o una tecnica, ci prendiamo il tempo di capire cosa cerchi e quale risultato desideri ottenere.</p>
+          <p class="mquote">La bellezza parte dall’ascolto, prende forma con la consulenza e si esprime in un risultato che senti davvero tuo.</p>
+          <a href="#prenota" class="btn btn-dark">Prenota un appuntamento</a>
+        </div>
+        <div class="msteps">
+          <div class="mhead"><h3>Il nostro metodo</h3><em>Ascoltare, comprendere, trovare insieme la direzione giusta.</em></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg><div><h4>Ascolto</h4><p>Partiamo da te: dalle tue abitudini, da ciò che ti piace e dal risultato che vorresti vedere allo specchio.</p></div></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4v16M4 12h16"/></svg><div><h4>Armonia</h4><p>Valutiamo le caratteristiche del viso e i tuoi colori naturali per individuare soluzioni in armonia con la tua immagine.</p></div></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z"/></svg><div><h4>Colore</h4><p>Studiamo tonalità e sfumature in base al risultato che desideri, alle caratteristiche dei tuoi capelli e alla loro base naturale.</p></div></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg><div><h4>Cura</h4><p>Dalla cute alle lunghezze, valutiamo le esigenze dei tuoi capelli per consigliarti trattamenti e attenzioni mirati.</p></div></li>
+          </ul>
         </div>
       </div>
     </section>
-    <!-- WRAPPER CON SFONDO CONDIVISO: METODO + SERVIZI -->
-<div class="metodo-servizi-wrapper">
-
-  <!-- IL METODO -->
-  <section id="metodo" class="section-padding metodo-section">
-    <div class="container text-center">
-
-      <span class="subtitle">Il nostro approccio</span>
-      <h2>Il Nostro Metodo</h2>
-
-      <p class="section-desc metodo-desc">
-  <em>Ascoltare, comprendere, trovare insieme la direzione giusta.</em>
-</p>
-
-      <div class="metodo-grid">
-
-        <div class="metodo-card">
-          <h3>
-            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"/>
-            </svg>
-            Ascolto
-          </h3>
-          <p>
-            Partiamo da te: dalle tue abitudini, da ciò che ti piace e dal risultato che vorresti vedere allo specchio.
-          </p>
-        </div>
-
-        <div class="metodo-card">
-          <h3>
-            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.46 6.288a15.99 15.99 0 00-4.648 4.763m3.42 3.42a6.761 6.761 0 01-1.436 1.436"/>
-            </svg>
-            Armonia
-          </h3>
-          <p>
-            Valutiamo le caratteristiche del viso e i tuoi colori naturali per individuare soluzioni in armonia con la tua immagine.
-          </p>
-        </div>
-
-        <div class="metodo-card">
-          <h3>
-            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
-            </svg>
-            Colore
-          </h3>
-          <p>
-            Studiamo tonalità e sfumature in base al risultato che desideri, alle caratteristiche dei tuoi capelli e alla loro base naturale.
-          </p>
-        </div>
-
-        <div class="metodo-card">
-          <h3>
-            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/>
-            </svg>
-            Cura
-          </h3>
-          <p>
-            Dalla cute alle lunghezze, valutiamo le esigenze dei tuoi capelli per consigliarti trattamenti e attenzioni mirati.
-          </p>
-        </div>
-
-      </div>
-
-      <div style="margin-top: 3rem;">
-       <a href="#prenota" class="btn btn-gold">Prenota un appuntamento</a>
-      </div>
-
-    </div>
-  </section>
-
-  
-
-</div>
-
-    <!-- SERVIZI -->
-    <section id="servizi" class="section-padding">
-      <div class="container servizi-grid">
-        <div>
+    <!-- SERVIZI (con Per lei / Per lui) -->
+    <section id="servizi" class="section-padding servizi">
+      <div class="container">
+        <div class="text-center">
           <span class="subtitle">L’esperienza atelier</span>
           <h2>I nostri servizi</h2>
-          <p class="section-desc" style="margin-left:0">Ogni servizio parte dalle caratteristiche dei tuoi capelli, da ciò che desideri e dal risultato che vuoi ottenere.</p>
+          <p class="section-desc">Ogni servizio parte dalle caratteristiche dei tuoi capelli, da ciò che desideri e dal risultato che vuoi ottenere.</p>
+        </div>
+        <div class="servizi-grid">
           <ul class="serv-list">
             <li><h3>Colore</h3><p>Riflessi, sfumature e tonalità studiate in base ai tuoi capelli e al risultato che desideri.</p></li>
             <li><h3>Taglio</h3><p>Un taglio pensato per valorizzare i tuoi lineamenti e accompagnare il tuo stile.</p></li>
@@ -2523,12 +2577,13 @@ animation:morph 11s ease-in-out infinite,bob 7s ease-in-out infinite;animation-d
             <li><h3>Styling</h3><p>Piega e definizione per completare il tuo look.</p></li>
             <li><h3>Consulenza</h3><p>Un confronto per capire le tue esigenze e scegliere insieme il servizio più adatto.</p></li>
           </ul>
-          <a href="#prenota" class="btn btn-dark">Parliamo delle tue esigenze</a>
+          <div class="duo-photos">
+            <p class="duo-head">Un solo atelier, due modi di stare in poltrona.</p>
+            <figure class="duo-card"><img src="immagini/web/lei.webp" alt="Capelli ramati con onde morbide, realizzati in salone" loading="lazy"><figcaption><h3>Per lei</h3><p>Colore, taglio e armocromia, in uno spazio luminoso e riservato.</p></figcaption></figure>
+            <figure class="duo-card"><img src="immagini/web/lui.webp" alt="Taglio maschile moderno, visto da dietro" loading="lazy"><figcaption><h3>Per lui</h3><p>Taglio e cura su misura, in un’area pensata per lui.</p></figcaption></figure>
+          </div>
         </div>
-        <div class="duo-photos">
-          <figure class="duo-card"><img src="immagini/creazioni/taglio_4.jpg" alt="Capelli ramati con onde morbide, realizzati in salone" loading="lazy"><figcaption><h3>Per lei</h3><p>Colore, taglio e armocromia in uno spazio luminoso.</p></figcaption></figure>
-          <figure class="duo-card"><img src="immagini/creazioni/taglio_10.jpg" alt="Taglio maschile moderno, visto da dietro" loading="lazy"><figcaption><h3>Per lui</h3><p>Taglio e cura su misura, in un’area dedicata.</p></figcaption></figure>
-        </div>
+        <div class="text-center" style="margin-top:3rem"><a href="#prenota" class="btn btn-dark">Parliamo delle tue esigenze</a></div>
       </div>
     </section>
     <!-- IL COLORE: colore, effetti cromatici, colorazioni vegetali -->
@@ -2540,10 +2595,10 @@ animation:morph 11s ease-in-out infinite,bob 7s ease-in-out infinite;animation-d
           <h2>Il colore giusto è quello che <span class="highlight-gold">ti valorizza.</span></h2>
           <p class="section-desc">Il colore prende forma dall’incontro tra ciò che desideri e ciò che valorizza davvero i tuoi colori naturali: una tonalità che ti piace, si armonizza con la tua immagine e ti fa sentire a tuo agio.</p>
         </div>
-        <div class="colore-grid">
-          <article class="cpil"><h3>Colore</h3><p>Colorazioni, riflessi e ricerca: partiamo dai tuoi colori naturali per costruire la tonalità più adatta a te.</p><div class="tags"><span>Colorazioni</span><span>Riflessi</span><span>Ricerca</span></div></article>
-          <article class="cpil"><h3>Effetti cromatici</h3><p>Sfumature, luce e profondità: giochi di riflessi che danno movimento ai capelli, dal naturale più sottile all’effetto più deciso.</p><div class="tags"><span>Sfumature</span><span>Luce</span><span>Profondità</span></div></article>
-          <article class="cpil veg">
+        <div id="armocromia" class="fan-wrap" style="--tone:#8E4E2E"><p class="fan-lead">Ogni persona ha caratteristiche cromatiche che contribuiscono alla sua immagine. L’armocromia le legge attraverso sottotono, luminosità e intensità e le raggruppa in quattro stagioni. Tocca una tonalità per scoprire a quale appartiene.</p><div class="fan"><div class="fan-group"><div class="fan-row"><button type="button" class="swatch" style="--c:#E2B872" data-c="#E2B872" data-n="Biondo dorato" data-u="Primavera · Sottotono caldo, chiaro e luminoso" aria-pressed="false" aria-label="Biondo dorato, Primavera"></button><button type="button" class="swatch" style="--c:#F0A98C" data-c="#F0A98C" data-n="Pesca" data-u="Primavera · Sottotono caldo, chiaro e luminoso" aria-pressed="false" aria-label="Pesca, Primavera"></button><button type="button" class="swatch" style="--c:#D9824A" data-c="#D9824A" data-n="Rame chiaro" data-u="Primavera · Sottotono caldo, chiaro e luminoso" aria-pressed="false" aria-label="Rame chiaro, Primavera"></button></div><span class="fan-label"><b>Primavera</b><i>caldo · luminoso</i></span></div><div class="fan-group"><div class="fan-row"><button type="button" class="swatch" style="--c:#CFC3AE" data-c="#CFC3AE" data-n="Biondo cenere" data-u="Estate · Sottotono freddo, chiaro e morbido" aria-pressed="false" aria-label="Biondo cenere, Estate"></button><button type="button" class="swatch" style="--c:#B7A9CC" data-c="#B7A9CC" data-n="Lavanda" data-u="Estate · Sottotono freddo, chiaro e morbido" aria-pressed="false" aria-label="Lavanda, Estate"></button><button type="button" class="swatch" style="--c:#A5B8CF" data-c="#A5B8CF" data-n="Azzurro polvere" data-u="Estate · Sottotono freddo, chiaro e morbido" aria-pressed="false" aria-label="Azzurro polvere, Estate"></button></div><span class="fan-label"><b>Estate</b><i>freddo · morbido</i></span></div><div class="fan-group"><div class="fan-row"><button type="button" class="swatch" style="--c:#8E4E2E" data-c="#8E4E2E" data-n="Castano ramato" data-u="Autunno · Sottotono caldo, profondo e morbido" aria-pressed="false" aria-label="Castano ramato, Autunno"></button><button type="button" class="swatch" style="--c:#C8902E" data-c="#C8902E" data-n="Ocra" data-u="Autunno · Sottotono caldo, profondo e morbido" aria-pressed="false" aria-label="Ocra, Autunno"></button><button type="button" class="swatch" style="--c:#7C7B3F" data-c="#7C7B3F" data-n="Verde oliva" data-u="Autunno · Sottotono caldo, profondo e morbido" aria-pressed="false" aria-label="Verde oliva, Autunno"></button></div><span class="fan-label"><b>Autunno</b><i>caldo · profondo</i></span></div><div class="fan-group"><div class="fan-row"><button type="button" class="swatch" style="--c:#1F2433" data-c="#1F2433" data-n="Nero blu" data-u="Inverno · Sottotono freddo, profondo e intenso" aria-pressed="false" aria-label="Nero blu, Inverno"></button><button type="button" class="swatch" style="--c:#6B1E36" data-c="#6B1E36" data-n="Borgogna" data-u="Inverno · Sottotono freddo, profondo e intenso" aria-pressed="false" aria-label="Borgogna, Inverno"></button><button type="button" class="swatch" style="--c:#2C4C9B" data-c="#2C4C9B" data-n="Blu intenso" data-u="Inverno · Sottotono freddo, profondo e intenso" aria-pressed="false" aria-label="Blu intenso, Inverno"></button></div><span class="fan-label"><b>Inverno</b><i>freddo · intenso</i></span></div></div><p class="fan-cap" aria-live="polite"><strong id="tn">Castano ramato</strong><span id="tu">Autunno · Sottotono caldo, profondo e morbido</span></p></div><div class="colore-grid">
+          <article class="cpil"><div class="cpil-img"><img src="immagini/web/colore.webp" alt="Capelli con un colore intenso e luminoso" loading="lazy"></div><div class="cpil-body"><h3>Colore</h3><p>Colorazioni, riflessi e ricerca: partiamo dai tuoi colori naturali per costruire la tonalità più adatta a te.</p><div class="tags"><span>Colorazioni</span><span>Riflessi</span><span>Ricerca</span></div></div></article>
+          <article class="cpil"><div class="cpil-img"><img src="immagini/web/effetti.webp" alt="Capelli lisci con sfumature e riflessi" loading="lazy"></div><div class="cpil-body"><h3>Effetti cromatici</h3><p>Sfumature, luce e profondità: giochi di riflessi che danno movimento ai capelli, dal naturale più sottile all’effetto più deciso.</p><div class="tags"><span>Sfumature</span><span>Luce</span><span>Profondità</span></div></div></article>
+          <article class="cpil veg"><div class="cpil-img"><img src="immagini/web/vegetali.webp" alt="Capelli castani lucidi, dall’aspetto naturale" loading="lazy"></div><div class="cpil-body">
             <div class="ico" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M5 19C5 9 11 4 20 4c0 9-5 15-15 15zM5 19c3-5 6-8 10-10"/></svg>
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M12 10c-1-3 0-6 0-6s1 3 0 6zM12 14c1 3 0 6 0 6s-1-3 0-6zM10 12c-3 1-6 0-6 0s3-1 6 0zM14 12c3-1 6 0 6 0s-3 1-6 0z"/></svg>
@@ -2553,20 +2608,9 @@ animation:morph 11s ease-in-out infinite,bob 7s ease-in-out infinite;animation-d
             <p>Erbe, fiori e tannini del vino per un colore dal carattere naturale. Pensate per la donna green e per chi ha allergie o sensibilità ai coloranti tradizionali.</p>
             <div class="tags"><span>Erbe</span><span>Fiori</span><span>Tannini del vino</span></div>
             <small>Se hai allergie o la pelle sensibile, ne parliamo prima, in consulenza.</small>
-          </article>
+          </div></article>
         </div>
-      </div>
-    </section>
-    <!-- ARMOCROMIA: perle di colore -->
-    <section id="armocromia" class="section-padding text-center arm" style="--tone:#C87D55">
-      <div class="arm-aura" aria-hidden="true"></div>
-      <div class="container" style="position:relative">
-        <span class="subtitle">Ascolto &amp; armocromia</span>
-        <h2>Il colore parte <span class="highlight-gold">da te.</span></h2>
-        <p class="section-desc">Ogni persona ha caratteristiche cromatiche che contribuiscono alla sua immagine. L’armocromia ci aiuta a esplorare le tonalità che possono valorizzarle e a individuare nuovi spunti per scegliere il colore dei capelli.</p>
-        <div class="pearls" role="group" aria-label="Esempi di tonalità"><div class="pgroup"><span>Toni caldi</span><div class="prow"><button type="button" class="pearl" style="--c:#E2B29F;--i:0" data-c="#E2B29F" data-n="Cipria caldo" data-u="Toni caldi" aria-pressed="false" aria-label="Cipria caldo"></button><button type="button" class="pearl" style="--c:#C87D55;--i:1" data-c="#C87D55" data-n="Terracotta" data-u="Toni caldi" aria-pressed="false" aria-label="Terracotta"></button><button type="button" class="pearl" style="--c:#925035;--i:2" data-c="#925035" data-n="Nocciola intenso" data-u="Toni caldi" aria-pressed="false" aria-label="Nocciola intenso"></button><button type="button" class="pearl" style="--c:#DDA15E;--i:3" data-c="#DDA15E" data-n="Miele dorato" data-u="Toni caldi" aria-pressed="false" aria-label="Miele dorato"></button><button type="button" class="pearl" style="--c:#BC6C25;--i:4" data-c="#BC6C25" data-n="Rame caldo" data-u="Toni caldi" aria-pressed="false" aria-label="Rame caldo"></button><button type="button" class="pearl" style="--c:#D4A373;--i:5" data-c="#D4A373" data-n="Sabbia" data-u="Toni caldi" aria-pressed="false" aria-label="Sabbia"></button></div></div><div class="pgroup"><span>Toni freddi</span><div class="prow"><button type="button" class="pearl" style="--c:#E0C3FC;--i:6" data-c="#E0C3FC" data-n="Lilla freddo" data-u="Toni freddi" aria-pressed="false" aria-label="Lilla freddo"></button><button type="button" class="pearl" style="--c:#8E9AAF;--i:7" data-c="#8E9AAF" data-n="Salvia polvere" data-u="Toni freddi" aria-pressed="false" aria-label="Salvia polvere"></button><button type="button" class="pearl" style="--c:#4A5759;--i:8" data-c="#4A5759" data-n="Antracite freddo" data-u="Toni freddi" aria-pressed="false" aria-label="Antracite freddo"></button><button type="button" class="pearl" style="--c:#3D5A80;--i:9" data-c="#3D5A80" data-n="Ottanio avvolgente" data-u="Toni freddi" aria-pressed="false" aria-label="Ottanio avvolgente"></button></div></div></div>
-        <p class="pearl-cap" aria-live="polite"><strong id="tn">Terracotta</strong><span id="tu">Toni caldi</span></p>
-        <a href="#prenota" class="btn btn-dark">Prenota una consulenza</a>
+      <div class="text-center" style="margin-top:2.8rem"><a href="#prenota" class="btn btn-dark">Prenota una consulenza colore</a></div>
       </div>
     </section>
     <!-- NOVITA: MACCHINARIO e-color -->
@@ -2576,7 +2620,7 @@ animation:morph 11s ease-in-out infinite,bob 7s ease-in-out infinite;animation-d
         <figure class="mach">
           <img src="immagini/macchinario.jpg" alt="La color machine e•color in salone, con lo schermo per comporre la colorazione" loading="lazy">
           <!-- VIDEO: quando arriva il file, sostituire .video-slot con: <video controls playsinline poster="immagini/macchinario.jpg" src="immagini/ecolor.mp4"></video> -->
-          <figcaption class="video-slot"><i>▶</i><span>Il video della color machine, in arrivo</span></figcaption>
+          <a class="video-slot" href="#armocromia"><i>→</i><span>Trova la tua tonalità</span></a>
         </figure>
         <div>
           <span class="subtitle">La novità del salone</span>
@@ -2715,6 +2759,7 @@ animation:morph 11s ease-in-out infinite,bob 7s ease-in-out infinite;animation-d
             </div>
           </div>
         </div>
+        <div class="amb-band" id="ambasciata"><img src="immagini/Logo-Ambasciata.png" alt="Logo Ambasciata della Gioia" loading="lazy"><div><span class="subtitle">La nostra identità</span><h3>Ambasciata della Gioia</h3><p>Capelli D’Angelo fa parte del progetto Ambasciata della Gioia: un modo diverso di vivere la bellezza, con ascolto e attenzione alla persona.</p></div></div>
         <!-- SPAZIO DEL SALONE -->
         <div class="feature-block">
           <div class="feature-text">
@@ -2742,13 +2787,13 @@ animation:morph 11s ease-in-out infinite,bob 7s ease-in-out infinite;animation-d
             </div>
           </div>
           <div class="feature-img-box">
-            <img src="immagini/vetrina_esterno1.jpg" alt="Interno del salone Capelli D'Angelo a Rovereto" loading="lazy">
+            <img src="immagini/vetrina_esterno.jpg" alt="Interno del salone Capelli D'Angelo a Rovereto" loading="lazy">
           </div>
         </div>
       </div>
     </section>
      <!-- AMBASCIATA DELLA GIOIA -->
-    <section class="ambasciata-section" id="ambasciata"><div class="container"><div class="amb-label"><img src="immagini/Logo-Ambasciata.png" alt="Logo Ambasciata della Gioia" loading="lazy"><p><strong>Capelli D’Angelo fa parte del progetto Ambasciata della Gioia</strong>: un modo diverso di vivere la bellezza, con ascolto e attenzione alla persona.</p></div></div></section>
+    
    <!-- RECENSIONI -->
 <section class="section-padding reviews-section" id="recensioni">
   <div class="container text-center">
@@ -2863,34 +2908,24 @@ animation:morph 11s ease-in-out infinite,bob 7s ease-in-out infinite;animation-d
   </div>
 </section>
    <!-- PRENOTAZIONE -->
-<section id="prenota" class="section-padding booking-section">
-  <div class="container">
-    <div class="booking-container text-center">
-      <span class="subtitle">Esperienza Atelier</span>
-
-      <h2>Parliamo dei tuoi capelli.</h2>
-
-      <p class="section-desc" style="max-width: 550px; margin-bottom: 2rem;">
-        Vuoi cambiare colore, rinnovare il taglio o capire quale trattamento
-        è più adatto a te? Contattaci: parleremo delle tue esigenze e troveremo
-        insieme il modo migliore per iniziare.
-      </p>
-
-      <div class="booking-options">
-        <a href="https://wa.me/393396577389"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="btn btn-gold">
-          Prenota su WhatsApp
-        </a>
-
-        <a href="tel:+390464431296" class="btn btn-dark">
-          Chiama in Salone
-        </a>
+    <section id="prenota" class="section-padding booking-new">
+      <div class="container">
+        <div class="cta-card">
+          <div class="cta-photo"><img src="immagini/web/cta.webp" alt="Capelli biondo platino ondulati, visti di spalle" loading="lazy"></div>
+          <div class="cta-body">
+            <span class="subtitle">Esperienza atelier</span>
+            <h2>Parliamo dei tuoi <span>capelli.</span></h2>
+            <p>Vuoi cambiare colore, rinnovare il taglio o capire quale trattamento è più adatto a te? Contattaci: parleremo delle tue esigenze e troveremo insieme il modo migliore per iniziare.</p>
+            <div class="cta-actions">
+              <a href="https://wa.me/393396577389" target="_blank" rel="noopener noreferrer" class="btn cta-wa">Prenota su WhatsApp</a>
+              <a href="tel:+390464431296" class="btn cta-tel">Chiama in salone</a>
+            </div>
+            <ul class="cta-info"><li>Via Trieste 42, Rovereto (TN)</li><li><a href="tel:+390464431296">0464 431296</a> · <a href="tel:+393396577389">339 6577389</a></li></ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+    
   </main>
   <!-- FOOTER -->
   <footer>
@@ -2909,11 +2944,13 @@ animation:morph 11s ease-in-out infinite,bob 7s ease-in-out infinite;animation-d
           <ul>
             <li><a href="#metodo">Il Metodo</a></li>
             <li><a href="#servizi">Servizi</a></li>
+            <li><a href="#colore">Colore</a></li>
             <li><a href="#creazioni">Creazioni</a></li>
             <li><a href="#trattamenti">Trattamenti e prodotti</a></li>
             <li><a href="#salone">Il Salone</a></li>
             <li><a href="#ambasciata">Ambasciata della Gioia</a></li>
             <li><a href="#prenota">Prenota</a></li>
+            <li><button type="button" class="link-btn" data-open="privacy">Privacy &amp; Cookie</button></li>
           </ul>
         </div>
         <div class="footer-links">
@@ -3012,10 +3049,105 @@ animation:morph 11s ease-in-out infinite,bob 7s ease-in-out infinite;animation-d
   </script>
 <script>
     // Palette armocromia: la tonalità scelta colora l'alone dietro la sezione
-    (function(){var a=document.getElementById('armocromia'),tn=document.getElementById('tn'),tu=document.getElementById('tu'),ps=document.querySelectorAll('.pearl');
+    (function(){var a=document.getElementById('armocromia'),tn=document.getElementById('tn'),tu=document.getElementById('tu'),ps=document.querySelectorAll('.swatch');
     if(!a)return;function pick(b){a.style.setProperty('--tone',b.dataset.c);tn.textContent=b.dataset.n;tu.textContent=b.dataset.u;ps.forEach(function(x){x.setAttribute('aria-pressed',x===b)})}
-    ps.forEach(function(b){['mouseenter','focus','click'].forEach(function(e){b.addEventListener(e,function(){pick(b)})})});pick(ps[1]);})();
+    ps.forEach(function(b){['mouseenter','focus','click'].forEach(function(e){b.addEventListener(e,function(){pick(b)})})});pick(ps[6]);})();
     (function(){var n=document.getElementById('navLinks');if(!n)return;new MutationObserver(function(){document.body.style.overflow=n.classList.contains('active')?'hidden':''}).observe(n,{attributes:true,attributeFilter:['class']})})();
   </script>
+<!-- BARRA CONTATTI RAPIDI (solo mobile) -->
+<div class="m-bar" id="mBar" aria-label="Contatti rapidi"><a class="wa" href="https://wa.me/393396577389" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="tel:+390464431296">Chiama</a></div>
+
+<!-- BANNER COOKIE -->
+<div id="ck-banner" class="ck-banner" role="dialog" aria-label="Preferenze cookie" hidden>
+  <p><strong>La tua privacy conta.</strong> Usiamo cookie tecnici e, solo con il tuo consenso, cookie statistici anonimi per migliorare il sito. <button type="button" class="ck-link" data-open="cookie">Scopri di più</button></p>
+  <div class="ck-actions">
+    <button type="button" class="ck-btn ghost" data-ck="reject">Rifiuta</button>
+    <button type="button" class="ck-btn ghost" data-open="prefs">Personalizza</button>
+    <button type="button" class="ck-btn" data-ck="accept">Accetta</button>
+  </div>
+</div>
+
+<!-- PRIVACY & COOKIE (popup unico) -->
+<div id="pv-modal" class="pv-modal" role="dialog" aria-modal="true" aria-labelledby="pv-title" hidden>
+  <div class="pv-card">
+    <button type="button" class="pv-close" aria-label="Chiudi">&times;</button>
+    <h2 id="pv-title">Privacy &amp; Cookie</h2>
+    <div class="pv-tabs" role="tablist">
+      <button type="button" role="tab" class="pv-tab" data-tab="privacy" aria-selected="true">Privacy</button>
+      <button type="button" role="tab" class="pv-tab" data-tab="cookie" aria-selected="false">Cookie</button>
+      <button type="button" role="tab" class="pv-tab" data-tab="prefs" aria-selected="false">Preferenze</button>
+    </div>
+    <div class="pv-body">
+      <!-- NOTA: testi redatti come base di partenza. Completare i campi tra parentesi quadre e farli verificare da un consulente prima della pubblicazione. -->
+      <div data-pane="privacy">
+        <h3>Informativa sul trattamento dei dati personali</h3>
+        <p class="pv-small">ai sensi degli artt. 13 e 14 del Regolamento UE 2016/679 (GDPR) · Ultimo aggiornamento: novembre 2026</p>
+        <h4>Titolare del trattamento</h4>
+        <p>Capelli D’Angelo, Via Trieste 42, 38068 Rovereto (TN) · Tel. 0464 431296 · Email: [inserire email] · P. IVA: [inserire P. IVA].</p>
+        <h4>Quali dati trattiamo</h4>
+        <p>Dati di navigazione (indirizzo IP, tipo di browser, pagine visitate) generati dal funzionamento del sito. Dati che ci fornisci volontariamente quando ci contatti per telefono, WhatsApp o email, come nome, numero di telefono e contenuto del messaggio.</p>
+        <h4>Perché li trattiamo e su quale base</h4>
+        <p>Per rispondere alle tue richieste e fissare appuntamenti (esecuzione di misure precontrattuali, art. 6.1.b). Per garantire sicurezza e corretto funzionamento del sito (legittimo interesse, art. 6.1.f). Per statistiche anonime sull’uso del sito, solo se dai il consenso (art. 6.1.a).</p>
+        <h4>Per quanto tempo</h4>
+        <p>I dati di contatto sono conservati per il tempo necessario a gestire la richiesta e gli obblighi di legge. I dati statistici seguono la durata dei cookie indicata nella sezione Cookie.</p>
+        <h4>A chi possono essere comunicati</h4>
+        <p>A fornitori di servizi tecnici che ospitano o mantengono il sito, e, se acconsenti, a Google (Analytics). Se scegli di scriverci su WhatsApp, i dati sono trattati anche da WhatsApp secondo la sua informativa. I dati non sono diffusi. Alcuni fornitori possono trattare i dati fuori dall’Unione Europea, con le garanzie previste dal GDPR.</p>
+        <h4>I tuoi diritti</h4>
+        <p>Puoi chiedere accesso, rettifica, cancellazione, limitazione, portabilità e opposizione al trattamento, e revocare il consenso in qualsiasi momento, scrivendo ai contatti del titolare. Hai diritto di proporre reclamo al Garante per la protezione dei dati personali (www.garanteprivacy.it). Fornire i dati è facoltativo, ma senza di essi non possiamo rispondere alle tue richieste.</p>
+      </div>
+      <div data-pane="cookie" hidden>
+        <h3>Cookie Policy</h3>
+        <p class="pv-small">Ultimo aggiornamento: novembre 2026</p>
+        <p>I cookie sono piccoli file di testo che un sito salva sul tuo dispositivo. Ecco cosa usa questo sito.</p>
+        <h4>Tecnici (necessari)</h4>
+        <p>Servono a far funzionare il sito e a ricordare la tua scelta sui cookie. Non richiedono consenso.</p>
+        <h4>Statistici (solo con consenso)</h4>
+        <p>Usiamo Google Analytics 4 (Google Ireland Limited) per capire, in forma aggregata, quante persone visitano il sito e quali pagine leggono. Vengono installati solo se accetti. Cookie: <em>_ga</em> e <em>_ga_*</em>, durata massima 2 anni.</p>
+        <h4>Servizi di terze parti</h4>
+        <p>Il sito carica i caratteri tipografici da Google Fonts, e contiene collegamenti a Instagram, Facebook e WhatsApp: se li apri, si applicano le rispettive informative.</p>
+        <h4>Come gestire le scelte</h4>
+        <p>Puoi cambiare idea in ogni momento dalla scheda Preferenze, oppure dalle impostazioni del tuo browser.</p>
+      </div>
+      <div data-pane="prefs" hidden>
+        <h3>Le tue preferenze</h3>
+        <label class="pv-row"><span><strong>Necessari</strong><small>Sempre attivi. Servono al funzionamento del sito.</small></span><input type="checkbox" checked disabled></label>
+        <label class="pv-row"><span><strong>Statistici</strong><small>Google Analytics, in forma anonima e aggregata.</small></span><input type="checkbox" id="pv-stat"></label>
+        <div class="pv-actions"><button type="button" class="ck-btn ghost dark" data-ck="reject">Rifiuta tutto</button><button type="button" class="ck-btn ghost dark" data-ck="save">Salva preferenze</button><button type="button" class="ck-btn dark" data-ck="accept">Accetta tutto</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Cookie, privacy e statistiche. Google Analytics parte SOLO dopo il consenso.
+(function(){
+  var GA_ID='G-XXXXXXXXXX'; // <-- sostituire con l'ID di misurazione GA4
+  var KEY='cdv_consent';
+  var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var banner=$('#ck-banner'), modal=$('#pv-modal'), stat=$('#pv-stat'), last=null;
+  function get(){try{return JSON.parse(localStorage.getItem(KEY))}catch(e){return null}}
+  function save(a){try{localStorage.setItem(KEY,JSON.stringify({analytics:!!a,ts:Date.now()}))}catch(e){}}
+  function loadGA(){if(window.__ga||GA_ID.indexOf('XXXX')>-1)return;window.__ga=1;var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',GA_ID,{anonymize_ip:true});}
+  function revokeGA(){window['ga-disable-'+GA_ID]=true;document.cookie.split(';').forEach(function(c){var n=c.split('=')[0].trim();if(n.indexOf('_ga')===0)document.cookie=n+'=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/'})}
+  function apply(a){if(a)loadGA();else revokeGA();banner.hidden=true;document.body.classList.remove('ck-open');stat.checked=!!a;sync()}
+  function setTab(n){$$('.pv-tab').forEach(function(t){t.setAttribute('aria-selected',t.dataset.tab===n)});$$('[data-pane]').forEach(function(p){p.hidden=p.dataset.pane!==n});$('.pv-body').scrollTop=0}
+  function openM(n){last=document.activeElement;setTab(n||'privacy');modal.hidden=false;document.body.style.overflow='hidden';$('.pv-close').focus()}
+  function closeM(){modal.hidden=true;document.body.style.overflow='';if(last&&last.focus)last.focus()}
+  document.addEventListener('click',function(e){
+    var o=e.target.closest('[data-open]');if(o){e.preventDefault();openM(o.dataset.open);return}
+    var c=e.target.closest('[data-ck]');if(c){var k=c.dataset.ck,a=k==='accept'?true:k==='reject'?false:stat.checked;save(a);apply(a);if(!modal.hidden)closeM();return}
+    var t=e.target.closest('.pv-tab');if(t){setTab(t.dataset.tab);return}
+    if(e.target.closest('.pv-close')||e.target===modal)closeM();
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!modal.hidden)closeM()});
+  var c0=get();if(c0){apply(c0.analytics)}else{banner.hidden=false;document.body.classList.add('ck-open')}
+  // barra contatti rapidi su mobile: compare dopo l'hero, sparisce vicino alla CTA finale, al menu aperto e al banner
+  var bar=$('#mBar'),hero=$('#inizio'),end=$('#prenota'),foot=$('footer'),nav=$('#navLinks'),vis={hero:true,end:false,foot:false};
+  function sync(){var open=nav&&nav.classList.contains('active');bar.classList.toggle('show',!vis.hero&&!vis.end&&!vis.foot&&!open&&!document.body.classList.contains('ck-open'))}
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){vis[x.target===hero?'hero':x.target===end?'end':'foot']=x.isIntersecting});sync()},{threshold:.15});[hero,end,foot].forEach(function(n){n&&io.observe(n)})}
+  if(nav)new MutationObserver(sync).observe(nav,{attributes:true,attributeFilter:['class']});
+})();
+</script>
+
 </body>
 </html>
