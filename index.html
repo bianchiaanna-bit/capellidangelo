@@ -1600,6 +1600,16 @@ header{background:rgba(245,242,236,.78);backdrop-filter:blur(18px) saturate(1.4)
 .duo-card h3{color:#fff;font-size:1.5rem}.duo-card p{margin:0;font-size:.8rem;line-height:1.5;color:#F0EDE8}
 .feature-img-box,.editorial-filosofia-img{border-radius:56px 4px 56px 4px;overflow:hidden}
 /* prodotti: la foto resta dentro il suo riquadro */
+/* Card trattamenti: descrizione espandibile solo su mobile */
+.prod-expand{display:none}
+@media (max-width: 768px){
+  .prod:not(.is-expanded) .prod-body p:last-of-type{display:none}
+  .prod-expand{display:flex;align-items:center;justify-content:center;gap:.45rem;width:100%;margin-top:.65rem;padding:.55rem 0 0;border:0;border-top:1px solid rgba(255,255,255,.16);background:transparent;color:#E8E5DF;font:inherit;font-size:.75rem;letter-spacing:.06em;cursor:pointer}
+  .prod-expand svg{width:14px;height:14px;transition:transform .25s ease}
+  .prod.is-expanded .prod-expand svg{transform:rotate(180deg)}
+  .prod-expand:focus-visible{outline:2px solid #fff;outline-offset:3px}
+}
+
 .prod-img{position:relative;height:270px;overflow:hidden;background:radial-gradient(75% 60% at 50% 28%,#FBF9F5,#D8D5CE)}
 .prod-img img{display:block;width:100%;height:100%;object-fit:contain;padding:1.4rem 1rem;filter:drop-shadow(0 14px 14px rgba(0,0,0,.25));transition:transform .8s ease}.prod:hover .prod-img img{transform:scale(1.04)}
 .prod-img.photo img{object-fit:cover;padding:0;filter:none}
@@ -2365,6 +2375,32 @@ footer{padding-bottom:5.5rem}
     ps.forEach(function(b){['mouseenter','focus','click'].forEach(function(e){b.addEventListener(e,function(){pick(b)})})});pick(ps[6]);})();
     (function(){var n=document.getElementById('navLinks');if(!n)return;new MutationObserver(function(){document.body.style.overflow=n.classList.contains('active')?'hidden':''}).observe(n,{attributes:true,attributeFilter:['class']})})();
   </script>
+<script>
+// Espansione descrizioni prodotti: controllo visibile solo su mobile via CSS.
+(function(){
+  document.querySelectorAll('.prod').forEach(function(card,i){
+    var body=card.querySelector('.prod-body');
+    var description=body&&body.querySelector('p:last-of-type');
+    if(!body||!description)return;
+    var button=document.createElement('button');
+    button.type='button';
+    button.className='prod-expand';
+    button.setAttribute('aria-expanded','false');
+    button.setAttribute('aria-label','Scopri i dettagli di '+(card.querySelector('h4')?card.querySelector('h4').textContent.trim():'questo prodotto'));
+    var id='prod-description-'+(i+1);
+    description.id=id;
+    button.setAttribute('aria-controls',id);
+    button.innerHTML='<span>Scopri</span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>';
+    description.insertAdjacentElement('afterend',button);
+    button.addEventListener('click',function(){
+      var expanded=card.classList.toggle('is-expanded');
+      button.setAttribute('aria-expanded',String(expanded));
+      button.querySelector('span').textContent=expanded?'Mostra meno':'Scopri';
+      button.setAttribute('aria-label',(expanded?'Nascondi':'Scopri')+' i dettagli di '+(card.querySelector('h4')?card.querySelector('h4').textContent.trim():'questo prodotto'));
+    });
+  });
+})();
+</script>
 <!-- BARRA CONTATTI RAPIDI (solo mobile) -->
 <div aria-label="Contatti rapidi" class="m-bar" id="mBar"><a class="wa" href="https://wa.me/393396577389" rel="noopener noreferrer" target="_blank">WhatsApp</a><a href="tel:+390464431296">Chiama</a></div>
 <!-- BANNER COOKIE -->
