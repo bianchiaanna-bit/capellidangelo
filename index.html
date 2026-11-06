@@ -187,7 +187,6 @@
     .footer-logo-light {
       filter: brightness(0) invert(1);
     }
-
     /* BUTTONS */
 
     .btn {
@@ -1085,6 +1084,20 @@
     .footer-navigation {
       /* La navigazione rimane visibile su desktop e viene nascosta su mobile. */
     }
+    /* Privacy & Cookie nel footer: solo mobile */
+.footer-privacy-link {
+  display: none;
+  margin: 0.8rem auto 0;
+  color: #B0A69C;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer-privacy-link {
+    display: inline-block;
+  }
+}
 /* SEZIONE UNIFICATA: FILOSOFIA E SALONE */
 
 .salone-unificato {
@@ -2412,6 +2425,16 @@ section.section-padding{padding-top:var(--sec-y)!important;padding-bottom:var(--
 @media(max-width:700px){.fan{grid-template-columns:1fr 1fr;gap:1.8rem .8rem}.swatch{width:clamp(44px,12vw,54px)}.fan-row{gap:.45rem}}
 /* e-color */
 .video-slot{text-decoration:none;transition:background .4s,transform .4s}.video-slot:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+/* Pulsante e•color */
+.ecolor-btn {
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
 .video-slot i{font-size:.8rem}
 @media(max-width:600px){.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}.facts strong{font-size:1.7rem}.facts span{font-size:.66rem;line-height:1.35}}
 /* ambasciata integrata tra filosofia e salone */
@@ -2637,7 +2660,9 @@ footer{padding-bottom:5.5rem}
             <div><strong>3 mln</strong><span>di formule possibili</span></div>
           </div>
           <p class="note">I colori e•color sono senza ammoniaca.</p>
-          <a href="#prenota" class="btn btn-dark" style="margin-top:1.4rem">Prenota una consulenza colore</a>
+         <a href="#prenota" class="btn btn-dark ecolor-btn" style="margin-top:1.4rem">
+            Prenota una consulenza colore
+          </a>
         </div>
       </div>
     </section>
@@ -2983,8 +3008,14 @@ footer{padding-bottom:5.5rem}
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Capelli D'Angelo. Tutti i diritti riservati.</p>
-      </div>
+  <p>&copy; 2026 Capelli D'Angelo. Tutti i diritti riservati.</p>
+  <button
+    type="button"
+    class="link-btn footer-privacy-link"
+    data-open="privacy">
+    Privacy &amp; Cookie
+  </button>
+</div>
     </div>
   </footer>
   <script>
