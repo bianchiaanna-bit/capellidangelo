@@ -5,58 +5,57 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Capelli D'Angelo | Hair Atelier &amp; Armocromia a Rovereto</title>
-<!-- Typography Google Fonts -->
+<meta name="description" content="Parrucchiere a Rovereto, in Via Trieste 42: colore, taglio, armocromia e trattamenti su misura, a partire da una consulenza. Prenota su WhatsApp o per telefono."/>
+<meta name="theme-color" content="#F5F2EC"/>
+<!-- Anteprima quando il link viene condiviso (WhatsApp, Facebook). DA AGGIORNARE con il dominio definitivo. -->
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="it_IT"/>
+<meta property="og:site_name" content="Capelli D'Angelo"/>
+<meta property="og:title" content="Capelli D'Angelo | Hair Atelier &amp; Armocromia a Rovereto"/>
+<meta property="og:description" content="Colore, taglio, armocromia e cura personalizzata del capello, in un atelier riservato in Via Trieste a Rovereto."/>
+<meta property="og:image" content="https://bianchiaanna-bit.github.io/capellidangelo/immagini/web/hero.jpg"/>
+<!-- LCP: la foto principale parte subito, nella misura giusta per lo schermo -->
+<link rel="preload" as="image" href="immagini/web/hero.webp" imagesrcset="immagini/web/hero-480.webp 480w, immagini/web/hero.webp 896w" imagesizes="(max-width: 860px) 100vw, 52vw" fetchpriority="high"/>
+<!-- Font: caricati senza bloccare il rendering -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@300;400;500;600&amp;family=Alex+Brush&amp;display=swap" rel="stylesheet"/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600&amp;display=swap"/></noscript>
 <style>
-
     :root {
-      /* PALETTE — HAIR ATELIER CONTEMPORANEO */
       --bg-primary: #F8F6F2;
       --bg-secondary: #EDE7DF;
       --bg-dark: #211F1D;
       --bg-card: #FFFEFC;
-
       --text-main: #252321;
       --text-muted: #6F6861;
       --text-light: #F8F6F2;
-
-      /* Accento principale */
       --accent-strong: #1F1F20;
       --accent-strong-hover: #5A5A5D;
       --accent-taupe: #806B59;
-
       --border-color: #DCD3C8;
       --border-dark: #403832;
-
       --font-heading: "Cormorant Garamond", serif;
       --font-body: "Manrope", sans-serif;
       --font-script: "Alex Brush", cursive;
     }
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     html {
       scroll-behavior: smooth;
       scroll-padding-top: 90px;
     }
-
     body {
       background-color: var(--bg-primary);
       color: var(--text-main);
       font-family: var(--font-body);
       line-height: 1.75;
-      font-weight: 300;
+      font-weight: 400;
       -webkit-font-smoothing: antialiased;
     }
-
-    /* GERARCHIA TITOLI */
-
     h1,
     h2,
     h3,
@@ -66,14 +65,12 @@
       letter-spacing: 0.02em;
       color: var(--text-main);
     }
-
     h2{
       font-size: clamp(2.1rem, 3.8vw, 3.2rem) !important;
       line-height: 1.25 !important;
       font-weight: 500 !important;
       margin-bottom: 1.2rem;
     }
-
     .subtitle {
       font-family: var(--font-body);
       font-size: 0.8rem !important;
@@ -84,47 +81,37 @@
       display: block !important;
       font-weight: 600 !important;
     }
-
     .section-desc {
       font-size: 1.05rem;
       color: var(--text-muted);
       max-width: 750px;
       margin: 0 auto 2.5rem;
       line-height: 1.8;
-      font-weight: 300;
+      font-weight: 400;
     }
-
     .highlight-accent {
       color: var(--accent-taupe);
       font-style: italic;
     }
-
     a {
       color: inherit;
       text-decoration: none;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
-
     p {
       margin-bottom: 1rem;
     }
-
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 2rem;
     }
-
     .text-center {
       text-align: center;
     }
-
     .section-padding {
       padding: 7rem 0;
     }
-
-    /* LOGO BRAND */
-
     .logo-brand {
       display: flex;
       flex-direction: column;
@@ -132,7 +119,6 @@
       line-height: 1;
       text-decoration: none;
     }
-
     .logo-image {
       display: block;
       width: 178px;
@@ -140,13 +126,6 @@
       height: auto;
       object-fit: contain;
     }
-
-    
-
-    
-
-    /* LOGO NEL FOOTER */
-
     .footer-logo {
       display: block;
       width: 190px;
@@ -157,7 +136,6 @@
       text-decoration: none;
       line-height: 0;
     }
-
     .footer-logo img{
       display: block;
       width: 190px !important;
@@ -168,10 +146,6 @@
       margin: 0;
       padding: 0;
     }
-
-    
-    /* BUTTONS */
-
     .btn {
       display: inline-flex;
       align-items: center;
@@ -187,48 +161,38 @@
       cursor: pointer;
       transition: all 0.35s ease;
     }
-
     .btn:hover {
       background: var(--text-main);
       color: var(--bg-primary);
     }
-
     .btn-primary {
       border-color: var(--accent-strong);
       background: var(--accent-strong);
       color: #FFFFFF;
     }
-
     .btn-primary:hover {
       background: var(--accent-strong-hover);
       border-color: var(--accent-strong-hover);
       color: #FFFFFF;
     }
-
     .btn-dark {
       background: var(--bg-dark);
       color: var(--text-light);
       border-color: var(--bg-dark);
     }
-
     .btn-dark:hover {
       background: transparent;
       color: var(--bg-dark);
     }
-
     .btn-outline-light {
       border-color: rgba(255, 255, 255, 0.4);
       color: var(--text-light);
     }
-
     .btn-outline-light:hover {
       border-color: #FFFFFF;
       background: rgba(255, 255, 255, 0.1);
       color: #FFFFFF;
     }
-
-    /* HEADER & NAV */
-
     header {
       position: fixed;
       top: 0;
@@ -239,21 +203,18 @@
       z-index: 1000;
       border-bottom: 1px solid var(--border-color);
     }
-
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       height: 90px;
     }
-
     .nav-links {
       display: flex;
       gap: 2.2rem;
       list-style: none;
       align-items: center;
     }
-
     .nav-links a.nav-item {
       font-size: 0.75rem;
       letter-spacing: 0.18em;
@@ -261,11 +222,9 @@
       color: var(--text-muted);
       font-weight: 500;
     }
-
     .nav-links a.nav-item:hover {
       color: var(--text-main);
     }
-
     .mobile-menu-toggle {
       display: none;
       background: none;
@@ -274,7 +233,6 @@
       padding: 0.5rem;
       z-index: 1002;
     }
-
     .mobile-menu-toggle span {
       display: block;
       width: 24px;
@@ -283,9 +241,6 @@
       margin: 6px 0;
       transition: all 0.3s ease;
     }
-
-    /* HERO SECTION */
-
     .hero {
       position: relative;
       padding-top: 220px;
@@ -294,17 +249,9 @@
       display: flex;
       align-items: center;
       text-align: center;
-      background:
-        linear-gradient(
-          180deg,
-          rgba(25, 23, 22, 0.55) 0%,
-          rgba(25, 23, 22, 0.65) 100%
-        ),
-        url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1600")
-        center/cover no-repeat;
+      background: var(--bg-primary);
       color: #FFFFFF;
     }
-
     .hero h1 {
       font-size: clamp(2.5rem, 5vw, 4.2rem);
       line-height: 1.15;
@@ -312,294 +259,19 @@
       color: #FFFFFF;
       font-weight: 400;
     }
-
     .hero p {
       font-size: 1.1rem;
       color: var(--border-color);
       max-width: 620px;
       margin: 0 auto 2.5rem;
-      font-weight: 300;
+      font-weight: 400;
     }
-
     .hero-buttons {
       display: flex;
       gap: 1.2rem;
       justify-content: center;
       flex-wrap: wrap;
     }
-
-    /* INTRO EDITORIAL */
-
-    
-
-    
-
-    
-
-    
-
-    
-/* =========================================
-   SFONDO CONDIVISO: METODO + SERVIZI
-   DESKTOP E MOBILE
-========================================= */
-
-/* DESKTOP: fotografia condivisa, sovrapposizione
-   scura alleggerita per valorizzare l'immagine */
-
-
-
-/* Le sezioni condividono lo sfondo del wrapper */
-
-
-
-
-
-
-/* =========================================
-   TITOLI E DESCRIZIONI — DESKTOP
-========================================= */
-
-
-
-/* Descrizioni introduttive:
-   maggiore contrasto sulla fotografia */
-
-
-
-
-/* =========================================
-   GRIGLIA METODO
-========================================= */
-
-
-
-
-/* =========================================
-   CARD METODO E SERVIZI
-   DESKTOP — VETRO TRASPARENTE
-========================================= */
-
-
-
-/* Dettaglio decorativo */
-
-
-
-/* Hover desktop */
-
-
-
-
-
-
-/* =========================================
-   TESTI CARD METODO — DESKTOP
-========================================= */
-
-
-
-
-
-
-
-
-/* =========================================
-   SERVIZI — DESKTOP
-========================================= */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =========================================
-   BOTTONI PRINCIPALI
-========================================= */
-
-
-
-
-
-
-/* =========================================
-   RESPONSIVE TABLET
-========================================= */
-
-@media (max-width: 900px) {
-
-  
-
-  
-
-  
-
-  
-}
-
-
-/* =========================================
-   MOBILE — SFONDI METODO E SERVIZI
-   Foto solo nel Metodo
-   Sfondo secondario nei Servizi
-========================================= */
-
-@media (max-width: 768px) {
-
-  /* WRAPPER: rimuove lo sfondo condiviso */
-
-  
-
-
-  /* =========================================
-     METODO — SFONDO FOTOGRAFICO
-  ========================================= */
-
-  
-
-  
-
-
-  /* =========================================
-     SERVIZI — SFONDO TORTORA
-  ========================================= */
-
-  
-
-
-  /* =========================================
-     TITOLI E DESCRIZIONI — MOBILE
-     Colori coerenti con il sito
-  ========================================= */
-
-  
-
-  
-
-
-  /* =========================================
-     CARD — VETRO SATINATO MOBILE
-  ========================================= */
-
-  
-
-
-  /* Testi delle card Metodo */
-
-  
-
-  
-
-
-  /* Testi delle card Servizi */
-
-  
-
-  
-
-  
-
-
-  /* Bottoni principali su mobile */
-
-  
-
-  
-}
-
-
-
-/* =========================================
-   RESPONSIVE SERVIZI — SMARTPHONE
-========================================= */
-
-@media (max-width: 600px) {
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-}
-
-
-/* =========================================
-   ACCESSIBILITÀ — RIDUZIONE ANIMAZIONI
-========================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  
-}
-/* =========================================
-   RESPONSIVE SERVIZI — SMARTPHONE
-========================================= */
-
-@media (max-width: 600px) {
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-}
-/* Descrizione servizi */
-
-
-/* Colore originale su mobile */
-@media (max-width: 768px) {
-  
-}
-/* =========================================
-   ACCESSIBILITÀ — RIDUZIONE ANIMAZIONI
-========================================= */
-
-@media (prefers-reduced-motion: reduce) {
-  
-}
-    /* PALLINE COLORATE ARMOCROMIA */
-
-    
-
-    
-
-    
-
-    /* PRODOTTI CURA A CASA */
-
-    
-
-    
-
     .product-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
@@ -607,33 +279,14 @@
       text-align: center;
       transition: all 0.35s ease;
     }
-
     .product-card:hover {
       border-color: var(--accent-taupe);
     }
-
-    
-
-    
-
-    
-
-    
-
     .product-card h4 {
       font-size: 1.45rem;
       line-height: 1.2;
       margin-bottom: 0.35rem;
     }
-
-    
-
-    
-
-    .footer-navigation {
-      /* La navigazione rimane visibile su desktop e viene nascosta su mobile. */
-    }
-    /* Privacy & Cookie nel footer: solo mobile */
 .footer-privacy-link {
   display: none;
   margin: 0.8rem auto 0;
@@ -641,32 +294,26 @@
   font-size: 0.75rem;
   text-align: center;
 }
-
 @media (max-width: 768px) {
   .footer-privacy-link {
     display: inline-block;
   }
 }
-/* SEZIONE UNIFICATA: FILOSOFIA E SALONE */
-
 .salone-unificato {
   background: var(--bg-secondary);
 }
-
 .editorial-filosofia-wrapper {
   position: relative;
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 0 5rem;
 }
-
 .editorial-filosofia-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   position: relative;
 }
-
 .editorial-filosofia-img {
   position: relative;
   height: 520px;
@@ -675,7 +322,6 @@
   overflow: hidden;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
 }
-
 .editorial-filosofia-img img {
   width: 100%;
   height: 100%;
@@ -684,11 +330,9 @@
   filter: brightness(0.97);
   transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 .editorial-filosofia-img:hover img {
   transform: scale(1.03);
 }
-
 .editorial-filosofia-card {
   position: relative;
   z-index: 2;
@@ -698,7 +342,6 @@
   border: 1px solid var(--border-color);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.03);
 }
-
 .editorial-filosofia-card::after {
   content: "";
   position: absolute;
@@ -710,7 +353,6 @@
   border-right: 2px solid var(--accent-taupe);
   pointer-events: none;
 }
-
 .feature-block {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -718,13 +360,11 @@
   align-items: center;
   padding-top: 1rem;
 }
-
 .feature-text p {
   color: var(--text-muted);
   margin-bottom: 1.2rem;
   line-height: 1.8;
 }
-
 .location-box {
   display: flex;
   align-items: center;
@@ -736,21 +376,18 @@
   letter-spacing: 0.05em;
   color: var(--text-main);
 }
-
 .location-box svg {
   width: 20px;
   height: 20px;
   stroke: var(--accent-taupe);
   flex-shrink: 0;
 }
-
 .feature-img-box {
   width: 100%;
   height: 480px;
   overflow: hidden;
   border: 1px solid var(--border-color);
 }
-
 .feature-img-box img {
   width: 100%;
   height: 100%;
@@ -758,51 +395,9 @@
   display: block;
   transition: transform 0.5s ease;
 }
-
 .feature-img-box:hover img {
   transform: scale(1.03);
 }
-
-    /* AMBASCIATA DELLA GIOIA */
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    @media (max-width: 768px) {
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-    }
-
-    /* GALLERIA / MOSAICO CREAZIONI */
-
     .mosaic-grid {
       display: grid;
       grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -811,7 +406,6 @@
       width: 100%;
       overflow: hidden;
     }
-
     .mosaic-item {
       position: relative;
       overflow: hidden;
@@ -820,7 +414,6 @@
       border: none;
       min-width: 0;
     }
-
     .mosaic-item img {
       width: 100%;
       height: 100%;
@@ -828,11 +421,9 @@
       display: block;
       transition: transform 0.5s ease;
     }
-
     .mosaic-item:hover img {
       transform: scale(1.04);
     }
-
     .mosaic-item:nth-child(2),
     .mosaic-item:nth-child(10),
     .mosaic-item:nth-child(15),
@@ -840,56 +431,42 @@
       grid-column: span 2;
       grid-row: span 2;
     }
-
-    /* TABLET */
-
     @media (max-width: 900px) {
       .mosaic-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
       }
-
       .editorial-filosofia-container {
         grid-template-columns: 1fr;
       }
-
       .editorial-filosofia-card {
         margin-left: 0;
         margin-top: -50px;
         padding: 2.5rem 2rem;
       }
-
       .editorial-filosofia-img {
         height: 380px;
       }
-
       .feature-block {
         grid-template-columns: 1fr;
         gap: 2.5rem;
       }
-
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
       }
     }
-
-    /* RECENSIONI */
-
     .reviews-section {
       position: relative;
       background: var(--bg-primary);
       overflow: hidden;
     }
-
     .reviews-heading {
       max-width: 720px;
       margin: 0 auto;
     }
-
     .reviews-heading .section-desc {
       margin-bottom: 0;
     }
-
     .reviews-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -898,7 +475,6 @@
       text-align: left;
       align-items: stretch;
     }
-
     .review-card-modern {
       position: relative;
       display: flex;
@@ -909,12 +485,10 @@
       border: 1px solid var(--border-color);
       transition: border-color 0.35s ease, transform 0.35s ease;
     }
-
     .review-card-modern:hover {
       border-color: var(--accent-taupe);
       transform: translateY(-3px);
     }
-
     .review-card-modern::before {
       content: "“";
       display: block;
@@ -925,7 +499,6 @@
       color: var(--accent-taupe);
       opacity: 0.8;
     }
-
     .review-card-modern .stars {
       color: var(--accent-strong);
       font-family: var(--font-body);
@@ -933,7 +506,6 @@
       letter-spacing: 0.22em;
       margin: 0 0 1.2rem;
     }
-
     .review-card-modern .review-text {
       flex: 1;
       font-family: var(--font-heading);
@@ -943,7 +515,6 @@
       color: var(--text-main);
       margin: 0;
     }
-
     .review-card-modern .review-author-wrap {
       display: flex;
       align-items: center;
@@ -953,7 +524,6 @@
       padding-top: 1.2rem;
       border-top: 1px solid var(--border-color);
     }
-
     .review-card-modern .review-author {
       display: block;
       margin: 0;
@@ -963,7 +533,6 @@
       font-weight: 600;
       letter-spacing: 0.04em;
     }
-
     .review-source {
       display: inline-flex;
       align-items: center;
@@ -974,13 +543,11 @@
       text-transform: uppercase;
       white-space: nowrap;
     }
-
     .review-source svg {
       width: 14px;
       height: 14px;
       flex-shrink: 0;
     }
-
     .reviews-footer {
       display: flex;
       flex-direction: column;
@@ -988,39 +555,28 @@
       gap: 1.2rem;
       margin-top: 3rem;
     }
-
     .reviews-note {
       margin: 0;
       color: var(--text-muted);
       font-size: 0.75rem;
       letter-spacing: 0.04em;
     }
-
     .reviews-cta {
       gap: 0;
     }
-
     
-
-    .reviews-pagination {
-      display: none;
-    }
-
     @media (max-width: 900px) {
       .reviews-grid {
         grid-template-columns: repeat(3, minmax(260px, 1fr));
         gap: 1rem;
       }
-
       .review-card-modern {
         padding: 2rem 1.5rem 1.6rem;
       }
-
       .review-card-modern .review-text {
         font-size: 1.2rem;
       }
     }
-
     @media (max-width: 768px) {
       .reviews-grid {
         display: flex;
@@ -1036,98 +592,27 @@
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
       }
-
       .reviews-grid::-webkit-scrollbar {
         display: none;
       }
-
       .review-card-modern {
         flex: 0 0 88%;
         scroll-snap-align: center;
         padding: 2rem 1.5rem 1.6rem;
       }
-
       .review-card-modern:hover {
         transform: none;
       }
-
       .review-card-modern .review-text {
         font-size: 1.35rem;
       }
-
-      .reviews-pagination {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.55rem;
-        margin-top: 1.2rem;
-      }
-
-      .reviews-pagination button {
-        width: 7px;
-        height: 7px;
-        padding: 0;
-        border: 0;
-        border-radius: 50%;
-        background: var(--border-color);
-        cursor: pointer;
-        transition: transform 0.2s ease, background 0.2s ease;
-      }
-
-      .reviews-pagination button[aria-current="true"] {
-        background: var(--accent-taupe);
-        transform: scale(1.35);
-      }
-
+      
+      
+      
       .reviews-footer {
         margin-top: 2rem;
       }
     }
-
-    /* BOOKING */
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    /* =========================================
-       PRENOTAZIONI — FOTO E VETRO SATINATO
-    ========================================= */
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    @media (max-width: 600px) {
-      
-
-      
-
-      
-
-      
-
-      
-    }
-
-    /* FOOTER */
-
     footer {
       background: var(--bg-dark);
       color: #C8C1BA;
@@ -1135,37 +620,27 @@
       font-size: 0.85rem;
       border-top: 1px solid var(--border-dark);
     }
-
     .footer-grid {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr 1fr;
       gap: 3rem;
       margin-bottom: 4rem;
     }
-
-    
-
-    
-
     .footer-links ul {
       list-style: none;
     }
-
     .footer-links li {
       margin-bottom: 0.6rem;
     }
-
     .footer-links a:hover {
       color: #C0A37B;
     }
-
     .social-links-container {
       display: flex;
       gap: 1.2rem;
       margin-top: 0.8rem;
       flex-wrap: wrap;
     }
-
     .social-link-item {
       display: inline-flex;
       align-items: center;
@@ -1173,17 +648,14 @@
       color: var(--text-light);
       transition: color 0.3s ease;
     }
-
     .social-link-item:hover {
       color: #C0A37B;
     }
-
     .social-icon-svg {
       width: 18px;
       height: 18px;
       fill: currentColor;
     }
-
     .footer-bottom {
       border-top: 1px solid var(--border-dark);
       padding-top: 2rem;
@@ -1191,15 +663,11 @@
       font-size: 0.75rem;
       color: #B0A69C;
     }
-
-    /* CONTENUTI AGGIUNTIVI DEL MENU MOBILE */
-
     .mobile-menu-close,
     .mobile-menu-close-row,
     .mobile-menu-footer {
       display: none;
     }
-
     .mobile-menu-socials {
       display: flex;
       justify-content: center;
@@ -1207,7 +675,6 @@
       gap: 1.4rem;
       margin-bottom: 1.2rem;
     }
-
     .mobile-menu-socials a {
       display: inline-flex;
       align-items: center;
@@ -1218,149 +685,98 @@
       border-radius: 50%;
       color: var(--text-main);
     }
-
     .mobile-menu-socials a:hover {
       color: var(--text-main);
       border-color: var(--accent-taupe);
     }
-
     .mobile-menu-socials svg {
       width: 19px;
       height: 19px;
       fill: currentColor;
     }
-
     .mobile-menu-contact {
       font-size: 0.78rem;
       line-height: 1.8;
       color: var(--text-muted);
       text-align: center;
     }
-
     .mobile-menu-contact p {
       margin: 0.25rem 0;
     }
-
     .mobile-menu-contact a {
       color: var(--text-main);
       text-decoration: none;
     }
-
     .mobile-menu-contact a:hover {
       color: var(--text-muted);
     }
-
-    /* MENU MOBILE APERTO */
-
     .mobile-menu-toggle.active {
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
     }
-
     .mobile-menu-toggle.active span:first-child {
       transform: translateY(3.5px) rotate(45deg);
     }
-
     .mobile-menu-toggle.active span:last-child {
       transform: translateY(-3.5px) rotate(-45deg);
     }
-
-    /* FILOSOFIA — DETTAGLIO DECORATIVO */
-
     .editorial-filosofia-card {
       position: relative;
     }
-
-    /* RESPONSIVE */
-
     @media (max-width: 768px) {
-
-      /* FOOTER MOBILE */
-
       footer {
         padding: 3.5rem 0 1.8rem;
       }
-
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
         margin-bottom: 2.5rem;
       }
-
       .footer-navigation {
         display: none;
       }
-
       .footer-brand .logo-brand {
         margin-bottom: 1.1rem !important;
       }
-
-      
-
       .footer-brand p {
         max-width: 340px;
         line-height: 1.8;
         margin-bottom: 0;
       }
-
-      footer .footer-links h4 {
+      footer .footer-links h3 {
         margin-bottom: 0.8rem !important;
       }
-
       footer .footer-links ul {
         margin-bottom: 0.9rem;
       }
-
       footer .social-links-container {
         gap: 1.2rem;
         margin-top: 1rem;
       }
-
       footer .footer-links:last-child p {
         margin-bottom: 0;
         font-size: 0.85rem !important;
         color: #C8C1BA !important;
       }
-
       .footer-bottom {
         padding-top: 1.4rem;
       }
-
-      /* PRODOTTI: CAROSELLO ORIZZONTALE TOUCH */
-
-      
-
-      
-
       .product-card {
         flex: 0 0 86%;
         min-width: 0;
         scroll-snap-align: center;
         padding: 1.5rem 1.2rem;
       }
-
-      
-
-      
-
-      
-
-      
-
-      /* HEADER MOBILE */
-
       nav {
         position: relative;
       }
-
       .mobile-menu-toggle {
         display: block;
         margin-left: auto;
         order: 2;
         flex-shrink: 0;
       }
-
       .nav-links {
         position: fixed;
         top: 0;
@@ -1369,15 +785,7 @@
         height: 100vh;
         height: 100dvh;
         background-color: var(--bg-primary);
-        background-image:
-          linear-gradient(
-            rgba(248, 246, 242, 0.84),
-            rgba(248, 246, 242, 0.84)
-          ),
-          url("immagini/menu_foto.jpg");
-        background-position: left center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -1386,19 +794,15 @@
         z-index: 1001;
         overflow-y: auto;
       }
-
       .nav-links.active {
         left: 0;
       }
-
       .nav-links li {
         text-align: center;
       }
-
       .nav-links a.nav-item {
         font-size: 0.85rem;
       }
-
       .nav-links .mobile-menu-close-row {
         display: block;
         position: absolute;
@@ -1406,7 +810,6 @@
         right: 1.4rem;
         text-align: right;
       }
-
       .mobile-menu-close {
         display: inline-flex;
         align-items: center;
@@ -1419,16 +822,14 @@
         color: var(--text-main);
         font-family: var(--font-body);
         font-size: 2rem;
-        font-weight: 300;
+        font-weight: 400;
         line-height: 1;
         cursor: pointer;
       }
-
       .mobile-menu-close:hover {
         border-color: var(--accent-taupe);
         color: var(--text-main);
       }
-
       .nav-links .mobile-menu-footer {
         display: block;
         position: absolute;
@@ -1439,37 +840,16 @@
         padding-top: 1.2rem;
         border-top: 1px solid var(--border-color);
       }
-
-      /* INTRO */
-
-      
-
-      /* AMBASCIATA */
-
-      
-
-      /* PRENOTAZIONE */
-
-      
-
-      
-
-      
-
-      /* GALLERIA MOBILE */
-
       .mosaic-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 0;
         margin-top: 2rem;
       }
-
       .mosaic-item {
         grid-column: span 1;
         grid-row: span 1;
         aspect-ratio: 4 / 5;
       }
-
       .mosaic-item:nth-child(2),
       .mosaic-item:nth-child(10),
       .mosaic-item:nth-child(15),
@@ -1477,60 +857,40 @@
         grid-column: span 1;
         grid-row: span 1;
       }
-
-      /* SPAZIATURE E HERO */
-
       .section-padding {
         padding: 5rem 0;
       }
-
       .hero {
         padding-top: 170px;
         padding-bottom: 90px;
         min-height: 85vh;
       }
-
       .hero-buttons {
         flex-direction: column;
         align-items: center;
       }
-
       .hero-buttons .btn {
         width: 100%;
         max-width: 340px;
       }
-
       .feature-img-box {
         height: 350px;
       }
-
       .editorial-filosofia-wrapper {
         padding-bottom: 3rem;
       }
-
       .editorial-filosofia-img {
         height: 340px;
       }
-
       .editorial-filosofia-card {
         margin-top: -35px;
         padding: 2rem 1.5rem;
       }
-
-      
-
-      
-
-      
     }
-
-    /* ACCESSIBILITÀ: RIDUZIONE ANIMAZIONI */
-
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
       }
-
       *,
       *::before,
       *::after {
@@ -1539,17 +899,11 @@
         animation-iteration-count: 1 !important;
       }
     }
-    /* MENU MOBILE — ICONE SOCIAL */
     .mobile-menu-socials a {
   border-color: #FFFFFF !important;
 }
-    
-  /* =====================================================
-   LIQUID EDITORIAL — palette del negozio
-   panna · grigio cemento · bianco · nero
-===================================================== */
 @property --tone{syntax:"<color>";inherits:true;initial-value:#C87D55}
-:root{--bg-primary:#F5F2EC;--bg-secondary:#E6E3DD;--bg-dark:#1B1B1C;--bg-card:#FBFAF7;--text-main:#1F1F20;--text-muted:#66656A;--accent-strong:#1F1F20;--accent-strong-hover:#5A5A5D;--accent-taupe:#77767A;--border-color:#D6D3CC;--border-dark:#3A3A3C;
+:root{--bg-primary:#F5F2EC;--bg-secondary:#E6E3DD;--bg-dark:#1B1B1C;--bg-card:#FBFAF7;--text-main:#1F1F20;--text-muted:#4D4C52;--accent-strong:#1F1F20;--accent-strong-hover:#5A5A5D;--accent-taupe:#55545A;--border-color:#D6D3CC;--border-dark:#3A3A3C;
 --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .4 0 0 0 0 .4 0 0 0 .7 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
 body::after{content:"";position:fixed;inset:0;z-index:5;pointer-events:none;opacity:.14;mix-blend-mode:multiply;background:var(--grain)}
 header{background:rgba(245,242,236,.78);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4)}
@@ -1558,7 +912,6 @@ header{background:rgba(245,242,236,.78);backdrop-filter:blur(18px) saturate(1.4)
 .btn-primary{color:#fff}.btn-dark:hover{color:var(--text-main)}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 @keyframes zoomout{from{transform:scale(1.08)}to{transform:scale(1)}}
-/* hero: la foto del salone è protagonista */
 .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);padding:0;min-height:100svh;background:var(--bg-primary);color:var(--text-main);text-align:left}
 .hero-copy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:150px 4vw 80px max(5vw,calc((100vw - 1200px)/2 + 2rem));animation:rise 1.2s cubic-bezier(.16,1,.3,1) both}
 .hero .hero-copy h1{color:var(--text-main);font-size:clamp(2.3rem,4.4vw,3.9rem);margin-bottom:1.3rem}
@@ -1569,12 +922,10 @@ header{background:rgba(245,242,236,.78);backdrop-filter:blur(18px) saturate(1.4)
 .hero-photo{position:relative;overflow:hidden;border-radius:280px 0 0 0;min-height:72svh}
 .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 62%;animation:zoomout 2.4s ease-out both}
 .hero-tag{position:absolute;left:1.6rem;bottom:1.6rem;padding:.7rem 1.4rem;font-size:.78rem;letter-spacing:.06em;color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:30px 3px 30px 3px;background:rgba(255,255,255,.14);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-/* servizi + per lei / per lui */
 .servizi-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:6vw;align-items:start}
 .serv-list{list-style:none;margin:2rem 0 2.5rem;border-top:1px solid var(--border-color)}
 .serv-list li{display:grid;grid-template-columns:.8fr 1.4fr;gap:.4rem 2rem;padding:1.3rem 0;border-bottom:1px solid var(--border-color);transition:padding-left .5s}
 .serv-list li:hover{padding-left:.8rem}.serv-list h3{font-size:1.6rem}.serv-list p{margin:0;font-size:.92rem;color:var(--text-muted)}
-/* trattamenti: rituali e prodotti */
 .trattamenti{background:var(--bg-dark);color:#E8E5DF}.trattamenti h2{color:#fff}.trattamenti .subtitle{color:#B9B6B0!important}.trattamenti .section-desc{color:#B9B6B0}.trattamenti strong{color:#fff;font-weight:500}
 .trattamenti .btn-primary{background:#fff;border-color:#fff;color:#1F1F20}.trattamenti .btn-primary:hover{background:transparent;color:#fff}
 .rituals{margin-top:3.5rem;border-bottom:1px solid rgba(255,255,255,.16)}
@@ -1585,8 +936,6 @@ header{background:rgba(245,242,236,.78);backdrop-filter:blur(18px) saturate(1.4)
 .ritual .for{display:block;color:#B9B6B0;font-size:.9rem;margin-top:.2rem}
 .ritual summary::after{content:"+";flex:none;width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.35);border-radius:50%;color:#fff;font-size:1.6rem;font-weight:200;transition:transform .5s,background .4s}
 .ritual[open] summary::after{transform:rotate(135deg);background:rgba(255,255,255,.12)}
-/* Evita transform sul contenitore con scroll orizzontale: su Safari la barra
-   di scorrimento può restare dipinta nella posizione precedente. */
 .ritual[open] .prod-row{animation:fade-row .8s ease both}
 .ritual[open] .prod-row .prod{animation:rise .8s cubic-bezier(.16,1,.3,1) both}
 .ritual[open] .rit-note{animation:rise .8s cubic-bezier(.16,1,.3,1) both}
@@ -1596,16 +945,12 @@ header{background:rgba(245,242,236,.78);backdrop-filter:blur(18px) saturate(1.4)
 .prod{flex:0 0 min(270px,76vw);scroll-snap-align:start;overflow:hidden;border:1px solid rgba(255,255,255,.18);border-radius:34px 4px 34px 4px;background:linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,.03))}
 .prod-body{padding:1.2rem 1.3rem 1.5rem}.prod-step{font-size:.75rem;letter-spacing:.05em;color:#B9B6B0}
 .prod h4{color:#fff;font-size:1.45rem;margin:.1rem 0}.prod .kind{font-size:.8rem;color:#CFCBC3;margin:0 0 .6rem}.prod-body p:last-child{font-size:.85rem;line-height:1.65;color:#B9B6B0;margin:0}
-
-/* per lei / per lui: foto con due angoli opposti arrotondati */
 .duo-photos{display:grid;grid-template-columns:1fr 1fr;gap:1rem;position:sticky;top:120px}
 .duo-card{position:relative;margin:0;overflow:hidden;aspect-ratio:3/5;border-radius:56px 4px 56px 4px}
 .duo-card img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}.duo-card:hover img{transform:scale(1.04)}
 .duo-card figcaption{position:absolute;left:.7rem;right:.7rem;bottom:.7rem;padding:1rem 1.1rem;color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:26px 3px 26px 3px;background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.06));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 .duo-card h3{color:#fff;font-size:1.5rem}.duo-card p{margin:0;font-size:.8rem;line-height:1.5;color:#F0EDE8}
 .feature-img-box,.editorial-filosofia-img{border-radius:56px 4px 56px 4px;overflow:hidden}
-/* prodotti: la foto resta dentro il suo riquadro */
-/* Card trattamenti: descrizione espandibile solo su mobile */
 .prod-expand{display:none}
 @media (max-width: 768px){
   .prod:not(.is-expanded) .prod-body p:last-of-type{display:none}
@@ -1614,19 +959,11 @@ header{background:rgba(245,242,236,.78);backdrop-filter:blur(18px) saturate(1.4)
   .prod.is-expanded .prod-expand svg{transform:rotate(180deg)}
   .prod-expand:focus-visible{outline:2px solid #fff;outline-offset:3px}
 }
-
 .prod-img{position:relative;height:270px;overflow:hidden;background:radial-gradient(75% 60% at 50% 28%,#FBF9F5,#D8D5CE)}
 .prod-img img{display:block;width:100%;height:100%;object-fit:contain;padding:1.4rem 1rem;filter:drop-shadow(0 14px 14px rgba(0,0,0,.25));transition:transform .8s ease}.prod:hover .prod-img img{transform:scale(1.04)}
 .prod-img.photo img{object-fit:cover;padding:0;filter:none}
-/* ambasciata: solo un’etichetta */
-
-
-
-/* armocromia: perle di vetro satinato */
-
 @media(max-width:768px){
 .prod-row{margin-inline:-1.2rem;padding-inline:1.2rem}
-/* menu a tutto schermo */
 .nav-links{left:0!important;transform:translateX(100%);visibility:hidden;transition:transform .55s cubic-bezier(.77,0,.18,1),visibility 0s .55s!important;align-items:stretch!important;justify-content:flex-start!important;padding:calc(env(safe-area-inset-top,0px) + 92px) 8vw 230px!important;background:linear-gradient(160deg,#F8F5EF,#E8E4DC)!important}
 .nav-links.active{transform:none;visibility:visible;transition:transform .55s cubic-bezier(.77,0,.18,1),visibility 0s!important}
 .nav-links li{text-align:left!important;width:100%}
@@ -1642,8 +979,6 @@ header{background:rgba(245,242,236,.78);backdrop-filter:blur(18px) saturate(1.4)
 .nav-links .mobile-menu-close-row{width:auto!important;left:auto!important;right:1.4rem!important;text-align:right!important}
 .nav-links a.nav-item{padding:.7rem 0;font-size:1.85rem!important}
 }
-
-/* il colore: colore, effetti, vegetali */
 .colore{background:var(--bg-primary)}
 .colore-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3.2rem;text-align:left}
 .cpil{padding:2.3rem 2rem;border:1px solid var(--border-color);border-radius:44px 4px 44px 4px;background:linear-gradient(135deg,rgba(255,255,255,.8),rgba(255,255,255,.35))}
@@ -1666,10 +1001,7 @@ header{background:rgba(245,242,236,.78);backdrop-filter:blur(18px) saturate(1.4)
 .facts div{display:flex;flex-direction:column}.facts strong{font-family:var(--font-heading);font-size:2.4rem;font-weight:400;line-height:1}.facts span{font-size:.78rem;color:var(--text-muted);margin-top:.35rem}
 .ecolor .note{font-size:.88rem;font-style:italic;max-width:none;margin:0}
 @media(max-width:860px){.colore-grid{grid-template-columns:1fr}.ecolor-grid{grid-template-columns:1fr}.mach{aspect-ratio:4/5}.steps li{grid-template-columns:1fr;gap:.2rem}}
-
 .cpil:not(.veg) .tags span{border-color:var(--border-color);color:var(--text-muted)}
-
-/* metodo unito */
 .metodo-new{background:var(--bg-primary)}
 .metodo-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:6vw;align-items:center}
 .metodo-intro p{max-width:34em}.metodo-intro h2{margin-bottom:1.4rem}
@@ -1681,11 +1013,6 @@ header{background:rgba(245,242,236,.78);backdrop-filter:blur(18px) saturate(1.4)
 .msteps li:hover{padding-left:.6rem}
 .msteps svg{width:30px;height:30px;fill:none;stroke:#D9D5CC;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;margin-top:.2rem}
 .msteps h4{color:#fff;font-size:1.45rem;margin:0 0 .2rem}.msteps p{margin:0;font-size:.88rem;line-height:1.6;color:#B9B6B0}
-/* servizi (elenco) e lei/lui */
-
-
-
-/* cta finale */
 .booking-new{background:var(--bg-primary)}
 .cta-card{display:grid;grid-template-columns:.85fr 1.15fr;overflow:hidden;border-radius:64px 4px 64px 4px;background:linear-gradient(160deg,#252528,#131315);color:#E8E5DF;box-shadow:0 40px 90px -40px rgba(0,0,0,.55)}
 .cta-photo{position:relative;min-height:440px}.cta-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -1698,14 +1025,10 @@ header{background:rgba(245,242,236,.78);backdrop-filter:blur(18px) saturate(1.4)
 .cta-tel{border:1px solid rgba(255,255,255,.4);color:#fff;background:rgba(255,255,255,.06)}.cta-tel:hover{background:#fff;color:#1B1B1C}
 .cta-info{list-style:none;padding:1.2rem 0 0;margin:2rem 0 0;display:flex;flex-wrap:wrap;gap:.4rem 2rem;font-size:.85rem;color:#9C978F;border-top:1px solid rgba(255,255,255,.14)}.cta-info a{color:#E8E5DF;text-decoration:none}
 @media(max-width:860px){.metodo-wrap{grid-template-columns:1fr}.cta-card{grid-template-columns:1fr;border-radius:44px 4px 44px 4px}.cta-photo{min-height:230px}.cta-photo::after{background:linear-gradient(0deg,rgba(19,19,21,.95),transparent 70%)}.cta-actions .btn{width:100%;text-align:center}}
-
-/* servizi + per lei / per lui */
 .servizi-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:6vw;align-items:start;margin-top:3rem}
 .servizi-grid .serv-list{margin:0}
-
 .duo-head{grid-column:1/-1;margin:0 0 .3rem;font-family:var(--font-heading);font-style:italic;font-size:1.3rem;color:var(--text-muted);max-width:none}
 .duo-photos .duo-card{aspect-ratio:3/5}
-/* il colore: ventaglio di tonalità */
 .fan-wrap{position:relative;margin:3.2rem auto 3.6rem;max-width:1000px;transition:--tone 1.1s ease}
 .fan-wrap::before{content:"";position:absolute;left:6%;right:6%;bottom:-8%;height:50%;border-radius:50%;background:var(--tone);opacity:.34;filter:blur(48px);pointer-events:none}
 .fan-lead{max-width:42em;margin:0 auto 2.4rem;text-align:center;color:var(--text-muted)}
@@ -1727,23 +1050,17 @@ background:linear-gradient(180deg,rgba(255,255,255,.34),transparent 40%,rgba(0,0
 .fan-cap span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted)}
 @media(max-width:860px){.servizi-grid{grid-template-columns:1fr;gap:2rem}.duo-photos{order:-1;position:static;grid-template-columns:1fr 1fr;margin:0}.duo-photos .duo-card{aspect-ratio:3/4;border-radius:36px 4px 36px 4px}.duo-photos figcaption{left:.5rem;right:.5rem;bottom:.5rem;padding:.7rem .9rem}.duo-photos h3{font-size:1.3rem}.duo-photos figcaption p{display:none}.serv-list li{grid-template-columns:1fr}}
 @media(max-width:600px){.fan{gap:.6rem}.fan-row{gap:4px;height:240px}.swatch{border-radius:18px 3px 18px 3px}.fan-label{font-size:.9rem}}
-
-/* ===== v5: spazi uniformi, hero, menu, colore ===== */
 :root{--sec-y:clamp(3rem,6vw,5rem)}
 section.section-padding{padding-top:var(--sec-y)!important;padding-bottom:var(--sec-y)!important}
 .servizi{background:var(--bg-secondary)}
 .serv-list li{border-color:rgba(0,0,0,.1)}
 .colore-grid{margin-top:3rem}.fan-wrap{margin:2.6rem auto 3rem}.rituals{margin-top:3rem}
-/* metodo: pannello con foto di capelli */
 .msteps{background:linear-gradient(165deg,rgba(21,22,24,.55),rgba(21,22,24,.93) 72%),url("immagini/web/metodo.webp") center/cover,#151618}
-/* menu mobile con foto */
 @media(max-width:768px){.nav-links{background:linear-gradient(rgba(248,245,239,.9),rgba(240,236,228,.95)),url("immagini/web/menu.webp") center/cover!important}}
-/* schede colore con foto */
 .cpil{padding:0;overflow:hidden}
 .cpil-img{aspect-ratio:16/10;overflow:hidden}.cpil-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}.cpil:hover .cpil-img img{transform:scale(1.04)}
 .cpil-body{padding:1.8rem 1.8rem 2rem}
 .cpil.veg .ico{margin-bottom:1rem}
-/* ventaglio: quadrati piccoli per stagione */
 .fan{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem 1.4rem;max-width:880px;margin:0 auto}
 .fan-group{display:flex;flex-direction:column;align-items:center;gap:1rem;min-width:0}
 .fan-row{display:flex;gap:.55rem;justify-content:center;height:auto}
@@ -1756,9 +1073,7 @@ section.section-padding{padding-top:var(--sec-y)!important;padding-bottom:var(--
 .fan-label i{font-style:normal;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted)}
 .fan-cap{margin-top:2.4rem}
 @media(max-width:700px){.fan{grid-template-columns:1fr 1fr;gap:1.8rem .8rem}.swatch{width:clamp(44px,12vw,54px)}.fan-row{gap:.45rem}}
-/* e-color */
 .video-slot{text-decoration:none;transition:background .4s,transform .4s}.video-slot:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
-/* Pulsante e•color */
 .ecolor-btn {
   display: flex;
   width: fit-content;
@@ -1770,16 +1085,8 @@ section.section-padding{padding-top:var(--sec-y)!important;padding-bottom:var(--
 }
 .video-slot i{font-size:.8rem}
 @media(max-width:600px){.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}.facts strong{font-size:1.7rem}.facts span{font-size:.66rem;line-height:1.35}}
-/* ambasciata integrata tra filosofia e salone */
-.amb-band{display:flex;align-items:center;justify-content:center;gap:clamp(1.4rem,4vw,3rem);max-width:860px;margin:var(--sec-y) auto;padding:2.2rem 0;border-block:1px solid var(--border-color)}
-.amb-band img{flex:none;width:clamp(96px,14vw,132px);height:auto}
-.amb-band h3{font-size:clamp(1.7rem,3vw,2.3rem);margin:.1rem 0 .5rem}.amb-band p{margin:0;font-size:.95rem;color:var(--text-muted);max-width:34em}
-@media(max-width:700px){.amb-band{flex-direction:column;text-align:center;padding:1.8rem 0}.amb-band img{width:104px}}
-/* cta */
 .cta-photo img{object-position:50% 35%}
-/* footer: bottone privacy */
 .link-btn{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-align:left;text-decoration:underline;text-underline-offset:3px}
-/* banner cookie, popup privacy, barra contatti */
 .ck-banner{position:fixed;left:50%;bottom:1rem;translate:-50% 0;z-index:1100;width:min(780px,calc(100% - 1.4rem));padding:1.2rem 1.4rem;display:flex;gap:1rem 1.6rem;align-items:center;flex-wrap:wrap;color:#E8E5DF;font-size:.88rem;line-height:1.55;border:1px solid rgba(255,255,255,.18);border-radius:30px 4px 30px 4px;background:rgba(24,24,26,.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 24px 60px -20px rgba(0,0,0,.6)}
 .ck-banner[hidden],.pv-modal[hidden]{display:none}
 .ck-banner p{margin:0;flex:1 1 280px;color:#C9C5BD;max-width:none}.ck-banner strong{color:#fff;font-weight:500}
@@ -1801,7 +1108,6 @@ section.section-padding{padding-top:var(--sec-y)!important;padding-bottom:var(--
 .pv-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border-color);cursor:pointer}
 .pv-row small{display:block;color:var(--text-muted);font-size:.82rem}.pv-row input{width:22px;height:22px;accent-color:var(--text-main)}
 .pv-actions{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.4rem}
-.m-bar{display:none}
 @media(max-width:768px){
 html{scroll-padding-top:76px}
 a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
@@ -1809,12 +1115,6 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 .btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center}
 .ck-banner{bottom:.6rem;padding:1rem 1.1rem;border-radius:26px 4px 26px 4px}.ck-actions{width:100%}.ck-actions .ck-btn{flex:1 1 auto}.ck-actions .ck-btn:last-child{flex-basis:100%;order:-1}
 .pv-card{padding:1.5rem 1.2rem .8rem;border-radius:32px 4px 32px 4px;max-height:90vh}
-.m-bar{position:fixed;left:.7rem;right:.7rem;bottom:calc(env(safe-area-inset-bottom,0px) + .7rem);z-index:900;display:flex;gap:.5rem;padding:.45rem;border:1px solid var(--border-color);border-radius:28px 4px 28px 4px;background:rgba(245,242,236,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 14px 40px -16px rgba(0,0,0,.4);transform:translateY(160%);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
-.m-bar.show{transform:none}
-.m-bar a{flex:1;min-height:46px;display:grid;place-items:center;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-radius:22px 3px 22px 3px;color:var(--text-main);border:1px solid var(--text-main)}
-.m-bar a.wa{background:var(--text-main);color:#fff}
-footer{padding-bottom:5.5rem}
-/* hero: foto sopra, testo sotto, bottone sempre in vista */
 .hero-photo{height:42svh;min-height:250px;max-height:430px;margin-top:88px;border-radius:0 0 110px 0}
 .hero-photo img{object-position:center 55%}
 .hero-copy{padding:1.3rem 1.4rem 2rem}
@@ -1822,25 +1122,158 @@ footer{padding-bottom:5.5rem}
 .hero .hero-copy p{font-size:.92rem;margin-bottom:1.1rem}
 }
 @media(max-width:768px) and (max-height:800px){.hero .hero-copy p{display:none}.hero-photo{height:40svh}}
-/* alternanza dei fondi e aree di tocco */
 #styling{background:var(--bg-secondary)}
 .salone-unificato{background:var(--bg-primary)!important}
 #recensioni{background:var(--bg-secondary)!important}
 .swatch{min-width:44px}
 @media(max-width:768px){footer a{display:inline-block;padding:.45rem 0}.social-link-item{min-height:44px;display:inline-flex;align-items:center}.footer-logo{display:inline-block;padding:.4rem 0}}
 .fan-cap span{text-align:center}
-/* hero mobile: foto sopra, testo sotto (ripristino layout a colonna) */
 @media(max-width:860px){.hero{grid-template-columns:1fr;min-height:0}.hero-photo{order:-1;border-radius:0 0 110px 0}.hero-tag{display:none}.hero-buttons{flex-direction:column;align-items:stretch;width:100%;gap:.6rem}.hero-buttons .btn{width:100%;max-width:none;text-align:center}.hero .btn-outline-light{border:0;min-height:44px;padding:.5rem 0;text-decoration:underline;text-underline-offset:6px}.hero-copy{align-items:stretch}.hero .subtitle{font-size:1.05rem!important}}
 
+/* =====================================================
+   v6 — leggibilità, recensioni, identità, barra contatti, menu
+===================================================== */
+:root{--gutter:2rem}
+@media(max-width:600px){:root{--gutter:1.25rem}}
+.container{padding-left:var(--gutter);padding-right:var(--gutter)}
+.prod-row{scroll-padding-inline:0}
+@media(max-width:768px){.prod-row{margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter)}}
+
+/* niente scorrimento laterale della pagina (causa del menu "ballerino" su iPhone) */
+html,body{max-width:100%;overflow-x:clip}
+@supports not (overflow-x:clip){html,body{overflow-x:hidden}}
+
+/* texture: più leggera su desktop, assente su mobile (più leggibile e scroll più fluido) */
+body::after{opacity:.1}
+@media(max-width:768px){body::after{display:none}}
+
+/* accessibilità: salto ai contenuti e focus visibile */
+.skip{position:absolute;left:-999px;top:0;z-index:2000;padding:.8rem 1.2rem;background:#1B1B1C;color:#fff;font-size:.85rem}
+.skip:focus{left:.6rem;top:.6rem}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--text-main);outline-offset:3px}
+.trattamenti summary:focus-visible,.amb-tab summary:focus-visible,.cta-card a:focus-visible,.m-bar a:focus-visible{outline-color:#fff}
+
+/* testo: più corposo e con parole chiave in evidenza */
+body,.section-desc,.hero .hero-copy p{font-weight:400}
+strong,b{font-weight:600}
+.hero-copy p strong,.metodo-intro p strong,.colore .section-desc strong,.fan-lead strong,.cpil:not(.veg) p strong,.ecolor p strong,.angelo strong{color:var(--text-main)}
+.cpil.veg p strong{color:#fff}
+.subtitle{font-weight:600!important;font-size:1.25rem!important}
+.section-desc{font-size:1.1rem}
+.fan-label i{font-size:.72rem}
+.hero-tag{background:rgba(20,20,22,.42)}
+.duo-card figcaption{background:linear-gradient(135deg,rgba(20,20,22,.58),rgba(20,20,22,.36))}
+.video-slot{background:rgba(20,20,22,.62)}
+
+/* schede colore: etichette ben visibili */
+.cpil h3{font-size:2rem}
+.cpil p{font-size:1rem}
+.cpil .tags{gap:.45rem;margin-top:1.1rem}
+.cpil:not(.veg) .tags span{font-family:var(--font-body);font-size:.86rem;font-weight:600;letter-spacing:.01em;padding:.4rem .85rem;color:#fff;background:var(--text-main);border:1px solid var(--text-main);border-radius:16px 2px 16px 2px}
+.cpil.veg .tags span{font-family:var(--font-body);font-size:.86rem;font-weight:600;letter-spacing:.01em;padding:.4rem .85rem;color:#1B1B1C;background:#fff;border:1px solid #fff;border-radius:16px 2px 16px 2px}
+.cpil small{font-size:.86rem;color:#CFCBC3}
+
+/* Angelo: presentato subito, già nella prima sezione */
+.angelo{display:flex;gap:1rem;align-items:flex-start;margin:0 0 1.5rem;padding:1.1rem 0;border-top:1px solid var(--border-color);border-bottom:1px solid var(--border-color)}
+.angelo-mark{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--text-main);color:#fff;font-family:var(--font-heading);font-size:1.6rem;line-height:1}
+.angelo p{margin:0;font-size:1rem;max-width:34em}
+.photo-tag{position:absolute;right:1rem;top:1rem;z-index:1;padding:.55rem 1.1rem;font-size:.82rem;letter-spacing:.04em;color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:22px 3px 22px 3px;background:rgba(20,20,22,.52);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+
+/* rituali: titolo e sottotitolo direttamente nel summary (HTML valido) */
+.ritual summary{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:1rem}
+.ritual summary h3{grid-column:1;margin:0}
+.ritual summary .for{grid-column:1}
+.ritual summary::after{grid-column:2;grid-row:1 / span 2}
+
+/* identità: linguetta che si comprime, scura così il logo bianco si legge */
+.amb-tab{max-width:860px;margin:var(--sec-y) auto;border-radius:44px 4px 44px 4px;color:#E8E5DF;background:linear-gradient(160deg,#252528,#131315);box-shadow:0 30px 70px -36px rgba(0,0,0,.55);overflow:hidden;scroll-margin-top:100px}
+.amb-tab summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"logo kick plus" "logo name plus";align-items:center;column-gap:1.3rem;min-height:96px;padding:1rem 1.4rem 1rem 1.3rem}
+.amb-tab summary::-webkit-details-marker{display:none}
+.amb-logo{grid-area:logo;width:76px;height:76px;object-fit:contain}
+.amb-kicker{grid-area:kick;align-self:end;font-family:var(--font-heading);font-style:italic;font-size:1.15rem;line-height:1.2;color:#C9C5BD}
+.amb-tab h3{grid-area:name;align-self:start;margin:0;color:#fff;font-size:clamp(1.6rem,3vw,2.15rem);line-height:1.15}
+.amb-tab summary::after{content:"+";grid-area:plus;width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.4);border-radius:50%;color:#fff;font-size:1.6rem;font-weight:200;transition:transform .5s,background .4s}
+.amb-tab[open] summary::after{transform:rotate(135deg);background:rgba(255,255,255,.12)}
+.amb-body{padding:.1rem 1.8rem 1.8rem calc(76px + 1.3rem + 1.3rem)}
+.amb-body p{margin:0;max-width:36em;color:#D6D2CA;font-size:1rem}
+.amb-tab[open] .amb-body{animation:rise .6s cubic-bezier(.16,1,.3,1) both}
+@media(max-width:700px){
+  .amb-tab{border-radius:34px 4px 34px 4px}
+  .amb-tab summary{column-gap:.9rem;min-height:86px;padding:.9rem 1rem .9rem .9rem}
+  .amb-logo{width:60px;height:60px}
+  .amb-tab summary::after{width:42px;height:42px}
+  .amb-body{padding:0 1.3rem 1.5rem}
+}
+
+/* recensioni */
+.review-card-modern .review-text{font-weight:500;font-size:1.28rem;line-height:1.6;color:var(--text-main)}
+.review-card-modern .review-text strong{font-weight:600;background:linear-gradient(180deg,transparent 62%,rgba(31,31,32,.13) 62%)}
+.review-card-modern .stars{font-size:.95rem;letter-spacing:.2em}
+.review-who{display:flex;align-items:center;gap:.75rem;min-width:0}
+.review-avatar{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--text-main);color:#fff;font-family:var(--font-heading);font-size:1.3rem;line-height:1}
+.review-card-modern .review-author{font-size:.9rem}
+.review-source{font-size:.72rem}
+.rv-dots{display:none}
+@media(max-width:900px){
+  .reviews-grid{display:flex;gap:1rem;margin:2.2rem calc(var(--gutter) * -1) 0;padding:.4rem var(--gutter) 1rem;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none}
+  .reviews-grid::-webkit-scrollbar{display:none}
+  .review-card-modern{flex:0 0 min(84%,430px);scroll-snap-align:start;padding:2rem 1.5rem 1.6rem}
+  .review-card-modern:hover{transform:none}
+  .review-card-modern .review-text{font-size:1.22rem}
+  .rv-dots{display:flex;justify-content:center;gap:.1rem;margin-top:.3rem}
+  .rv-dots button{width:30px;height:30px;padding:0;border:0;background:none;cursor:pointer;display:grid;place-items:center}
+  .rv-dots button::before{content:"";width:9px;height:9px;border-radius:50%;background:transparent;box-shadow:inset 0 0 0 1.5px rgba(31,31,32,.55);transition:transform .2s,background .2s}
+  .rv-dots button[aria-current="true"]::before{background:var(--text-main);transform:scale(1.25)}
+}
+
+/* logo vettoriale ritagliato: la scritta ora riempie il suo spazio */
+.logo-image{width:132px}
+.footer-logo img{width:170px!important}
+/* foto di Angelo (verticale): l'inquadratura parte dal viso */
+.editorial-filosofia-img img{object-position:50% 36%}
+
+/* menu mobile: cerchietti social visibili */
+.mobile-menu-socials a{border-color:rgba(31,31,32,.45)!important}
+
+/* footer */
+footer .footer-brand p,footer .footer-links p{color:#B8B1A8!important}
+
+/* ===== barra contatti mobile: sempre attaccata al fondo, senza calcoli sul viewport ===== */
+.m-bar{display:none}
+@media(max-width:768px){
+  .m-bar{position:fixed;left:0;right:0;bottom:0;z-index:900;display:grid;grid-template-columns:1fr auto;gap:.6rem;padding:.65rem .8rem calc(.65rem + env(safe-area-inset-bottom,0px));background:#1B1B1C;border-top:1px solid rgba(255,255,255,.14)}
+  .m-bar a{min-height:50px;display:flex;align-items:center;justify-content:center;gap:.55rem;padding:0 1rem;text-align:center;line-height:1.2;font-size:.74rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-radius:22px 3px 22px 3px}
+  .m-bar svg{width:20px;height:20px;flex:none;fill:currentColor}
+  .m-bar .m-wa{background:#fff;color:#1B1B1C}
+  .m-bar .m-tel{padding:0 1.35rem;color:#fff;border:1px solid rgba(255,255,255,.5)}
+  .m-bar .m-hero{display:none}
+  .m-bar[data-state="hero"] .m-hero{display:inline}
+  .m-bar[data-state="hero"] .m-page{display:none}
+  body.menu-open .m-bar,body.ck-open .m-bar{display:none}
+  /* nella prima schermata il pulsante principale è nella barra: niente doppioni */
+  .hero-buttons .btn-primary{display:none}
+  footer{padding-bottom:calc(6.2rem + env(safe-area-inset-bottom,0px))}
+}
+
+/* ===== menu mobile: pannello agganciato al viewport e pagina bloccata ===== */
+@media(max-width:768px){
+  header{background:rgba(245,242,236,.97);backdrop-filter:none;-webkit-backdrop-filter:none}
+  .nav-links{top:0!important;right:0!important;bottom:0!important;left:0!important;width:auto!important;height:auto!important;overscroll-behavior:contain;touch-action:pan-y}
+  html.menu-open,html.menu-open body{overflow:hidden}
+  body.menu-open{position:fixed;left:0;right:0;width:100%}
+}
 </style>
+<!-- Dati strutturati. Aggiungere "url" e "image" col dominio definitivo; verificare gli orari con il salone. -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HairSalon", "name": "Capelli D'Angelo", "description": "Hair atelier a Rovereto: colore, taglio, armocromia e trattamenti personalizzati.", "telephone": "+390464431296", "address": {"@type": "PostalAddress", "streetAddress": "Via Trieste 42", "postalCode": "38068", "addressLocality": "Rovereto", "addressRegion": "TN", "addressCountry": "IT"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00"}], "sameAs": ["https://www.instagram.com/capelli_d_angelo_/", "https://www.facebook.com/capellidangelorovereto/?locale=it_IT"], "hasMap": "https://www.google.com/maps/search/?api=1&query=Capelli%20D%27Angelo%2C%20Via%20Trieste%2042%2C%2038068%20Rovereto&query_place_id=ChIJu-yvoMUOgkcRFxsvyKmvoYI"}</script>
 </head>
 <body>
+<a class="skip" href="#main">Vai ai contenuti</a>
 <!-- HEADER -->
 <header>
 <div class="container">
 <nav aria-label="Navigazione principale">
 <a aria-label="Capelli D'Angelo - Home" class="logo-brand" href="#inizio">
-<img alt="Capelli D'Angelo" class="logo-image" height="60" src="immagini/logo.png" width="178"/>
+<img alt="Capelli D'Angelo" class="logo-image" height="67" src="immagini/logo.svg" width="132"/>
 </a>
 <button aria-controls="navLinks" aria-expanded="false" aria-label="Apri il menu" class="mobile-menu-toggle" id="menuToggle" type="button">
 <span></span>
@@ -1871,20 +1304,20 @@ footer{padding-bottom:5.5rem}
 </nav>
 </div>
 </header>
-<main>
+<main id="main">
 <!-- HERO -->
 <section class="hero" id="inizio">
 <div class="hero-copy">
 <span class="subtitle">Parrucchiere a Rovereto</span>
 <h1>Prima di scegliere il colore, ascoltiamo te.</h1>
-<p>Colore, taglio, armocromia e cura personalizzata del capello, in un atelier riservato in Via Trieste.</p>
+<p><strong>Colore, taglio, armocromia</strong> e cura personalizzata del capello, in un atelier riservato in Via Trieste.</p>
 <div class="hero-buttons">
 <a class="btn btn-primary" href="#prenota">Prenota una consulenza</a>
 <a class="btn btn-outline-light" href="#metodo">Scopri il metodo</a>
 </div>
 </div>
 <div class="hero-photo">
-<img alt="L’interno del salone Capelli D’Angelo a Rovereto, con specchi e poltrone color panna" fetchpriority="high" height="1020" src="immagini/web/hero.jpg" width="816"/>
+<img alt="L’interno del salone Capelli D’Angelo a Rovereto, con specchi e poltrone color panna" decoding="async" fetchpriority="high" height="1195" sizes="(max-width: 860px) 100vw, 52vw" src="immagini/web/hero.webp" srcset="immagini/web/hero-480.webp 480w, immagini/web/hero.webp 896w" width="896"/>
 <span class="hero-tag">Via Trieste 42 · Rovereto</span>
 </div>
 </section>
@@ -1894,7 +1327,8 @@ footer{padding-bottom:5.5rem}
 <div class="metodo-intro">
 <span class="subtitle">Il nostro approccio</span>
 <h2>I capelli non sono tutti uguali. <span class="highlight-accent">E nemmeno le persone.</span></h2>
-<p>Ogni capello ha una struttura, una storia e delle esigenze diverse. Per questo, prima di scegliere un trattamento o una tecnica, ci prendiamo il tempo di capire cosa cerchi e quale risultato desideri ottenere.</p>
+<p>Ogni capello ha una <strong>struttura, una storia e delle esigenze</strong> diverse. Per questo, prima di scegliere un trattamento o una tecnica, ci prendiamo il tempo di capire cosa cerchi e quale risultato desideri ottenere.</p>
+<div class="angelo"><span aria-hidden="true" class="angelo-mark">A</span><p><strong>Angelo</strong>, titolare di Capelli D’Angelo, ti accoglie in consulenza: ascolta ciò che desideri e sceglie con te taglio, colore e trattamento più adatti ai tuoi capelli.</p></div>
 <p class="mquote">La bellezza parte dall’ascolto, prende forma con la consulenza e si esprime in un risultato che senti davvero tuo.</p>
 <a class="btn btn-dark" href="#prenota">Prenota un appuntamento</a>
 </div>
@@ -1928,8 +1362,8 @@ footer{padding-bottom:5.5rem}
 </ul>
 <div class="duo-photos">
 <p class="duo-head">Un solo atelier, due modi di stare in poltrona.</p>
-<figure class="duo-card"><img alt="Capelli ramati con onde morbide, realizzati in salone" decoding="async" loading="lazy" src="immagini/web/lei.webp"/><figcaption><h3>Per lei</h3><p>Colore, taglio e armocromia, in uno spazio luminoso e riservato.</p></figcaption></figure>
-<figure class="duo-card"><img alt="Taglio maschile moderno, visto da dietro" decoding="async" loading="lazy" src="immagini/web/lui.webp"/><figcaption><h3>Per lui</h3><p>Taglio e cura su misura, in un’area pensata per lui.</p></figcaption></figure>
+<figure class="duo-card"><img alt="Capelli ramati con onde morbide, realizzati in salone" decoding="async" height="1000" loading="lazy" width="600" src="immagini/web/lei.webp"/><figcaption><h3>Per lei</h3><p>Colore, taglio e armocromia, in uno spazio luminoso e riservato.</p></figcaption></figure>
+<figure class="duo-card"><img alt="Taglio maschile moderno, visto da dietro" decoding="async" height="1000" loading="lazy" width="600" src="immagini/web/lui.webp"/><figcaption><h3>Per lui</h3><p>Taglio e cura su misura, in un’area pensata per lui.</p></figcaption></figure>
 </div>
 </div>
 <div class="text-center" style="margin-top:3rem"><a class="btn btn-dark" href="#prenota">Parliamo delle tue esigenze</a></div>
@@ -1942,19 +1376,19 @@ footer{padding-bottom:5.5rem}
 <div class="text-center">
 <span class="subtitle">Il colore</span>
 <h2>Il colore giusto è quello che <span class="highlight-accent">ti valorizza.</span></h2>
-<p class="section-desc">Il colore prende forma dall’incontro tra ciò che desideri e ciò che valorizza davvero i tuoi colori naturali: una tonalità che ti piace, si armonizza con la tua immagine e ti fa sentire a tuo agio.</p>
+<p class="section-desc">Il colore prende forma dall’incontro tra <strong>ciò che desideri</strong> e <strong>ciò che valorizza davvero i tuoi colori naturali</strong>: una tonalità che ti piace, si armonizza con la tua immagine e ti fa sentire a tuo agio.</p>
 </div>
 <div class="fan-wrap" id="armocromia" style="--tone:#8E4E2E"><p class="fan-lead">Ogni persona ha caratteristiche cromatiche che contribuiscono alla sua immagine. L’armocromia le legge attraverso sottotono, luminosità e intensità e le raggruppa in quattro stagioni. Tocca una tonalità per scoprire a quale appartiene.</p><div class="fan"><div class="fan-group"><div class="fan-row"><button aria-label="Biondo dorato, Primavera" aria-pressed="false" class="swatch" data-c="#E2B872" data-n="Biondo dorato" data-u="Primavera · Sottotono caldo, chiaro e luminoso" style="--c:#E2B872" type="button"></button><button aria-label="Pesca, Primavera" aria-pressed="false" class="swatch" data-c="#F0A98C" data-n="Pesca" data-u="Primavera · Sottotono caldo, chiaro e luminoso" style="--c:#F0A98C" type="button"></button><button aria-label="Rame chiaro, Primavera" aria-pressed="false" class="swatch" data-c="#D9824A" data-n="Rame chiaro" data-u="Primavera · Sottotono caldo, chiaro e luminoso" style="--c:#D9824A" type="button"></button></div><span class="fan-label"><b>Primavera</b><i>caldo · luminoso</i></span></div><div class="fan-group"><div class="fan-row"><button aria-label="Biondo cenere, Estate" aria-pressed="false" class="swatch" data-c="#CFC3AE" data-n="Biondo cenere" data-u="Estate · Sottotono freddo, chiaro e morbido" style="--c:#CFC3AE" type="button"></button><button aria-label="Lavanda, Estate" aria-pressed="false" class="swatch" data-c="#B7A9CC" data-n="Lavanda" data-u="Estate · Sottotono freddo, chiaro e morbido" style="--c:#B7A9CC" type="button"></button><button aria-label="Azzurro polvere, Estate" aria-pressed="false" class="swatch" data-c="#A5B8CF" data-n="Azzurro polvere" data-u="Estate · Sottotono freddo, chiaro e morbido" style="--c:#A5B8CF" type="button"></button></div><span class="fan-label"><b>Estate</b><i>freddo · morbido</i></span></div><div class="fan-group"><div class="fan-row"><button aria-label="Castano ramato, Autunno" aria-pressed="false" class="swatch" data-c="#8E4E2E" data-n="Castano ramato" data-u="Autunno · Sottotono caldo, profondo e morbido" style="--c:#8E4E2E" type="button"></button><button aria-label="Ocra, Autunno" aria-pressed="false" class="swatch" data-c="#C8902E" data-n="Ocra" data-u="Autunno · Sottotono caldo, profondo e morbido" style="--c:#C8902E" type="button"></button><button aria-label="Verde oliva, Autunno" aria-pressed="false" class="swatch" data-c="#7C7B3F" data-n="Verde oliva" data-u="Autunno · Sottotono caldo, profondo e morbido" style="--c:#7C7B3F" type="button"></button></div><span class="fan-label"><b>Autunno</b><i>caldo · profondo</i></span></div><div class="fan-group"><div class="fan-row"><button aria-label="Nero blu, Inverno" aria-pressed="false" class="swatch" data-c="#1F2433" data-n="Nero blu" data-u="Inverno · Sottotono freddo, profondo e intenso" style="--c:#1F2433" type="button"></button><button aria-label="Borgogna, Inverno" aria-pressed="false" class="swatch" data-c="#6B1E36" data-n="Borgogna" data-u="Inverno · Sottotono freddo, profondo e intenso" style="--c:#6B1E36" type="button"></button><button aria-label="Blu intenso, Inverno" aria-pressed="false" class="swatch" data-c="#2C4C9B" data-n="Blu intenso" data-u="Inverno · Sottotono freddo, profondo e intenso" style="--c:#2C4C9B" type="button"></button></div><span class="fan-label"><b>Inverno</b><i>freddo · intenso</i></span></div></div><p aria-live="polite" class="fan-cap"><strong id="tn">Castano ramato</strong><span id="tu">Autunno · Sottotono caldo, profondo e morbido</span></p></div><div class="colore-grid">
-<article class="cpil"><div class="cpil-img"><img alt="Capelli con un colore intenso e luminoso" decoding="async" loading="lazy" src="immagini/web/colore.webp"/></div><div class="cpil-body"><h3>Colore</h3><p>Colorazioni, riflessi e ricerca: partiamo dai tuoi colori naturali per costruire la tonalità più adatta a te.</p><div class="tags"><span>Colorazioni</span><span>Riflessi</span><span>Ricerca</span></div></div></article>
-<article class="cpil"><div class="cpil-img"><img alt="Capelli lisci con sfumature e riflessi" decoding="async" loading="lazy" src="immagini/web/effetti.webp"/></div><div class="cpil-body"><h3>Effetti cromatici</h3><p>Sfumature, luce e profondità: giochi di riflessi che danno movimento ai capelli, dal naturale più sottile all’effetto più deciso.</p><div class="tags"><span>Sfumature</span><span>Luce</span><span>Profondità</span></div></div></article>
-<article class="cpil veg"><div class="cpil-img"><img alt="Capelli castani lucidi, dall’aspetto naturale" decoding="async" loading="lazy" src="immagini/web/vegetali.webp"/></div><div class="cpil-body">
+<article class="cpil"><div class="cpil-img"><img alt="Capelli con un colore intenso e luminoso" decoding="async" height="500" loading="lazy" width="800" src="immagini/web/colore.webp"/></div><div class="cpil-body"><h3>Colore</h3><p><strong>Colorazioni, riflessi e ricerca</strong>: partiamo dai tuoi colori naturali per costruire la tonalità più adatta a te.</p><div class="tags"><span>Colorazioni</span><span>Riflessi</span><span>Ricerca</span></div></div></article>
+<article class="cpil"><div class="cpil-img"><img alt="Capelli lisci con sfumature e riflessi" decoding="async" height="500" loading="lazy" width="800" src="immagini/web/effetti.webp"/></div><div class="cpil-body"><h3>Effetti cromatici</h3><p><strong>Sfumature, luce e profondità</strong>: giochi di riflessi che danno <strong>movimento</strong> ai capelli, dal naturale più sottile all’effetto più deciso.</p><div class="tags"><span>Sfumature</span><span>Luce</span><span>Profondità</span></div></div></article>
+<article class="cpil veg"><div class="cpil-img"><img alt="Capelli castani lucidi, dall’aspetto naturale" decoding="async" height="500" loading="lazy" width="800" src="immagini/web/vegetali.webp"/></div><div class="cpil-body">
 <div aria-hidden="true" class="ico">
 <svg viewbox="0 0 24 24"><path d="M5 19C5 9 11 4 20 4c0 9-5 15-15 15zM5 19c3-5 6-8 10-10"></path></svg>
 <svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="2"></circle><path d="M12 10c-1-3 0-6 0-6s1 3 0 6zM12 14c1 3 0 6 0 6s-1-3 0-6zM10 12c-3 1-6 0-6 0s3-1 6 0zM14 12c3-1 6 0 6 0s-3 1-6 0z"></path></svg>
 <svg viewbox="0 0 24 24"><circle cx="9" cy="11" r="2.2"></circle><circle cx="15" cy="11" r="2.2"></circle><circle cx="12" cy="15.5" r="2.2"></circle><path d="M12 8.5V4M12 5c2 0 4-1 5-2"></path></svg>
 </div>
 <h3>Colorazioni vegetali</h3>
-<p>Erbe, fiori e tannini del vino per un colore dal carattere naturale. Pensate per la donna green e per chi ha allergie o sensibilità ai coloranti tradizionali.</p>
+<p><strong>Erbe, fiori e tannini del vino</strong> per un colore dal carattere naturale. Pensate per la donna green e per chi ha <strong>allergie o sensibilità</strong> ai coloranti tradizionali.</p>
 <div class="tags"><span>Erbe</span><span>Fiori</span><span>Tannini del vino</span></div>
 <small>Se hai allergie o la pelle sensibile, ne parliamo prima, in consulenza.</small>
 </div></article>
@@ -1967,17 +1401,17 @@ footer{padding-bottom:5.5rem}
 <section class="section-padding ecolor" id="ecolor">
 <div class="container ecolor-grid">
 <figure class="mach">
-<img alt="La color machine e•color in salone, con lo schermo per comporre la colorazione" decoding="async" loading="lazy" src="immagini/macchinario.jpg"/>
-<!-- VIDEO: quando arriva il file, sostituire .video-slot con: <video controls playsinline poster="immagini/macchinario.jpg" src="immagini/ecolor.mp4"></video> -->
+<img alt="La color machine ecolor in salone, con lo schermo per comporre la colorazione" decoding="async" loading="lazy" height="1195" src="immagini/macchinario.webp" width="896"/>
+<!-- VIDEO: quando arriva il file, sostituire .video-slot con: <video controls playsinline poster="immagini/macchinario.webp" src="immagini/ecolor.mp4"></video> -->
 <a class="video-slot" href="#armocromia"><i>→</i><span>Trova la tua tonalità</span></a>
 </figure>
 <div>
 <span class="subtitle">La novità del salone</span>
-<h2>e•color: il colore composto con precisione</h2>
-<p>In salone è arrivata e•color, la prima color machine intelligente: dosa e miscela il colore al grammo. Non sostituisce la mano di Angelo, la valorizza: la formula la sceglie sempre lui, la macchina la prepara con precisione e senza sprechi.</p>
+<h2>ecolor: il colore composto con precisione</h2>
+<p>In salone è arrivata ecolor, la prima color machine intelligente: <strong>dosa e miscela il colore al grammo</strong>. Non sostituisce la mano di Angelo, la valorizza: la formula la sceglie sempre lui, la macchina la prepara con precisione e senza sprechi.</p>
 <ul class="steps">
 <li><b>Scopriamo</b><span>Con l’armocromia individuiamo i toni che ti valorizzano.</span></li>
-<li><b>Componiamo</b><span>Angelo sceglie la formula, e•color la dosa al grammo.</span></li>
+<li><b>Componiamo</b><span>Angelo sceglie la formula, ecolor la dosa al grammo.</span></li>
 <li><b>Ritroviamo</b><span>Il tuo profilo resta salvato: lo stesso colore, ogni volta che vuoi.</span></li>
 </ul>
 <div class="facts">
@@ -1985,7 +1419,7 @@ footer{padding-bottom:5.5rem}
 <div><strong>6 + 2</strong><span>basi colore e ossidanti</span></div>
 <div><strong>3 mln</strong><span>di formule possibili</span></div>
 </div>
-<p class="note">I colori e•color sono senza ammoniaca.</p>
+<p class="note">I colori ecolor sono senza ammoniaca.</p>
 <a class="btn btn-dark ecolor-btn" href="#prenota" style="margin-top:1.4rem">
             Prenota una consulenza colore
           </a>
@@ -2001,7 +1435,7 @@ footer{padding-bottom:5.5rem}
 <h2>I nostri trattamenti</h2>
 <p class="section-desc">Per ogni esigenza scegliamo insieme il rituale giusto. Usiamo prodotti professionali <strong>Philip Martin’s</strong> e ti aiutiamo a continuare la cura a casa con quelli più adatti ai tuoi capelli.<br/><em>Per un tocco di luce in più, chiedici informazioni su Soffio di Luce.</em></p>
 </div>
-<div class="rituals"><details class="ritual" name="rit" open=""><summary><span><h3>Cute in equilibrio</h3><span class="for">Cute grassa, sensibile o appesantita</span></span></summary><div class="prod-row"><article class="prod"><div class="prod-img photo"><img alt="Scalp Peel, peeling cuoio capelluto" decoding="async" loading="lazy" src="immagini/prodotti/scalp-peel.webp"/></div><div class="prod-body"><span class="prod-step">Prima dello shampoo</span><h4>Scalp Peel</h4><p class="kind">Peeling cuoio capelluto</p><p>Esfoliazione controllata che libera la cute da impurità, sebo in eccesso e cellule morte, preparandola ai trattamenti successivi.</p></div></article><article class="prod"><div class="prod-img"><img alt="Aloe Pure Gel, trattamento pulizia cute" decoding="async" loading="lazy" src="immagini/prodotto_aloe.jpg"/></div><div class="prod-body"><span class="prod-step">Prima dello shampoo</span><h4>Aloe Pure Gel</h4><p class="kind">Trattamento pulizia cute</p><p>Gel all’aloe bio che detossina e riequilibra la cute grassa o irritata, con un’immediata sensazione di freschezza.</p></div></article><article class="prod"><div class="prod-img"><img alt="Purifying Wash, shampoo cute grassa" decoding="async" loading="lazy" src="immagini/prodotti/purifying.webp"/></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Purifying Wash</h4><p class="kind">Shampoo cute grassa</p><p>Purifica in profondità, rimuove l’eccesso di sebo e lenisce la cute con una freschezza che dura.</p></div></article><article class="prod"><div class="prod-img"><img alt="Scalp Benefit, maschera cute grassa" decoding="async" loading="lazy" src="immagini/prodotti/scalp-benefit.webp"/></div><div class="prod-body"><span class="prod-step">Maschera</span><h4>Scalp Benefit</h4><p class="kind">Maschera cute grassa</p><p>Texture leggera, lenitiva e rinfrescante: calma le irritazioni e riporta benessere al cuoio capelluto.</p></div></article><article class="prod"><div class="prod-img"><img alt="Calming Wash, shampoo cute sensibile e con forfora" decoding="async" loading="lazy" src="immagini/prodotti/calming-wash.webp"/></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Calming Wash</h4><p class="kind">Shampoo cute sensibile e con forfora</p><p>Detersione delicata che purifica la cute sensibile e con forfora e ne mantiene il naturale benessere.</p></div></article><article class="prod"><div class="prod-img"><img alt="Calming Rinse, maschera cute con forfora" decoding="async" loading="lazy" src="immagini/prodotti/calming-rinse.webp"/></div><div class="prod-body"><span class="prod-step">Maschera</span><h4>Calming Rinse</h4><p class="kind">Maschera cute con forfora</p><p>Nutre le lunghezze e aiuta a riequilibrare il cuoio capelluto, per capelli morbidi e luminosi.</p></div></article></div></details><details class="ritual" name="rit"><summary><span><h3>Capelli secchi e stressati</h3><span class="for">Idratazione, forza ed elasticità</span></span></summary><div class="prod-row"><article class="prod"><div class="prod-img"><img alt="Maple Aqua Wash, shampoo capelli secchi" decoding="async" loading="lazy" src="immagini/prodotti/maple-wash.webp"/></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Maple Aqua Wash</h4><p class="kind">Shampoo capelli secchi</p><p>Deterge con dolcezza i capelli secchi e crespi, migliorando la pettinabilità e lasciandoli morbidi.</p></div></article><article class="prod"><div class="prod-img"><img alt="Maple Aqua Rinse, maschera capelli secchi" decoding="async" loading="lazy" src="immagini/prodotti/maple-rinse.webp"/></div><div class="prod-body"><span class="prod-step">Maschera</span><h4>Maple Aqua Rinse</h4><p class="kind">Maschera capelli secchi</p><p>Texture ricca e vellutata che nutre e idrata in profondità, restituendo elasticità e setosità.</p></div></article><article class="prod"><div class="prod-img"><img alt="Canapa Wash, shampoo capelli stressati" decoding="async" loading="lazy" src="immagini/prodotti/canapa-wash.webp"/></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Canapa Wash</h4><p class="kind">Shampoo capelli stressati</p><p>Delicato e riequilibrante: contrasta lo stress ossidativo, lenisce la cute e lascia i capelli puliti e morbidi.</p></div></article><article class="prod"><div class="prod-img"><img alt="Canapa Rinse, maschera capelli stressati" decoding="async" loading="lazy" src="immagini/prodotti/canapa-rinse.webp"/></div><div class="prod-body"><span class="prod-step">Maschera</span><h4>Canapa Rinse</h4><p class="kind">Maschera capelli stressati</p><p>Rinforzante e protettiva, districa e fortifica la fibra per capelli più resistenti e vitali.</p></div></article><article class="prod"><div class="prod-img photo"><img alt="Fusion Luxury Mask, maschera super idratante" decoding="async" loading="lazy" src="immagini/prodotti/fusion.webp"/></div><div class="prod-body"><span class="prod-step">Maschera</span><h4>Fusion Luxury Mask</h4><p class="kind">Maschera super idratante</p><p>Per capelli trattati e stressati: castagna bio, fico d’India e olio d’oliva bio per luminosità e setosità senza peso.</p></div></article></div></details><details class="ritual" name="rit"><summary><span><h3>Ricci e mossi</h3><span class="for">Definizione morbida, senza crespo</span></span></summary><div class="prod-row"><article class="prod"><div class="prod-img"><img alt="Moringa Wash, shampoo capelli ricci" decoding="async" loading="lazy" src="immagini/prodotti/moringa.webp"/></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Moringa Wash</h4><p class="kind">Shampoo capelli ricci</p><p>Deterge senza appesantire e preserva morbidezza, elasticità e definizione di ricci e mossi.</p></div></article><article class="prod"><div class="prod-img"><img alt="Potion Spray, spray idratante e disciplinante" decoding="async" loading="lazy" src="immagini/prodotti/potion.webp"/></div><div class="prod-body"><span class="prod-step">Finish</span><h4>Potion Spray</h4><p class="kind">Spray idratante e disciplinante</p><p>Riduce il crespo, definisce onde e ricci e migliora la pettinabilità, con olio di lino ed estratto di baobab.</p></div></article></div></details><details class="ritual" name="rit"><summary><span><h3>Biondi, grigi e colorati</h3><span class="for">Un colore luminoso più a lungo</span></span></summary><p class="rit-note">Per i capelli chiari abbiamo anche un rituale completo, il Blonde Radiance: 24 Wash, Ultra Violet Wash, Maple Aqua Rinse e Infusion Spray per detergere, neutralizzare e illuminare.</p><div class="prod-row"><article class="prod"><div class="prod-img"><img alt="Ultra Violet Wash, shampoo anti-giallo" decoding="async" loading="lazy" src="immagini/prodotti/uv.webp"/></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Ultra Violet Wash</h4><p class="kind">Shampoo anti-giallo</p><p>Pigmento viola e mirtillo bio neutralizzano i riflessi gialli di biondi, decolorati, grigi e bianchi.</p></div></article><article class="prod"><div class="prod-img"><img alt="Color Maintenance, shampoo capelli colorati" decoding="async" loading="lazy" src="immagini/prodotti/color-m.webp"/></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Color Maintenance</h4><p class="kind">Shampoo capelli colorati</p><p>Ripara, rivitalizza e illumina, mantenendo il colore intenso e brillante più a lungo.</p></div></article><article class="prod"><div class="prod-img"><img alt="Color Repair, maschera capelli colorati" decoding="async" loading="lazy" src="immagini/prodotti/color-r.webp"/></div><div class="prod-body"><span class="prod-step">Maschera</span><h4>Color Repair</h4><p class="kind">Maschera capelli colorati</p><p>Estratti botanici e burri vegetali per capelli morbidi, setosi e perfettamente controllati.</p></div></article></div></details><details class="ritual" name="rit"><summary><span><h3>Ogni giorno e capelli sottili</h3><span class="for">Detersione delicata e volume naturale</span></span></summary><div class="prod-row"><article class="prod"><div class="prod-img"><img alt="24 Wash, shampoo uso frequente" decoding="async" loading="lazy" src="immagini/prodotti/w24.webp"/></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>24 Wash</h4><p class="kind">Shampoo uso frequente</p><p>La detersione delicata di ogni giorno, adatta a tutti i capelli: leggeri, luminosi e pieni di vitalità.</p></div></article><article class="prod"><div class="prod-img"><img alt="Babassu Wash, shampoo capelli sottili" decoding="async" loading="lazy" src="immagini/prodotti/babassu.webp"/></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Babassu Wash</h4><p class="kind">Shampoo capelli sottili</p><p>Sostiene la fibra senza appesantire e restituisce volume naturale, movimento e luminosità.</p></div></article></div></details><details class="ritual" name="rit"><summary><span><h3>Finish e styling</h3><span class="for">Luce, protezione e texture</span></span></summary><div class="prod-row"><article class="prod"><div class="prod-img"><img alt="Infusion Spray, spray protettivo e illuminante" decoding="async" loading="lazy" src="immagini/prodotti/infusion.webp"/></div><div class="prod-body"><span class="prod-step">Finish</span><h4>Infusion Spray</h4><p class="kind">Spray protettivo e illuminante</p><p>Protegge dal calore e dallo stress ambientale e dona una lucentezza setosa senza appesantire.</p></div></article><article class="prod"><div class="prod-img"><img alt="Marvel Oil, olio secco spray lucidante" decoding="async" loading="lazy" src="immagini/prodotti/marvel.webp"/></div><div class="prod-body"><span class="prod-step">Finish</span><h4>Marvel Oil</h4><p class="kind">Olio secco spray lucidante</p><p>Senza siliconi, per capelli medio-grossi: luce istantanea, protezione termica e pettinabilità.</p></div></article><article class="prod"><div class="prod-img"><img alt="Stylix, spray texturizzante" decoding="async" loading="lazy" src="immagini/prodotti/stylix.webp"/></div><div class="prod-body"><span class="prod-step">Finish</span><h4>Stylix</h4><p class="kind">Spray texturizzante</p><p>Volume immediato e texture leggera per un look opaco e naturale, senza residui.</p></div></article><article class="prod"><div class="prod-img"><img alt="Infinito, elisir idratante barba e capelli" decoding="async" loading="lazy" src="immagini/prodotti/infinito.webp"/></div><div class="prod-body"><span class="prod-step">Finish</span><h4>Infinito</h4><p class="kind">Elisir idratante barba e capelli</p><p>Oli di argan, oliva, jojoba e carota nutrono e donano morbidezza e lucentezza a barba e capelli.</p></div></article></div></details></div>
+<div class="rituals"><details class="ritual" name="rit" open=""><summary><h3>Cute in equilibrio</h3><span class="for">Cute grassa, sensibile o appesantita</span></summary><div class="prod-row"><article class="prod"><div class="prod-img photo"><img alt="Scalp Peel, peeling cuoio capelluto" decoding="async" loading="lazy" height="270" src="immagini/prodotti/scalp-peel.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Prima dello shampoo</span><h4>Scalp Peel</h4><p class="kind">Peeling cuoio capelluto</p><p>Esfoliazione controllata che libera la cute da impurità, sebo in eccesso e cellule morte, preparandola ai trattamenti successivi.</p></div></article><article class="prod"><div class="prod-img"><img alt="Aloe Pure Gel, trattamento pulizia cute" decoding="async" loading="lazy" height="501" src="immagini/prodotti/prodotto_aloe.webp" width="183"/></div><div class="prod-body"><span class="prod-step">Prima dello shampoo</span><h4>Aloe Pure Gel</h4><p class="kind">Trattamento pulizia cute</p><p>Gel all’aloe bio che detossina e riequilibra la cute grassa o irritata, con un’immediata sensazione di freschezza.</p></div></article><article class="prod"><div class="prod-img"><img alt="Purifying Wash, shampoo cute grassa" decoding="async" loading="lazy" height="270" src="immagini/prodotti/purifying.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Purifying Wash</h4><p class="kind">Shampoo cute grassa</p><p>Purifica in profondità, rimuove l’eccesso di sebo e lenisce la cute con una freschezza che dura.</p></div></article><article class="prod"><div class="prod-img"><img alt="Scalp Benefit, maschera cute grassa" decoding="async" loading="lazy" height="270" src="immagini/prodotti/scalp-benefit.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Maschera</span><h4>Scalp Benefit</h4><p class="kind">Maschera cute grassa</p><p>Texture leggera, lenitiva e rinfrescante: calma le irritazioni e riporta benessere al cuoio capelluto.</p></div></article><article class="prod"><div class="prod-img"><img alt="Calming Wash, shampoo cute sensibile e con forfora" decoding="async" loading="lazy" height="270" src="immagini/prodotti/calming-wash.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Calming Wash</h4><p class="kind">Shampoo cute sensibile e con forfora</p><p>Detersione delicata che purifica la cute sensibile e con forfora e ne mantiene il naturale benessere.</p></div></article><article class="prod"><div class="prod-img"><img alt="Calming Rinse, maschera cute con forfora" decoding="async" loading="lazy" height="270" src="immagini/prodotti/calming-rinse.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Maschera</span><h4>Calming Rinse</h4><p class="kind">Maschera cute con forfora</p><p>Nutre le lunghezze e aiuta a riequilibrare il cuoio capelluto, per capelli morbidi e luminosi.</p></div></article></div></details><details class="ritual" name="rit"><summary><h3>Capelli secchi e stressati</h3><span class="for">Idratazione, forza ed elasticità</span></summary><div class="prod-row"><article class="prod"><div class="prod-img"><img alt="Maple Aqua Wash, shampoo capelli secchi" decoding="async" loading="lazy" height="270" src="immagini/prodotti/maple-wash.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Maple Aqua Wash</h4><p class="kind">Shampoo capelli secchi</p><p>Deterge con dolcezza i capelli secchi e crespi, migliorando la pettinabilità e lasciandoli morbidi.</p></div></article><article class="prod"><div class="prod-img"><img alt="Maple Aqua Rinse, maschera capelli secchi" decoding="async" loading="lazy" height="270" src="immagini/prodotti/maple-rinse.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Maschera</span><h4>Maple Aqua Rinse</h4><p class="kind">Maschera capelli secchi</p><p>Texture ricca e vellutata che nutre e idrata in profondità, restituendo elasticità e setosità.</p></div></article><article class="prod"><div class="prod-img"><img alt="Canapa Wash, shampoo capelli stressati" decoding="async" loading="lazy" height="270" src="immagini/prodotti/canapa-wash.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Canapa Wash</h4><p class="kind">Shampoo capelli stressati</p><p>Delicato e riequilibrante: contrasta lo stress ossidativo, lenisce la cute e lascia i capelli puliti e morbidi.</p></div></article><article class="prod"><div class="prod-img"><img alt="Canapa Rinse, maschera capelli stressati" decoding="async" loading="lazy" height="270" src="immagini/prodotti/canapa-rinse.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Maschera</span><h4>Canapa Rinse</h4><p class="kind">Maschera capelli stressati</p><p>Rinforzante e protettiva, districa e fortifica la fibra per capelli più resistenti e vitali.</p></div></article><article class="prod"><div class="prod-img photo"><img alt="Fusion Luxury Mask, maschera super idratante" decoding="async" loading="lazy" height="270" src="immagini/prodotti/fusion.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Maschera</span><h4>Fusion Luxury Mask</h4><p class="kind">Maschera super idratante</p><p>Per capelli trattati e stressati: castagna bio, fico d’India e olio d’oliva bio per luminosità e setosità senza peso.</p></div></article></div></details><details class="ritual" name="rit"><summary><h3>Ricci e mossi</h3><span class="for">Definizione morbida, senza crespo</span></summary><div class="prod-row"><article class="prod"><div class="prod-img"><img alt="Moringa Wash, shampoo capelli ricci" decoding="async" loading="lazy" height="270" src="immagini/prodotti/moringa.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Moringa Wash</h4><p class="kind">Shampoo capelli ricci</p><p>Deterge senza appesantire e preserva morbidezza, elasticità e definizione di ricci e mossi.</p></div></article><article class="prod"><div class="prod-img"><img alt="Potion Spray, spray idratante e disciplinante" decoding="async" loading="lazy" height="270" src="immagini/prodotti/potion.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Finish</span><h4>Potion Spray</h4><p class="kind">Spray idratante e disciplinante</p><p>Riduce il crespo, definisce onde e ricci e migliora la pettinabilità, con olio di lino ed estratto di baobab.</p></div></article></div></details><details class="ritual" name="rit"><summary><h3>Biondi, grigi e colorati</h3><span class="for">Un colore luminoso più a lungo</span></summary><p class="rit-note">Per i capelli chiari abbiamo anche un rituale completo, il Blonde Radiance: 24 Wash, Ultra Violet Wash, Maple Aqua Rinse e Infusion Spray per detergere, neutralizzare e illuminare.</p><div class="prod-row"><article class="prod"><div class="prod-img"><img alt="Ultra Violet Wash, shampoo anti-giallo" decoding="async" loading="lazy" height="270" src="immagini/prodotti/uv.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Ultra Violet Wash</h4><p class="kind">Shampoo anti-giallo</p><p>Pigmento viola e mirtillo bio neutralizzano i riflessi gialli di biondi, decolorati, grigi e bianchi.</p></div></article><article class="prod"><div class="prod-img"><img alt="Color Maintenance, shampoo capelli colorati" decoding="async" loading="lazy" height="270" src="immagini/prodotti/color-m.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Color Maintenance</h4><p class="kind">Shampoo capelli colorati</p><p>Ripara, rivitalizza e illumina, mantenendo il colore intenso e brillante più a lungo.</p></div></article><article class="prod"><div class="prod-img"><img alt="Color Repair, maschera capelli colorati" decoding="async" loading="lazy" height="270" src="immagini/prodotti/color-r.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Maschera</span><h4>Color Repair</h4><p class="kind">Maschera capelli colorati</p><p>Estratti botanici e burri vegetali per capelli morbidi, setosi e perfettamente controllati.</p></div></article></div></details><details class="ritual" name="rit"><summary><h3>Ogni giorno e capelli sottili</h3><span class="for">Detersione delicata e volume naturale</span></summary><div class="prod-row"><article class="prod"><div class="prod-img"><img alt="24 Wash, shampoo uso frequente" decoding="async" loading="lazy" height="270" src="immagini/prodotti/w24.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>24 Wash</h4><p class="kind">Shampoo uso frequente</p><p>La detersione delicata di ogni giorno, adatta a tutti i capelli: leggeri, luminosi e pieni di vitalità.</p></div></article><article class="prod"><div class="prod-img"><img alt="Babassu Wash, shampoo capelli sottili" decoding="async" loading="lazy" height="270" src="immagini/prodotti/babassu.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Shampoo</span><h4>Babassu Wash</h4><p class="kind">Shampoo capelli sottili</p><p>Sostiene la fibra senza appesantire e restituisce volume naturale, movimento e luminosità.</p></div></article></div></details><details class="ritual" name="rit"><summary><h3>Finish e styling</h3><span class="for">Luce, protezione e texture</span></summary><div class="prod-row"><article class="prod"><div class="prod-img"><img alt="Infusion Spray, spray protettivo e illuminante" decoding="async" loading="lazy" height="270" src="immagini/prodotti/infusion.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Finish</span><h4>Infusion Spray</h4><p class="kind">Spray protettivo e illuminante</p><p>Protegge dal calore e dallo stress ambientale e dona una lucentezza setosa senza appesantire.</p></div></article><article class="prod"><div class="prod-img"><img alt="Marvel Oil, olio secco spray lucidante" decoding="async" loading="lazy" height="270" src="immagini/prodotti/marvel.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Finish</span><h4>Marvel Oil</h4><p class="kind">Olio secco spray lucidante</p><p>Senza siliconi, per capelli medio-grossi: luce istantanea, protezione termica e pettinabilità.</p></div></article><article class="prod"><div class="prod-img"><img alt="Stylix, spray texturizzante" decoding="async" loading="lazy" height="270" src="immagini/prodotti/stylix.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Finish</span><h4>Stylix</h4><p class="kind">Spray texturizzante</p><p>Volume immediato e texture leggera per un look opaco e naturale, senza residui.</p></div></article><article class="prod"><div class="prod-img"><img alt="Infinito, elisir idratante barba e capelli" decoding="async" loading="lazy" height="270" src="immagini/prodotti/infinito.webp" width="270"/></div><div class="prod-body"><span class="prod-step">Finish</span><h4>Infinito</h4><p class="kind">Elisir idratante barba e capelli</p><p>Oli di argan, oliva, jojoba e carota nutrono e donano morbidezza e lucentezza a barba e capelli.</p></div></article></div></details></div>
 <div class="text-center" style="margin-top:3rem"><a class="btn btn-primary" href="#prenota">Scopri il rituale per te</a></div>
 </div>
 </section>
@@ -2017,58 +1451,58 @@ footer{padding-bottom:5.5rem}
 <!-- Mosaico: 18 creazioni reali. Le foto 2, 10, 15 e 16 sono più grandi su desktop. -->
 <div class="mosaic-grid">
 <div class="mosaic-item">
-<img alt="Acconciatura di una cliente, vista da dietro" decoding="async" loading="lazy" src="immagini/creazioni/taglio_1.jpg"/>
+<img alt="Capelli ricci castano scuro, definiti e pieni di volume, visti da dietro" decoding="async" height="1015" loading="lazy" sizes="(max-width: 768px) 50vw, (max-width: 900px) 25vw, 17vw" src="immagini/creazioni/taglio_1.webp" srcset="immagini/creazioni/taglio_1-480.webp 480w, immagini/creazioni/taglio_1.webp 800w" width="800"/>
 </div>
 <div class="mosaic-item">
-<img alt="Acconciatura di una cliente, vista da dietro" decoding="async" loading="lazy" src="immagini/creazioni/taglio_2.jpg"/>
+<img alt="Biondo chiaro con onde morbide e sfumature luminose, visto da dietro" decoding="async" height="1001" loading="lazy" sizes="(max-width: 900px) 50vw, 34vw" src="immagini/creazioni/taglio_2.webp" srcset="immagini/creazioni/taglio_2-480.webp 480w, immagini/creazioni/taglio_2.webp 800w" width="800"/>
 </div>
 <div class="mosaic-item">
-<img alt="Acconciatura di una cliente, vista da dietro" decoding="async" loading="lazy" src="immagini/creazioni/taglio_3.jpg"/>
+<img alt="Capelli lunghi castano caramello con onde morbide e riflessi dorati" decoding="async" height="996" loading="lazy" sizes="(max-width: 768px) 50vw, (max-width: 900px) 25vw, 17vw" src="immagini/creazioni/taglio_3.webp" srcset="immagini/creazioni/taglio_3-480.webp 480w, immagini/creazioni/taglio_3.webp 800w" width="800"/>
 </div>
 <div class="mosaic-item">
-<img alt="Acconciatura di una cliente, vista da dietro" decoding="async" loading="lazy" src="immagini/creazioni/taglio_4.jpg"/>
+<img alt="Colore ramato con riflessi dorati e onde morbide, lunghezza media" decoding="async" height="1005" loading="lazy" sizes="(max-width: 768px) 50vw, (max-width: 900px) 25vw, 17vw" src="immagini/creazioni/taglio_4.webp" srcset="immagini/creazioni/taglio_4-480.webp 480w, immagini/creazioni/taglio_4.webp 800w" width="800"/>
 </div>
 <div class="mosaic-item">
-<img alt="Acconciatura di una cliente, vista da dietro" decoding="async" loading="lazy" src="immagini/creazioni/taglio_5.jpg"/>
+<img alt="Raccolto basso e morbido su capelli castani, con una ciocca libera sul viso" decoding="async" height="1004" loading="lazy" sizes="(max-width: 768px) 50vw, (max-width: 900px) 25vw, 17vw" src="immagini/creazioni/taglio_5.webp" srcset="immagini/creazioni/taglio_5-480.webp 480w, immagini/creazioni/taglio_5.webp 800w" width="800"/>
 </div>
 <div class="mosaic-item">
-<img alt="Acconciatura di una cliente, vista da dietro" decoding="async" loading="lazy" src="immagini/creazioni/taglio_6.jpg"/>
+<img alt="Capelli lisci con sfumature biondo miele che schiariscono verso le punte" decoding="async" height="1003" loading="lazy" sizes="(max-width: 768px) 50vw, (max-width: 900px) 25vw, 17vw" src="immagini/creazioni/taglio_6.webp" srcset="immagini/creazioni/taglio_6-480.webp 480w, immagini/creazioni/taglio_6.webp 800w" width="800"/>
 </div>
 <div class="mosaic-item">
-<img alt="Acconciatura di una cliente, vista da dietro" decoding="async" loading="lazy" src="immagini/creazioni/taglio_7.jpg"/>
+<img alt="Caschetto lungo, liscio e lucido, castano, visto di profilo" decoding="async" height="991" loading="lazy" sizes="(max-width: 768px) 50vw, (max-width: 900px) 25vw, 17vw" src="immagini/creazioni/taglio_7.webp" srcset="immagini/creazioni/taglio_7-480.webp 480w, immagini/creazioni/taglio_7.webp 800w" width="800"/>
 </div>
 <div class="mosaic-item">
-<img alt="Acconciatura di una cliente, vista da dietro" decoding="async" loading="lazy" src="immagini/creazioni/taglio_8.jpg"/>
+<img alt="Bob liscio color rame intenso, lucido, visto da dietro" decoding="async" height="1006" loading="lazy" sizes="(max-width: 768px) 50vw, (max-width: 900px) 25vw, 17vw" src="immagini/creazioni/taglio_8.webp" srcset="immagini/creazioni/taglio_8-480.webp 480w, immagini/creazioni/taglio_8.webp 800w" width="800"/>
 </div>
 <div class="mosaic-item">
-<img alt="Acconciatura di una cliente, vista da dietro" decoding="async" loading="lazy" src="immagini/creazioni/taglio_9.jpg"/>
+<img alt="Capelli castano scuro con frangia laterale e onde morbide, visti di profilo" decoding="async" height="987" loading="lazy" sizes="(max-width: 768px) 50vw, (max-width: 900px) 25vw, 17vw" src="immagini/creazioni/taglio_9.webp" srcset="immagini/creazioni/taglio_9-480.webp 480w, immagini/creazioni/taglio_9.webp 800w" width="800"/>
 </div>
 <div class="mosaic-item">
-<img alt="Acconciatura di una cliente, vista da dietro" decoding="async" loading="lazy" src="immagini/creazioni/taglio_10.jpg"/>
+<img alt="Taglio maschile corto con nuca sfumata e ciuffo mosso, visto da dietro" decoding="async" height="1001" loading="lazy" sizes="(max-width: 900px) 50vw, 34vw" src="immagini/creazioni/taglio_10.webp" srcset="immagini/creazioni/taglio_10-480.webp 480w, immagini/creazioni/taglio_10.webp 800w" width="800"/>
 </div>
 <div class="mosaic-item">
-<img alt="Acconciatura di una cliente, vista da dietro" decoding="async" loading="lazy" src="immagini/creazioni/taglio_11.jpg"/>
+<img alt="Taglio corto geometrico castano con base rasata, visto di profilo" decoding="async" height="1005" loading="lazy" sizes="(max-width: 768px) 50vw, (max-width: 900px) 25vw, 17vw" src="immagini/creazioni/taglio_11.webp" srcset="immagini/creazioni/taglio_11-480.webp 480w, immagini/creazioni/taglio_11.webp 800w" width="800"/>
 </div>
 <div class="mosaic-item">
-<img alt="Acconciatura di una cliente, vista da dietro" decoding="async" loading="lazy" src="immagini/creazioni/taglio_12.jpg"/>
+<img alt="Capelli castani lisci a media lunghezza, con taglio netto, visti da dietro" decoding="async" height="1005" loading="lazy" sizes="(max-width: 768px) 50vw, (max-width: 900px) 25vw, 17vw" src="immagini/creazioni/taglio_12.webp" srcset="immagini/creazioni/taglio_12-480.webp 480w, immagini/creazioni/taglio_12.webp 800w" width="800"/>
 </div>
 <div class="mosaic-item">
-<img alt="Acconciatura di una cliente, vista da dietro" decoding="async" loading="lazy" src="immagini/creazioni/taglio_13.jpg"/>
+<img alt="Bob corto e liscio castano, con taglio netto sulla nuca" decoding="async" height="1009" loading="lazy" sizes="(max-width: 768px) 50vw, (max-width: 900px) 25vw, 17vw" src="immagini/creazioni/taglio_13.webp" srcset="immagini/creazioni/taglio_13-480.webp 480w, immagini/creazioni/taglio_13.webp 800w" width="800"/>
 </div>
 <div class="mosaic-item">
-<img alt="Acconciatura di una cliente, vista da dietro" decoding="async" loading="lazy" src="immagini/creazioni/taglio_14.jpg"/>
+<img alt="Capelli castano scuro lucidi, con onde definite a boccoli morbidi" decoding="async" height="1004" loading="lazy" sizes="(max-width: 768px) 50vw, (max-width: 900px) 25vw, 17vw" src="immagini/creazioni/taglio_14.webp" srcset="immagini/creazioni/taglio_14-480.webp 480w, immagini/creazioni/taglio_14.webp 800w" width="800"/>
 </div>
 <div class="mosaic-item">
-<img alt="Acconciatura di una cliente, vista da dietro" decoding="async" loading="lazy" src="immagini/creazioni/taglio_15.jpg"/>
+<img alt="Capelli molto lunghi, lisci e lucidi, castani con riflessi caramello, di profilo" decoding="async" height="995" loading="lazy" sizes="(max-width: 900px) 50vw, 34vw" src="immagini/creazioni/taglio_15.webp" srcset="immagini/creazioni/taglio_15-480.webp 480w, immagini/creazioni/taglio_15.webp 800w" width="800"/>
 </div>
 <div class="mosaic-item">
-<img alt="Acconciatura di una cliente, vista da dietro" decoding="async" loading="lazy" src="immagini/creazioni/taglio_16.jpg"/>
+<img alt="Onde morbide con sfumatura dal castano al biondo dorato, lunghezza media" decoding="async" height="1021" loading="lazy" sizes="(max-width: 900px) 50vw, 34vw" src="immagini/creazioni/taglio_16.webp" srcset="immagini/creazioni/taglio_16-480.webp 480w, immagini/creazioni/taglio_16.webp 800w" width="800"/>
 </div>
 <div class="mosaic-item">
-<img alt="Acconciatura di una cliente, vista da dietro" decoding="async" loading="lazy" src="immagini/creazioni/taglio_17.jpg"/>
+<img alt="Pixie cut corto biondo chiaro, visto di profilo" decoding="async" height="994" loading="lazy" sizes="(max-width: 768px) 50vw, (max-width: 900px) 25vw, 17vw" src="immagini/creazioni/taglio_17.webp" srcset="immagini/creazioni/taglio_17-480.webp 480w, immagini/creazioni/taglio_17.webp 800w" width="800"/>
 </div>
 <div class="mosaic-item">
-<img alt="Acconciatura di una cliente, vista da dietro" decoding="async" loading="lazy" src="immagini/creazioni/taglio_18.jpg"/>
+<img alt="Capelli rosa pesca con onde morbide, visti da dietro in salone" decoding="async" height="805" loading="lazy" sizes="(max-width: 768px) 50vw, (max-width: 900px) 25vw, 17vw" src="immagini/creazioni/taglio_18.webp" srcset="immagini/creazioni/taglio_18-480.webp 480w, immagini/creazioni/taglio_18.webp 800w" width="800"/>
 </div>
 </div>
 </div>
@@ -2077,7 +1511,7 @@ footer{padding-bottom:5.5rem}
 <!-- NOTA: marchio visibile nella foto vetrina (Bio Ionic). Da confermare con Angelo. -->
 <section class="section-padding" id="styling">
 <div class="container"><div class="feature-block">
-<div class="feature-img-box"><img alt="Phon, piastre e spazzole professionali in vetrina" decoding="async" loading="lazy" src="immagini/vetrina.jpg"/></div>
+<div class="feature-img-box"><img alt="Phon, piastre e spazzole professionali in vetrina" decoding="async" height="750" loading="lazy" src="immagini/vetrina.webp" width="1000"/></div>
 <div class="feature-text"><span class="subtitle">Styling e strumenti</span><h2>Anche la piega parte dagli strumenti giusti.</h2>
 <p>In vetrina trovi phon, piastre e spazzole professionali Bio Ionic, gli stessi con cui completiamo il look in salone.</p>
 <p>Chiedici quale è più adatto ai tuoi capelli: ti consigliamo con calma, senza fretta.</p></div>
@@ -2090,7 +1524,8 @@ footer{padding-bottom:5.5rem}
 <div class="editorial-filosofia-wrapper">
 <div class="editorial-filosofia-container">
 <div class="editorial-filosofia-img">
-<img alt="Il proprietario di Capelli D'Angelo al lavoro" decoding="async" loading="lazy" src="immagini/chisiamo_foto.jpg"/>
+<img alt="Angelo, titolare di Capelli D’Angelo, al lavoro in salone" decoding="async" height="1450" loading="lazy" src="immagini/chisiamo_foto.webp" width="720"/>
+<span class="photo-tag">Angelo, titolare</span>
 </div>
 <div class="editorial-filosofia-card">
 <span class="subtitle" style="margin-bottom: 0.5rem !important;">La Nostra Filosofia</span>
@@ -2107,7 +1542,10 @@ footer{padding-bottom:5.5rem}
 </div>
 </div>
 </div>
-<div class="amb-band" id="ambasciata"><img alt="Logo Ambasciata della Gioia" loading="lazy" src="immagini/Logo-Ambasciata.png"/><div><span class="subtitle">La nostra identità</span><h3>Ambasciata della Gioia</h3><p>Capelli D’Angelo fa parte del progetto Ambasciata della Gioia: un modo diverso di vivere la bellezza, con ascolto e attenzione alla persona.</p></div></div>
+<details class="amb-tab" id="ambasciata">
+<summary><img alt="Logo Ambasciata della Gioia" class="amb-logo" decoding="async" height="76" loading="lazy" src="immagini/Logo-Ambasciata.webp" width="76"/><span class="amb-kicker">La nostra identità</span><h3>Ambasciata della Gioia</h3></summary>
+<div class="amb-body"><p>Capelli D’Angelo fa parte del progetto Ambasciata della Gioia: un modo diverso di vivere la bellezza, con ascolto e attenzione alla persona.</p></div>
+</details>
 <!-- SPAZIO DEL SALONE -->
 <div class="feature-block">
 <div class="feature-text">
@@ -2135,7 +1573,7 @@ footer{padding-bottom:5.5rem}
 </div>
 </div>
 <div class="feature-img-box">
-<img alt="Vetrina del salone Capelli D’Angelo a Rovereto" decoding="async" loading="lazy" src="immagini/vetrina_esterno.jpg"/>
+<img alt="Vetrina del salone Capelli D’Angelo a Rovereto" decoding="async" height="750" loading="lazy" src="immagini/vetrina_esterno.webp" width="1000"/>
 </div>
 </div>
 </div>
@@ -2151,80 +1589,37 @@ footer{padding-bottom:5.5rem}
         Leggi le recensioni delle clienti e scopri le loro esperienze in salone.
       </p>
 </div>
-<div aria-label="Selezione di recensioni delle clienti" class="reviews-grid" id="reviewsCarousel">
-<!-- Recensione 1 -->
+<div aria-label="Recensioni delle clienti" class="reviews-grid" id="reviewsCarousel" role="region" tabindex="0">
 <article class="review-card-modern">
-<div aria-label="5 stelle su 5" class="stars">★★★★★</div>
-<p class="review-text">
-          «Molta attenzione ai miei desideri, con ascolto e confronto prima
-          di procedere al taglio. Pur non avendo una situazione semplice
-          causa trattamenti precedenti, sono uscita con un taglio molto
-          più adatto al mio viso e con dei capelli morbidissimi.»
-        </p>
+<div aria-label="5 stelle su 5" class="stars" role="img">★★★★★</div>
+<p class="review-text">«Molta attenzione ai miei desideri, con <strong>ascolto e confronto</strong> prima di procedere al taglio. Pur non avendo una situazione semplice causa trattamenti precedenti, sono uscita con un taglio <strong>molto più adatto al mio viso</strong> e con dei <strong>capelli morbidissimi</strong>.»</p>
 <div class="review-author-wrap">
-<span class="review-author">Mary Molinari</span>
-<span class="review-source">
-<svg aria-hidden="true" viewbox="0 0 24 24">
-<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.05 5.05 0 0 1-2.2 3.31v2.77h3.57c2.09-1.92 3.27-4.75 3.27-8.09Z" fill="#4285F4"></path>
-<path d="M12 23c2.97 0 5.46-.99 7.28-2.66l-3.57-2.77c-.99.66-2.25 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.15v2.84A11 11 0 0 0 12 23Z" fill="#34A853"></path>
-<path d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.15a11 11 0 0 0 0 9.88l3.69-2.84Z" fill="#FBBC05"></path>
-<path d="M12 5.37c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1a11 11 0 0 0-9.85 6.06l3.69 2.84C6.71 7.3 9.14 5.37 12 5.37Z" fill="#EA4335"></path>
-</svg>
-            Google
-          </span>
+<div class="review-who"><span aria-hidden="true" class="review-avatar">M</span><span class="review-author">Mary Molinari</span></div>
+<span class="review-source"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.05 5.05 0 0 1-2.2 3.31v2.77h3.57c2.09-1.92 3.27-4.75 3.27-8.09Z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.99 7.28-2.66l-3.57-2.77c-.99.66-2.25 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.15v2.84A11 11 0 0 0 12 23Z" fill="#34A853"></path><path d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.15a11 11 0 0 0 0 9.88l3.69-2.84Z" fill="#FBBC05"></path><path d="M12 5.37c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1a11 11 0 0 0-9.85 6.06l3.69 2.84C6.71 7.3 9.14 5.37 12 5.37Z" fill="#EA4335"></path></svg> Google</span>
 </div>
 </article>
-<!-- Recensione 2 -->
 <article class="review-card-modern">
-<div aria-label="5 stelle su 5" class="stars">★★★★★</div>
-<p class="review-text">
-          «Si entra nel salone e si fa una consulenza per capire il trattamento
-          adeguato alla tipologia del tuo capello, il taglio che ti può star
-          bene e il trattamento che puoi continuare a casa. Angelo ha
-          effettuato un taglio stupendo! 100% soddisfatta.»
-        </p>
+<div aria-label="5 stelle su 5" class="stars" role="img">★★★★★</div>
+<p class="review-text">«Si entra nel salone e si fa una <strong>consulenza</strong> per capire il trattamento adeguato alla tipologia del tuo capello, il taglio che ti può star bene e il trattamento che puoi continuare a casa. Angelo ha effettuato un <strong>taglio stupendo</strong>! <strong>100% soddisfatta.</strong>»</p>
 <div class="review-author-wrap">
-<span class="review-author">Alessandra</span>
-<span class="review-source">
-<svg aria-hidden="true" viewbox="0 0 24 24">
-<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.05 5.05 0 0 1-2.2 3.31v2.77h3.57c2.09-1.92 3.27-4.75 3.27-8.09Z" fill="#4285F4"></path>
-<path d="M12 23c2.97 0 5.46-.99 7.28-2.66l-3.57-2.77c-.99.66-2.25 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.15v2.84A11 11 0 0 0 12 23Z" fill="#34A853"></path>
-<path d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.15a11 11 0 0 0 0 9.88l3.69-2.84Z" fill="#FBBC05"></path>
-<path d="M12 5.37c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1a11 11 0 0 0-9.85 6.06l3.69 2.84C6.71 7.3 9.14 5.37 12 5.37Z" fill="#EA4335"></path>
-</svg>
-            Google
-          </span>
+<div class="review-who"><span aria-hidden="true" class="review-avatar">A</span><span class="review-author">Alessandra</span></div>
+<span class="review-source"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.05 5.05 0 0 1-2.2 3.31v2.77h3.57c2.09-1.92 3.27-4.75 3.27-8.09Z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.99 7.28-2.66l-3.57-2.77c-.99.66-2.25 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.15v2.84A11 11 0 0 0 12 23Z" fill="#34A853"></path><path d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.15a11 11 0 0 0 0 9.88l3.69-2.84Z" fill="#FBBC05"></path><path d="M12 5.37c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1a11 11 0 0 0-9.85 6.06l3.69 2.84C6.71 7.3 9.14 5.37 12 5.37Z" fill="#EA4335"></path></svg> Google</span>
 </div>
 </article>
-<!-- Recensione 3 -->
 <article class="review-card-modern">
-<div aria-label="5 stelle su 5" class="stars">★★★★★</div>
-<p class="review-text">
-          «Qui si percepisce subito che si prendono davvero il tempo per ogni
-          cliente: non ci si sente mai “una di tanti” da fare in fretta,
-          ma accolta e ascoltata. La consulenza è attenta e personale,
-          e l’atmosfera rilassante.»
-        </p>
+<div aria-label="5 stelle su 5" class="stars" role="img">★★★★★</div>
+<p class="review-text">«Qui si percepisce subito che si prendono davvero il tempo per ogni cliente: non ci si sente mai “una di tanti” da fare in fretta, ma <strong>accolta e ascoltata</strong>. La consulenza è attenta e personale, e l’<strong>atmosfera rilassante</strong>.»</p>
 <div class="review-author-wrap">
-<span class="review-author">Mireille Pellegrino</span>
-<span class="review-source">
-<svg aria-hidden="true" viewbox="0 0 24 24">
-<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.05 5.05 0 0 1-2.2 3.31v2.77h3.57c2.09-1.92 3.27-4.75 3.27-8.09Z" fill="#4285F4"></path>
-<path d="M12 23c2.97 0 5.46-.99 7.28-2.66l-3.57-2.77c-.99.66-2.25 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.15v2.84A11 11 0 0 0 12 23Z" fill="#34A853"></path>
-<path d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.15a11 11 0 0 0 0 9.88l3.69-2.84Z" fill="#FBBC05"></path>
-<path d="M12 5.37c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1a11 11 0 0 0-9.85 6.06l3.69 2.84C6.71 7.3 9.14 5.37 12 5.37Z" fill="#EA4335"></path>
-</svg>
-            Google
-          </span>
+<div class="review-who"><span aria-hidden="true" class="review-avatar">M</span><span class="review-author">Mireille Pellegrino</span></div>
+<span class="review-source"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.05 5.05 0 0 1-2.2 3.31v2.77h3.57c2.09-1.92 3.27-4.75 3.27-8.09Z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.99 7.28-2.66l-3.57-2.77c-.99.66-2.25 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.15v2.84A11 11 0 0 0 12 23Z" fill="#34A853"></path><path d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.15a11 11 0 0 0 0 9.88l3.69-2.84Z" fill="#FBBC05"></path><path d="M12 5.37c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1a11 11 0 0 0-9.85 6.06l3.69 2.84C6.71 7.3 9.14 5.37 12 5.37Z" fill="#EA4335"></path></svg> Google</span>
 </div>
 </article>
 </div>
-<div aria-label="Seleziona una recensione" class="reviews-pagination" id="reviewsPagination"></div>
+<div aria-label="Scegli una recensione" class="rv-dots" id="reviewsDots" role="group"></div>
 <div class="reviews-footer">
 <p class="reviews-note">
         Vuoi leggere altre esperienze? Consulta tutte le recensioni su Google.
       </p>
-<!-- TODO prima della pubblicazione: sostituire GOOGLE_REVIEWS_URL con il link ufficiale alle recensioni Google del salone. -->
 <a class="btn btn-dark reviews-cta" href="https://www.google.com/maps/search/?api=1&amp;query=Capelli%20D%27Angelo%2C%20Via%20Trieste%2042%2C%2038068%20Rovereto&amp;query_place_id=ChIJu-yvoMUOgkcRFxsvyKmvoYI" rel="noopener noreferrer" target="_blank">
         Leggi tutte le recensioni
       </a>
@@ -2235,7 +1630,7 @@ footer{padding-bottom:5.5rem}
 <section class="section-padding booking-new" id="prenota">
 <div class="container">
 <div class="cta-card">
-<div class="cta-photo"><img alt="Capelli biondo platino ondulati, visti di spalle" decoding="async" loading="lazy" src="immagini/web/cta.webp"/></div>
+<div class="cta-photo"><img alt="Capelli biondo platino ondulati, visti di spalle" decoding="async" height="900" loading="lazy" src="immagini/web/cta.webp" width="800"/></div>
 <div class="cta-body">
 <span class="subtitle">Esperienza atelier</span>
 <h2>Parliamo dei tuoi <span>capelli.</span></h2>
@@ -2256,14 +1651,14 @@ footer{padding-bottom:5.5rem}
 <div class="footer-grid">
 <div class="footer-brand">
 <a aria-label="Capelli D'Angelo - Torna all'inizio" class="footer-logo" href="#inizio">
-<img alt="Capelli D'Angelo" src="immagini/logo_footer.png"/>
+<img alt="Capelli D'Angelo" decoding="async" loading="lazy" height="97" src="immagini/logo_footer.svg" width="190"/>
 </a>
-<p style="font-size: 0.85rem; color: #77726E;">
+<p style="font-size: 0.9rem;">
             Consulenza, colore e armocromia. Cura dei capelli a Rovereto.
           </p>
 </div>
 <div class="footer-links footer-navigation">
-<h4 style="color: var(--text-light); margin-bottom: 1rem; font-size: 1rem;">Navigazione</h4>
+<h3 style="color: var(--text-light); margin-bottom: 1rem; font-size: 1.15rem;">Navigazione</h3>
 <ul>
 <li><a href="#metodo">Il Metodo</a></li>
 <li><a href="#servizi">Servizi</a></li>
@@ -2277,7 +1672,7 @@ footer{padding-bottom:5.5rem}
 </ul>
 </div>
 <div class="footer-links">
-<h4 style="color: var(--text-light); margin-bottom: 1rem; font-size: 1rem;">Contatti &amp; Social</h4>
+<h3 style="color: var(--text-light); margin-bottom: 1rem; font-size: 1.15rem;">Contatti &amp; Social</h3>
 <ul>
 <li style="margin-bottom: 0.8rem;">Via Trieste 42, Rovereto (TN)</li>
 <li style="margin-bottom: 0.8rem;">Tel: <a href="tel:+393396577389">339 6577389</a><br/>Tel: <a href="tel:+390464431296">0464 431296</a></li>
@@ -2299,8 +1694,8 @@ footer{padding-bottom:5.5rem}
 </div>
 <div class="footer-links">
 <!-- TODO: verificare con il salone che gli orari qui sotto siano aggiornati prima della pubblicazione. -->
-<h4 style="color: var(--text-light); margin-bottom: 1rem; font-size: 1rem;">Orari</h4>
-<p style="font-size: 0.8rem; color: #77726E;">
+<h3 style="color: var(--text-light); margin-bottom: 1rem; font-size: 1.15rem;">Orari</h3>
+<p style="font-size: 0.9rem;">
             Lun - Ven: 09:00 - 18:00
           </p>
 </div>
@@ -2314,63 +1709,50 @@ footer{padding-bottom:5.5rem}
 </div>
 </footer>
 <script>
-    // Toggle del menu mobile
+    // Menu mobile: il pannello è agganciato al viewport e la pagina dietro resta ferma
     const menuToggle = document.getElementById('menuToggle');
     const menuClose = document.getElementById('menuClose');
     const navLinks = document.getElementById('navLinks');
 
     if (menuToggle && navLinks) {
+      let savedY = 0;
+      const root = document.documentElement;
+      const lockPage = () => {
+        savedY = window.pageYOffset || root.scrollTop || 0;
+        document.body.style.top = '-' + savedY + 'px';
+        root.classList.add('menu-open');
+        document.body.classList.add('menu-open');
+      };
+      const unlockPage = () => {
+        root.classList.remove('menu-open');
+        document.body.classList.remove('menu-open');
+        document.body.style.top = '';
+        root.style.scrollBehavior = 'auto';
+        window.scrollTo(0, savedY);
+        root.style.scrollBehavior = '';
+      };
       const closeMenu = () => {
+        if (!navLinks.classList.contains('active')) return;
         navLinks.classList.remove('active');
         menuToggle.classList.remove('active');
         menuToggle.setAttribute('aria-expanded', 'false');
         menuToggle.setAttribute('aria-label', 'Apri il menu');
+        unlockPage();
       };
       const openMenu = () => {
+        if (navLinks.classList.contains('active')) return;
+        lockPage();
         navLinks.classList.add('active');
         menuToggle.classList.add('active');
         menuToggle.setAttribute('aria-expanded', 'true');
         menuToggle.setAttribute('aria-label', 'Chiudi il menu');
+        if (menuClose) menuClose.focus({ preventScroll: true });
       };
       menuToggle.addEventListener('click', () => navLinks.classList.contains('active') ? closeMenu() : openMenu());
       if (menuClose) menuClose.addEventListener('click', closeMenu);
       navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
       document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
-    }
-
-    // Carosello prodotti mobile con indicatori cliccabili.
-    const productsCarousel = document.getElementById('productsCarousel');
-    const productsPagination = document.getElementById('productsPagination');
-    if (productsCarousel && productsPagination) {
-      const productCards = Array.from(productsCarousel.querySelectorAll('.product-card'));
-      const paginationButtons = productCards.map((card, index) => {
-        const button = document.createElement('button');
-        button.type = 'button';
-        button.setAttribute('aria-label', `Mostra prodotto ${index + 1} di ${productCards.length}`);
-        button.setAttribute('aria-current', index === 0 ? 'true' : 'false');
-        button.addEventListener('click', () => {
-          productsCarousel.scrollTo({ left: card.offsetLeft - productCards[0].offsetLeft, behavior: 'smooth' });
-        });
-        productsPagination.appendChild(button);
-        return button;
-      });
-      let scrollTicking = false;
-      productsCarousel.addEventListener('scroll', () => {
-        if (scrollTicking) return;
-        scrollTicking = true;
-        window.requestAnimationFrame(() => {
-          const center = productsCarousel.scrollLeft + productsCarousel.clientWidth / 2;
-          let closestIndex = 0;
-          let closestDistance = Infinity;
-          productCards.forEach((card, index) => {
-            const cardCenter = card.offsetLeft - productsCarousel.offsetLeft + card.offsetWidth / 2;
-            const distance = Math.abs(cardCenter - center);
-            if (distance < closestDistance) { closestDistance = distance; closestIndex = index; }
-          });
-          paginationButtons.forEach((button, index) => button.setAttribute('aria-current', index === closestIndex ? 'true' : 'false'));
-          scrollTicking = false;
-        });
-      }, { passive: true });
+      window.matchMedia('(min-width: 769px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
     }
   </script>
 <script>
@@ -2378,7 +1760,6 @@ footer{padding-bottom:5.5rem}
     (function(){var a=document.getElementById('armocromia'),tn=document.getElementById('tn'),tu=document.getElementById('tu'),ps=document.querySelectorAll('.swatch');
     if(!a)return;function pick(b){a.style.setProperty('--tone',b.dataset.c);tn.textContent=b.dataset.n;tu.textContent=b.dataset.u;ps.forEach(function(x){x.setAttribute('aria-pressed',x===b)})}
     ps.forEach(function(b){['mouseenter','focus','click'].forEach(function(e){b.addEventListener(e,function(){pick(b)})})});pick(ps[6]);})();
-    (function(){var n=document.getElementById('navLinks');if(!n)return;new MutationObserver(function(){document.body.style.overflow=n.classList.contains('active')?'hidden':''}).observe(n,{attributes:true,attributeFilter:['class']})})();
   </script>
 <script>
 // Espansione descrizioni prodotti: controllo visibile solo su mobile via CSS.
@@ -2415,7 +1796,7 @@ footer{padding-bottom:5.5rem}
 })();
 </script>
 <!-- BARRA CONTATTI RAPIDI (solo mobile) -->
-<div aria-label="Contatti rapidi" class="m-bar" id="mBar"><a class="wa" href="https://wa.me/393396577389" rel="noopener noreferrer" target="_blank">WhatsApp</a><a href="tel:+390464431296">Chiama</a></div>
+<div aria-label="Contatti rapidi" class="m-bar" data-state="hero" id="mBar"><a class="m-wa" href="https://wa.me/393396577389?text=Buongiorno%2C%20vorrei%20prenotare%20una%20consulenza." rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2a9.7 9.7 0 0 0-8.3 14.7L2.4 22l5.4-1.4A9.8 9.8 0 1 0 12 2Zm0 2a7.7 7.7 0 0 1 0 15.4 7.6 7.6 0 0 1-3.9-1.1l-.4-.2-2.9.8.8-2.8-.3-.5A7.7 7.7 0 0 1 12 4Z"></path></svg><span class="m-hero">Prenota una consulenza</span><span class="m-page">Prenota su WhatsApp</span></a><a class="m-tel" href="tel:+390464431296"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"></path></svg><span>Chiama</span></a></div>
 <!-- BANNER COOKIE -->
 <div aria-label="Preferenze cookie" class="ck-banner" hidden="" id="ck-banner" role="dialog">
 <p><strong>La tua privacy conta.</strong> Usiamo cookie tecnici e, solo con il tuo consenso, cookie statistici anonimi per migliorare il sito. <button class="ck-link" data-open="cookie" type="button">Scopri di più</button></p>
@@ -2486,7 +1867,7 @@ footer{padding-bottom:5.5rem}
   function save(a){try{localStorage.setItem(KEY,JSON.stringify({analytics:!!a,ts:Date.now()}))}catch(e){}}
   function loadGA(){if(window.__ga||GA_ID.indexOf('XXXX')>-1)return;window.__ga=1;var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',GA_ID,{anonymize_ip:true});}
   function revokeGA(){window['ga-disable-'+GA_ID]=true;document.cookie.split(';').forEach(function(c){var n=c.split('=')[0].trim();if(n.indexOf('_ga')===0)document.cookie=n+'=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/'})}
-  function apply(a){if(a)loadGA();else revokeGA();banner.hidden=true;document.body.classList.remove('ck-open');stat.checked=!!a;sync()}
+  function apply(a){if(a)loadGA();else revokeGA();banner.hidden=true;document.body.classList.remove('ck-open');stat.checked=!!a}
   function setTab(n){$$('.pv-tab').forEach(function(t){t.setAttribute('aria-selected',t.dataset.tab===n)});$$('[data-pane]').forEach(function(p){p.hidden=p.dataset.pane!==n});$('.pv-body').scrollTop=0}
   function openM(n){last=document.activeElement;setTab(n||'privacy');modal.hidden=false;document.body.style.overflow='hidden';$('.pv-close').focus()}
   function closeM(){modal.hidden=true;document.body.style.overflow='';if(last&&last.focus)last.focus()}
@@ -2498,11 +1879,47 @@ footer{padding-bottom:5.5rem}
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!modal.hidden)closeM()});
   var c0=get();if(c0){apply(c0.analytics)}else{banner.hidden=false;document.body.classList.add('ck-open')}
-  // barra contatti rapidi su mobile: compare dopo l'hero, sparisce vicino alla CTA finale, al menu aperto e al banner
-  var bar=$('#mBar'),hero=$('#inizio'),end=$('#prenota'),foot=$('footer'),nav=$('#navLinks'),vis={hero:true,end:false,foot:false};
-  function sync(){var open=nav&&nav.classList.contains('active');bar.classList.toggle('show',!vis.hero&&!vis.end&&!vis.foot&&!open&&!document.body.classList.contains('ck-open'))}
-  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){vis[x.target===hero?'hero':x.target===end?'end':'foot']=x.isIntersecting});sync()},{threshold:.15});[hero,end,foot].forEach(function(n){n&&io.observe(n)})}
-  if(nav)new MutationObserver(sync).observe(nav,{attributes:true,attributeFilter:['class']});
+})();
+</script>
+<script>
+// Barra contatti mobile: solo il testo cambia tra la prima schermata e il resto della pagina.
+// La posizione è puro CSS (position: fixed; bottom: 0), niente calcoli sul viewport.
+(function(){
+  var bar=document.getElementById('mBar'),hero=document.getElementById('inizio');
+  if(!bar||!hero||!('IntersectionObserver' in window))return;
+  new IntersectionObserver(function(es){
+    es.forEach(function(e){bar.setAttribute('data-state',e.isIntersecting?'hero':'page')});
+  },{rootMargin:'0px 0px -55% 0px'}).observe(hero);
+})();
+// Recensioni: puntini di navigazione per il carosello su telefono e tablet
+(function(){
+  var track=document.getElementById('reviewsCarousel'),dots=document.getElementById('reviewsDots');
+  if(!track||!dots)return;
+  var cards=[].slice.call(track.querySelectorAll('.review-card-modern')),btns=[],ticking=false;
+  function pad(){return parseFloat(getComputedStyle(track).paddingLeft)||0}
+  cards.forEach(function(card,i){
+    var b=document.createElement('button');
+    b.type='button';b.setAttribute('aria-label','Recensione '+(i+1)+' di '+cards.length);
+    b.setAttribute('aria-current',i===0?'true':'false');
+    b.addEventListener('click',function(){
+      var left=card.getBoundingClientRect().left-track.getBoundingClientRect().left+track.scrollLeft-pad();
+      track.scrollTo({left:left,behavior:'smooth'});
+    });
+    dots.appendChild(b);btns.push(b);
+  });
+  function update(){
+    var origin=track.getBoundingClientRect().left+pad(),best=0,bd=Infinity;
+    cards.forEach(function(c,i){var d=Math.abs(c.getBoundingClientRect().left-origin);if(d<bd){bd=d;best=i}});
+    btns.forEach(function(b,i){b.setAttribute('aria-current',i===best?'true':'false')});
+    ticking=false;
+  }
+  track.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update)}},{passive:true});
+})();
+// La linguetta "Ambasciata della Gioia" si apre quando si arriva da un link (#ambasciata)
+(function(){
+  var d=document.getElementById('ambasciata');if(!d)return;
+  function check(){if(location.hash==='#ambasciata')d.open=true}
+  check();window.addEventListener('hashchange',check);
 })();
 </script>
 </body>
